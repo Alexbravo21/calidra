@@ -1,0 +1,53 @@
+@import 'scss/mixins.scss';
+@import 'scss/variables.scss';
+@import 'scss/hamburger.scss';
+
+
+html { font-size: 62.5%; }
+body{font-size: 1.4rem;line-height: 1.6rem; }
+.nav-container{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    .top-menu{
+        background-color: #000000;
+        color: #ffffff;
+        .search-container{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px;
+            @include minWidth($md) {
+                padding: 15px 0;
+            }
+            p{
+                margin-left: 30px;
+            }
+        }
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        .logo{
+            width: 20%;
+        }
+        .burger{
+            @include minWidth($md){
+                display: none;
+            }
+        }
+        ul{
+            justify-content: space-between;
+            margin-left: 20px;
+            font-size: $light-grey;
+            width: 80%;
+            display: none;
+            @include minWidth($md) {
+                display: flex;
+            }
+        }
+    }
+}

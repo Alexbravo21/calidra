@@ -1,0 +1,5 @@
+@mixin minWidth($arg){
+    @media screen and (min-width: $arg) {
+        @content;
+    }
+}

@@ -2,6 +2,10 @@
     /*
     Template Name: HomePage
     */
+    get_header();
 ?>
-<p>holo</p>
 <img src="<?=the_field('hero_banner') ?>" alt="">
+
+<?php 
+    get_footer();
+?>
