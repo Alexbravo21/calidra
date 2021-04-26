@@ -1,13 +1,17 @@
 
 const Calidra = (() => {
-    const el = document.querySelector('.burger');
+    const elBurger = document.querySelector('.burger');
+    const elUl = document.querySelector('.nav-ul');
 
     return{
         init: () => {
             Calidra.burgerClick();
         },
         burgerClick: () => {
-            el.onclick = () => el.classList.toggle('open');
+            elBurger.onclick = () => {
+                elBurger.classList.toggle('open');
+                elUl.classList.toggle('open');
+            }
         }
     }  
 })();

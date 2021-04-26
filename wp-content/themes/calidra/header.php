@@ -44,7 +44,7 @@
             <span></span>
             <span></span>
         </div>
-        <ul>
+        <ul class="nav-ul">
             <?php 
                 foreach ($menu_items as $menu_item){
                     echo "<li>".$menu_item."</li>";

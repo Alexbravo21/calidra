@@ -1,0 +1,2 @@
+# Ignore css files dreated by sass watcher
+.css.map
