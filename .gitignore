@@ -1,2 +1,7 @@
 # Ignore css files dreated by sass watcher
-.css.map
+*.css.map
+# Ignore css files in the assets/sass folder
+/wp-content/themes/calidra/assets/css/scss/*.css
+
+#Ignnore all css and sass files created in wp-admin
+/wp-admin/**/*.css
