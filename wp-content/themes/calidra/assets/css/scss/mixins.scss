@@ -8,3 +8,27 @@
         @content;
     }
 }
+@mixin standardButton($bg-color, $font-color) {
+    color: $font-color;
+    border: none;
+    background-color: $bg-color;
+    padding: 20px 50px;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    @include minWidth(1024px){
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+@mixin fontLine($font-size){
+    font-size: $font-size;
+    line-height: $font-size;
+}
+@mixin homeRestoSections($url){
+    background: url($url) center center no-repeat;
+    background-size: cover;
+    height: 500px;
+}

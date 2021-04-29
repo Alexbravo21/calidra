@@ -69,7 +69,7 @@ body {
 }
 
 .nav-container {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -193,6 +193,440 @@ body {
 @media screen and (min-width: 1200px) {
   .nav-container nav .nav-ul li {
     margin: 0;
+  }
+}
+
+.hero-banner {
+  width: 100%;
+  height: calc(100vh - 121px);
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner {
+    height: 600px;
+  }
+}
+
+.hero-banner .hero-copy-container {
+  background-color: rgba(237, 29, 36, 0.85);
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner .hero-copy-container {
+    width: 25%;
+  }
+}
+
+.hero-banner .hero-copy-container .hero-copy {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  color: #ffffff;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  width: 60vw;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner .hero-copy-container .hero-copy {
+    font-size: 6rem;
+    line-height: 6rem;
+    right: -50px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .hero-banner .hero-copy-container .hero-copy {
+    right: -230px;
+  }
+}
+
+.hero-banner .hero-copy-container .hero-copy .hero-big-copy {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner .hero-copy-container .hero-copy .hero-big-copy {
+    font-size: 8rem;
+    line-height: 8rem;
+    margin-bottom: 20px;
+  }
+}
+
+.hero-banner .hero-copy-container .hero-cta {
+  color: #000000;
+  border: none;
+  background-color: #ffffff;
+  padding: 20px 50px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner .hero-copy-container .hero-cta {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home-productos {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home-productos-desc {
+    padding: 0 50px 0 0;
+  }
+}
+
+.home-productos-desc h2 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #3e3e3e;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  .home-productos-desc h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+.home-productos-desc p {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .home-productos-desc p {
+    font-size: 1.6rem;
+  }
+}
+
+.home-productos-item-cont {
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .home-productos-item-cont {
+    padding: 0 0 0 50px;
+  }
+}
+
+.home-productos-item-cont .home-productos-item {
+  background-color: #202020;
+  padding: 40px 50px 100px;
+  color: #ffffff;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .home-productos-item-cont .home-productos-item {
+    padding: 40px 50px 200px;
+  }
+}
+
+.home-productos-item-cont .home-productos-item .productos-numero {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  color: rgba(62, 62, 62, 0.5);
+  font-size: 10rem;
+  line-height: 10rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.home-productos-item-cont .home-productos-item .productos-icono {
+  width: 25%;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.home-productos-item-cont .home-productos-item .producto-titulo {
+  font-family: "Century Gothic", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  text-align: center;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.home-productos-item-cont .home-productos-item .producto-separador {
+  margin: 30px auto;
+  width: 50px;
+  height: 3px;
+  background-color: #ed1d24;
+}
+
+.home-productos-item-cont .home-productos-item .producto-desc {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #e3e3e3;
+  text-align: justify;
+}
+
+.home-productos-item-cont .home-productos-item .producto-vermas {
+  font-family: "Century Gothic", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  color: #e3e3e3;
+  letter-spacing: 4px;
+  margin: 30px 0;
+}
+
+.home-productos-item-cont .productos-navegador {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  overflow: hidden;
+  background-color: rgba(237, 29, 36, 0.9);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .home-productos-item-cont .productos-navegador {
+    left: calc(50% + 25px);
+  }
+}
+
+.home-productos-item-cont .productos-navegador div {
+  position: relative;
+  width: 70px;
+  height: 140px;
+}
+
+.home-productos-item-cont .productos-navegador div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 5rem;
+  line-height: 4.5rem;
+}
+
+.home-resto-contenido {
+  background-color: #dbdbdb;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-resto-contenido .container {
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(45%, rgba(255, 255, 255, 0)), color-stop(45%, #ed1d24), color-stop(45%, #ed1d24), color-stop(50%, #ed1d24), color-stop(55%, #ed1d24), color-stop(55%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 45%, #ed1d24 45%, #ed1d24 45%, #ed1d24 50%, #ed1d24 55%, rgba(255, 255, 255, 0) 55%);
+  position: relative;
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .home-resto-contenido .container {
+    padding-top: 80px;
+  }
+}
+
+.home-resto-contenido .container h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  line-height: 5rem;
+  position: relative;
+  top: -30px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .home-resto-contenido .container h3 {
+    width: 35%;
+  }
+}
+
+.home-resto-contenido .container .usos-cotidianos {
+  background: url("../img/usos_cotidianos.jpg") center center no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.home-resto-contenido .container .home-blog {
+  background: url("../img/blog.jpg") center center no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .home-resto-contenido .container .home-blog {
+    margin-top: 0;
+  }
+}
+
+.home-resto-contenido .container .home-asesor {
+  background: url("../img/asesor.jpg") center center no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-resto-contenido .container .home-asesor h3 {
+  top: -40px;
+}
+
+.home-resto-contenido .container .go-down-arrow {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(237, 29, 36, 0.9);
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 70%);
+          transform: translate(-50%, 70%);
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.home-resto-contenido .container .go-down-arrow .flecha_down {
+  border-left: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: 0 auto 20px;
+  width: 28px;
+  height: 28px;
+}
+
+.contacto-banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacto-banner {
+    height: 500px;
+  }
+}
+
+.contacto-banner .contacto-copy-container {
+  background-color: rgba(0, 0, 0, 0.63);
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacto-banner .contacto-copy-container {
+    width: 25%;
+  }
+}
+
+.contacto-banner .contacto-copy-container .contacto-copy {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  color: #ffffff;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  width: 60vw;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+}
+
+@media screen and (min-width: 1024px) {
+  .contacto-banner .contacto-copy-container .contacto-copy {
+    right: -50px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .contacto-banner .contacto-copy-container .contacto-copy {
+    right: -230px;
+  }
+}
+
+.contacto-banner .contacto-copy-container .contacto-copy .contacto-big-copy {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacto-banner .contacto-copy-container .contacto-copy .contacto-big-copy {
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 20px;
+  }
+}
+
+.contacto-banner .contacto-copy-container .contacto-cta {
+  color: #ffffff;
+  border: none;
+  background-color: #ed1d24;
+  padding: 20px 50px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacto-banner .contacto-copy-container .contacto-cta {
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

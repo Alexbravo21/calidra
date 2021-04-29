@@ -6,7 +6,7 @@
 html { font-size: 62.5%; }
 body{font-size: 1.4rem;line-height: 1.6rem; }
 .nav-container{
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: $open-sans;
     font-size: 1.3rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -54,7 +54,7 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                 display: block;
                 width: 100%;
                 height: 100vh;
-                background-color: $dark-grey;
+                background-color: $ultra-dark-grey;
                 position: fixed;
                 z-index: 100;
                 top: 0;
@@ -83,6 +83,287 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                     margin: 0;
                 }
             }
+        }
+    }
+}
+.hero-banner{
+    width: 100%;
+    height: calc(100vh - 121px);
+    position: relative;
+    @include minWidth($lg){
+        height: 600px;
+    }
+    .hero-copy-container{
+        background-color: rgba($color: $calidra-red, $alpha: .85);
+        width: 40%;
+        height: 100%;
+        position: relative;
+        @include minWidth($lg){
+            width: 25%;
+        }
+        .hero-copy{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+            color: #ffffff;
+            font-family: $century;
+            @include fontLine(3rem);
+            font-weight: bold;
+            width: 60vw;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+            @include minWidth($lg){
+                @include fontLine(6rem);
+                right: -50px;
+                transform: translate(0, -50%);
+                width: 90%;
+            }
+            @include minWidth($xxxl){
+                right: -230px;
+            }
+            .hero-big-copy{
+                @include fontLine(4.5rem);
+                text-transform: uppercase;
+                @include minWidth($lg){
+                    @include fontLine(8rem);
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .hero-cta{
+            @include standardButton(#ffffff, #000000);
+            margin-top: 50px;
+        }
+    }
+}
+.home-productos{
+    @include minWidth($xl){
+        padding: 50px 0;
+    }
+    &-desc{
+        @include minWidth($xl){
+            padding: 0 50px 0 0;
+        }
+        h2{
+            font-family: $century;
+            @include fontLine(3rem);
+            color: $grey;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            @include minWidth($lg){
+                @include fontLine(5rem);
+            }
+        }
+        p{
+            font-family: $lato;
+            text-align: justify;
+            font-size: 1.4rem;
+            @include minWidth($lg){
+                font-size: 1.6rem;
+            }
+        }
+    }
+    &-item-cont{
+        position: relative;
+        @include minWidth($lg){
+            padding: 0 0 0 50px;
+        }
+        .home-productos-item{
+            background-color: $ultra-dark-grey;
+            padding: 40px 50px 100px;
+            color: #ffffff;
+            position: relative;
+            @include minWidth($xl){
+                padding: 40px 50px 200px;
+            }
+            .productos-numero{
+                position: absolute;
+                top: 5px;
+                left: 15px;
+                color: rgba($color: $grey, $alpha: 0.5);
+               @include fontLine(10rem);
+               font-family: $montserrat;
+            }
+            .productos-icono{
+                width: 25%;
+                display: block;
+                margin: 0 auto 30px;
+            }
+            .producto-titulo{
+                font-family: $century;
+                font-style: italic;
+                font-weight: bold;
+                @include fontLine(2.8rem);
+                text-align: center;
+                width: 45%;
+                margin: 0 auto;
+            }
+            .producto-separador{
+                margin: 30px auto;
+                width: 50px;
+                height: 3px;
+                background-color: $calidra-red;
+            }
+            .producto-desc{
+                font-family: $century;
+                @include fontLine(1.4rem);
+                color: $white-grey;
+                text-align: justify;
+            }
+            .producto-vermas{
+                font-family: $century;
+                text-transform: uppercase;
+                text-decoration: underline;
+                @include fontLine(1.2rem);
+                font-weight: bold;
+                color: $white-grey;
+                letter-spacing: 4px;
+                margin: 30px 0;
+            }
+        }   
+        .productos-navegador{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            overflow: hidden;
+            background-color: rgba($color: $calidra-red, $alpha: 0.9);
+            border-radius: 100%;
+            display: flex;
+            @include minWidth($xl){
+                left: calc(50% + 25px);
+            }
+            div{
+                position: relative;
+                width: 70px;
+                height: 140px;
+                span{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #ffffff;
+                    font-family: $century;
+                    font-size: 5rem;
+                    line-height: 4.5rem;
+                }
+            }
+        }
+    }
+}
+.home-resto-contenido{
+    background-color: $white-dark-grey;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 2;
+    .container{
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 45%, rgba(237,29,36,1) 45%, rgba(237,29,36,1) 45%, rgba(237,29,36,1) 50%, rgba(237,29,36,1) 55%, rgba(255,255,255,0) 55%);
+        position: relative;
+        padding-top: 10px;
+        @include minWidth($xl){
+            padding-top: 80px;
+        }
+        h3{
+            font-family: $montserrat;
+            @include fontLine(5rem);
+            position: relative;
+            top: -30px;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+            color: #ffffff;
+            width: 100%;
+            @include minWidth($xl){
+                width: 35%;
+            }
+        }
+        .usos-cotidianos{
+            @include homeRestoSections('../img/usos_cotidianos.jpg');
+        }
+        .home-blog{
+            @include homeRestoSections('../img/blog.jpg');
+            margin-top: 40px;
+            @include minWidth($xl){
+                margin-top: 0;
+            }
+        }
+        .home-asesor{
+            @include homeRestoSections('../img/asesor.jpg');
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+            h3{
+                top: -40px;
+            }
+        }
+        .go-down-arrow{
+            width: 160px;
+            height: 160px;
+            background-color: rgba($color: $calidra-red, $alpha: 0.9);
+            border-radius: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 70%);
+            z-index: 0;
+            display: flex;
+            align-items: flex-end;
+            .flecha_down{
+                border-left: 4px solid #ffffff;
+                border-bottom: 4px solid #ffffff;
+                transform: rotate(-45deg);
+                margin: 0 auto 20px;
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+.contacto-banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @include minWidth($lg){
+        height: 500px;
+    }
+    .contacto-copy-container{
+        background-color: rgba($color: #000000, $alpha: .63);
+        width: 40%;
+        height: 100%;
+        position: relative;
+        @include minWidth($lg){
+            width: 25%;
+        }
+        .contacto-copy{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+            color: #ffffff;
+            font-family: $century;
+            @include fontLine(1.3rem);
+            width: 60vw;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+            @include minWidth($lg){
+                right: -50px;
+                transform: translate(0, -50%);
+                width: 90%;
+            }
+            @include minWidth($xxxl){
+                right: -230px;
+            }
+            .contacto-big-copy{
+                @include fontLine(2.5rem);
+                font-weight: bold;
+                text-transform: uppercase;
+                @include minWidth($lg){
+                    @include fontLine(5rem);
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .contacto-cta{
+            @include standardButton($calidra-red, #ffffff);
+            margin-top: 50px;
         }
     }
 }
