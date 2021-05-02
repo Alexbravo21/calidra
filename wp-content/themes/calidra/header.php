@@ -1,3 +1,17 @@
+<?php 
+    global $site_url;
+    $site_url = 'http://localhost/calidra/';
+    $menu_items = Array(
+        ["corporativo", "corporativo"],
+        ["usos cotidianos", "usos-cotidianos"],
+        ["Alimenticia y agrícola", "alimenticia-y-agricola"],
+        ["química", "quimica"],
+        ["minería y siderúrgica", "mineria-y-siderurgica"],
+        ["estabilización de suelos", "estabilizacion-de-suelos"],
+        ["construcción", "construccion"],
+        ["localizador", "localizador"]
+    )
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,18 +31,6 @@
     <title>Calidra</title>
 </head>
 <body>
-    <?php 
-        $menu_items = Array(
-            "corporativo",
-            "usos cotidianos",
-            "Alimenticia y agrícola",
-            "química",
-            "minería y siderúrgica",
-            "estabilización de suelos",
-            "construcción",
-            "localizador"
-        )
-    ?>
 <div class="nav-container">
     <div class="top-menu">
         <div class="search-container container">
@@ -39,7 +41,7 @@
     </div>
     <nav class="container">
         <div class="logo">
-            <img src="<?=get_template_directory_uri()?>/assets/img/logo.png" alt="Calidra">
+            <a href="<?=$site_url ?>"><img src="<?=get_template_directory_uri()?>/assets/img/logo.png" alt="Calidra"></a>
         </div>
         <div class="burger">
             <span></span>
@@ -50,7 +52,7 @@
         <ul class="nav-ul">
             <?php 
                 foreach ($menu_items as $menu_item){
-                    echo "<li>".$menu_item."</li>";
+                    echo "<a href='".$site_url.$menu_item[1]."'><li>".$menu_item[0]."</li></a>";
                 }
             ?>
         </ul>

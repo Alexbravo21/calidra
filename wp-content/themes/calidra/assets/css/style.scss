@@ -4,10 +4,19 @@
 
 
 html { font-size: 62.5%; }
-body{font-size: 1.4rem;line-height: 1.6rem; }
+body{font-size: 1.4rem;line-height: 2rem; }
+a, a:link, a:visited, a:focus{
+    color: inherit;
+    text-decoration: none;
+}
+.section{
+    @include minWidth($lg){
+        padding: 0;
+    }
+}
 .nav-container{
     font-family: $open-sans;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
     .top-menu{
@@ -108,12 +117,12 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
             transform: translate(50%, -50%);
             color: #ffffff;
             font-family: $century;
-            @include fontLine(3rem);
+            @include fontLine(3rem, 3rem);
             font-weight: bold;
             width: 60vw;
-            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+            text-shadow: $outter-shadow;
             @include minWidth($lg){
-                @include fontLine(6rem);
+                @include fontLine(6rem, 6rem);
                 right: -50px;
                 transform: translate(0, -50%);
                 width: 90%;
@@ -122,10 +131,10 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                 right: -230px;
             }
             .hero-big-copy{
-                @include fontLine(4.5rem);
+                @include fontLine(4.5rem, 4.5rem);
                 text-transform: uppercase;
                 @include minWidth($lg){
-                    @include fontLine(8rem);
+                    @include fontLine(8rem, 8rem);
                     margin-bottom: 20px;
                 }
             }
@@ -137,21 +146,21 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
     }
 }
 .home-productos{
-    @include minWidth($xl){
+    @include minWidth($lg){
         padding: 50px 0;
     }
     &-desc{
-        @include minWidth($xl){
+        @include minWidth($lg){
             padding: 0 50px 0 0;
         }
         h2{
             font-family: $century;
-            @include fontLine(3rem);
+            @include fontLine(3rem, 3rem);
             color: $grey;
             margin-bottom: 20px;
             text-transform: uppercase;
             @include minWidth($lg){
-                @include fontLine(5rem);
+                @include fontLine(5rem, 5rem);
             }
         }
         p{
@@ -173,7 +182,7 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
             padding: 40px 50px 100px;
             color: #ffffff;
             position: relative;
-            @include minWidth($xl){
+            @include minWidth($lg){
                 padding: 40px 50px 200px;
             }
             .productos-numero{
@@ -181,7 +190,7 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                 top: 5px;
                 left: 15px;
                 color: rgba($color: $grey, $alpha: 0.5);
-               @include fontLine(10rem);
+               @include fontLine(10rem, 10rem);
                font-family: $montserrat;
             }
             .productos-icono{
@@ -193,7 +202,7 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                 font-family: $century;
                 font-style: italic;
                 font-weight: bold;
-                @include fontLine(2.8rem);
+                @include fontLine(2.8rem, 2.8rem);
                 text-align: center;
                 width: 45%;
                 margin: 0 auto;
@@ -206,7 +215,6 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
             }
             .producto-desc{
                 font-family: $century;
-                @include fontLine(1.4rem);
                 color: $white-grey;
                 text-align: justify;
             }
@@ -214,7 +222,7 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                 font-family: $century;
                 text-transform: uppercase;
                 text-decoration: underline;
-                @include fontLine(1.2rem);
+                @include fontLine(1.2rem, 1.2rem);
                 font-weight: bold;
                 color: $white-grey;
                 letter-spacing: 4px;
@@ -230,7 +238,7 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
             background-color: rgba($color: $calidra-red, $alpha: 0.9);
             border-radius: 100%;
             display: flex;
-            @include minWidth($xl){
+            @include minWidth($lg){
                 left: calc(50% + 25px);
             }
             div{
@@ -261,33 +269,33 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
         background: linear-gradient(90deg, rgba(255,255,255,0) 45%, rgba(237,29,36,1) 45%, rgba(237,29,36,1) 45%, rgba(237,29,36,1) 50%, rgba(237,29,36,1) 55%, rgba(255,255,255,0) 55%);
         position: relative;
         padding-top: 10px;
-        @include minWidth($xl){
+        @include minWidth($lg){
             padding-top: 80px;
         }
         h3{
             font-family: $montserrat;
-            @include fontLine(5rem);
+            @include fontLine(5rem, 5rem);
             position: relative;
             top: -30px;
-            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+            text-shadow: $outter-shadow;
             color: #ffffff;
             width: 100%;
-            @include minWidth($xl){
+            @include minWidth($lg){
                 width: 35%;
             }
         }
         .usos-cotidianos{
-            @include homeRestoSections('../img/usos_cotidianos.jpg');
+            @include homeRestoSections('../img/home/usos_cotidianos.jpg');
         }
         .home-blog{
-            @include homeRestoSections('../img/blog.jpg');
+            @include homeRestoSections('../img/home/blog.jpg');
             margin-top: 40px;
-            @include minWidth($xl){
+            @include minWidth($lg){
                 margin-top: 0;
             }
         }
         .home-asesor{
-            @include homeRestoSections('../img/asesor.jpg');
+            @include homeRestoSections('../img/home/asesor.jpg');
             margin-top: 40px;
             position: relative;
             z-index: 2;
@@ -340,9 +348,9 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
             transform: translate(50%, -50%);
             color: #ffffff;
             font-family: $century;
-            @include fontLine(1.3rem);
+            @include fontLine(1.3rem, 1.9rem);
             width: 60vw;
-            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
+            text-shadow: $outter-shadow;
             @include minWidth($lg){
                 right: -50px;
                 transform: translate(0, -50%);
@@ -352,11 +360,11 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
                 right: -230px;
             }
             .contacto-big-copy{
-                @include fontLine(2.5rem);
+                @include fontLine(2.5rem, 2.5rem);
                 font-weight: bold;
                 text-transform: uppercase;
                 @include minWidth($lg){
-                    @include fontLine(5rem);
+                    @include fontLine(5rem, 5rem);
                     margin-bottom: 20px;
                 }
             }
@@ -364,6 +372,453 @@ body{font-size: 1.4rem;line-height: 1.6rem; }
         .contacto-cta{
             @include standardButton($calidra-red, #ffffff);
             margin-top: 50px;
+        }
+    }
+}
+.seccion-hero{
+    width: 100%;
+    height: 450px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &.derecho{
+            justify-content: flex-end;
+        }
+        p{
+            @include fontLine(4rem, 4rem);
+            color: $ultra-dark-grey;
+            text-transform: capitalize;
+            font-family: $century;
+            font-weight: bold;
+            padding-bottom: 20px;
+            @include minWidth($lg){
+                @include fontLine(8rem, 8rem);
+            }
+            &.blanco{
+                color: #ffffff;
+            }
+        }
+    }
+}
+.quienes-somos{
+    margin: 20px 0 50px;
+    &-titulo-cont{
+        h2{
+            text-align: center;
+            color: $grey;
+            @include fontLine(4.5rem, 4.5rem);
+            text-transform: uppercase;
+            font-family: $century;
+            font-weight: bold;
+        }
+    }
+    &-mini-cont{
+        @include especificContainer(800px);
+        margin: 50px auto 70px;
+        .quienes-somos-texto{
+            margin-bottom: 30px;
+            font-family: $lato;
+            p{
+                margin-bottom: 20px;
+                text-align: justify;
+            }
+        }
+        .quienes-somos-iconos{
+            text-align: center;
+            font-family: $century;
+            font-weight: bold;
+            @include fontLine(1.6rem, 1.6rem);
+            font-style: italic;
+            p{
+                margin-top: 20px;
+            }
+        }
+    }
+    .responsabilidad-social{
+        background-color: $ultra-dark-grey;
+        padding: 20px 0;
+        position: relative;
+        @include fullWidthSection();
+        @include minWidth($lg){
+            padding: 80px 0;
+        }
+        &-imagen-cont{
+            text-align: right;
+            img{
+                width: 1000px;
+                max-width: 100%;
+            }
+        }
+        &-texto{
+            color: #ffffff;
+            text-shadow: $outter-shadow;
+            width: 100%;
+            @include minWidth($lg){
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h2{
+                font-family: $century;
+                @include fontLine(3.5rem, 3.5rem);
+                width: 900px;
+                max-width: 100%;
+                margin-bottom: 30px;
+                font-weight: bold;
+                @include minWidth($lg){
+                    @include fontLine(7rem, 7rem);
+                }
+            }
+            p{
+                margin-bottom: 20px;
+                font-family: $lato;
+                width: 750px;
+                max-width: 100%;
+            }
+        }
+    }
+    .colabora-nosotros{
+        padding: 80px 0;
+        .colabora-imagen{
+            position: relative;
+            .colabora-imagen-over{
+                height: 350px;
+                overflow: hidden;
+                @include minWidth($lg){
+                    height: 550px;
+                }
+                img{
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+            h2{
+                color: #ffffff;
+                font-family: $century;
+                @include fontLine(4rem, 4rem);
+                font-weight: bold;
+                text-shadow: $outter-shadow;
+                position: absolute;
+                left: 20px;
+                bottom: 0;
+                transform: translate(0, 25%);
+                @include minWidth($lg){
+                    @include fontLine(8rem, 8rem);
+                }
+            }
+        }
+        p{
+            color: $grey;
+            margin: 50px 0;
+            font-family: $lato;
+            @include fontLine(1.6rem, 2.2rem);
+        }
+        .colabora-vermas{
+            font-family: $century;
+            text-transform: uppercase;
+            text-decoration: underline;
+            @include fontLine(1.2rem, 1.2rem);
+            font-weight: bold;
+            color: $ultra-dark-grey;
+            letter-spacing: 4px;
+            margin: 30px 0;
+        }
+    }
+    .corporativo-iniciativas-cont{
+        background: url(../img/corporativo/hexagonos.jpg) top center no-repeat;
+        background-size: cover;
+        color: #ffffff;
+        padding: 150px 0 0;
+        @include fullWidthSection();
+        .corporativo-iniciativas{
+            width: 800px;
+            max-width: 100%;
+            margin-bottom: 80px;
+            h2{
+                font-family: $century;
+                @include fontLine(4rem, 4rem);
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+            p{
+                font-family: $lato;
+                @include fontLine(1.5rem, 2rem);
+            }
+        }
+        .corporativo-iniciativas-slider{
+            @include minWidth($lg){
+                transform: translate(0, 60%);
+                margin-top: -200px;
+                margin-bottom: 300px;
+            }
+            .columns{
+                justify-content: flex-end;
+                .corporativo-iniciativas-slider-texto{
+                    flex-basis: unset;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    font-family: $lato;
+                    @include minWidth($lg){
+                        padding-right: 50px;
+                        width: 40%
+                    }
+                    h3{
+                        @include fontLine(2.5rem, 3rem);
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        letter-spacing: 10px;
+                    }
+                }
+                .corporativo-iniciativas-slider-imagen{
+                    flex-basis: unset;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    position: relative;
+                    padding-left: 0;
+                    @include minWidth($lg){
+                        top: -80px;
+                    }
+                    .corporativo-navegador{
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 50%);
+                        overflow: hidden;
+                        background-color: rgba($color: $ultra-dark-grey, $alpha: 0.9);
+                        border-radius: 100%;
+                        display: flex;
+                        @include minWidth($lg){
+                            bottom: 50%;
+                            left: 0;
+                            transform: translate(-50%, 50%);
+                        }
+                        div{
+                            position: relative;
+                            width: 70px;
+                            height: 140px;
+                            span{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: #ffffff;
+                                font-family: $century;
+                                font-size: 5rem;
+                                line-height: 4.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.colabora-nosotros-seccion{
+    .colabora-nosotros-titulo-cont {
+        @include especificContainer(800px);
+        margin-bottom: 50px;
+        @include minWidth($lg){
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        h2{
+            text-align: center;
+            color: $grey;
+            @include fontLine(3rem, 3rem);
+            text-transform: uppercase;
+            font-family: $century;
+            font-weight: bold;
+            margin-bottom: 70px;
+            @include minWidth($lg){
+                @include fontLine(4.5rem, 4.5rem);
+            }
+        }
+    }
+    .colabora-vacantes-cont{
+        padding: 20px 0;
+        @include minWidth($lg){
+            @include fontLine(4.5rem, 4.5rem);
+            background: rgb(26,26,26);
+            background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(26,26,26,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+            padding: 80px 0;
+        }
+        .columns{
+            .column{
+                &:last-child{
+                    .colabora-vacantes{
+                        margin-bottom: 0;
+                        h3{
+                            @include fontLine(3rem, 3rem);
+                            @include minWidth($lg){
+                                @include fontLine(3rem, 3rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .colabora-vacantes{
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+            @include minWidth($lg){
+                margin-bottom: 0;
+            }
+            h3{
+                color: #ffffff;
+                text-shadow: $outter-shadow;
+                font-family: $montserrat;
+                font-weight: bold;
+                @include fontLine(4rem, 4rem);
+                position: absolute;
+                top: 0;
+                left: 20px;
+                transform: translate(0, -50%);
+                text-align: left;
+            }
+            img{
+                width: 100%;
+            }
+            p{
+                text-align: left;
+                font-family: $lato;
+                color: $grey;
+                max-width: 95%;
+                margin: 20px auto 0;
+            }
+        }
+        .column{
+            &:last-child{
+                .colabora-vacantes{
+                    h3{
+                        transform: translate(0, -30%);
+                    }
+                }
+            }
+        }
+    }
+    .colabora-creciendo-cont{
+        .colabora-creciendo{
+            background: url(../img/corporativo/hexagonos.jpg) top center no-repeat;
+            @include fullWidthSection();
+            background-size: cover;
+            color: #ffffff;
+            padding: 100px 0 50px;
+            .colabora-creciendo-int{
+                @include especificContainer(800px);
+                h3{
+                    font-family: $century;
+                    font-weight: bold;
+                    @include fontLine(4rem, 4rem);
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                p{
+                    @include fontLine(1.3rem, 1.5rem);
+                    margin-bottom: 20px;
+                    color: $white-grey;
+                    padding-left: 20px;
+                }
+                .colabora-creciendo-numeros{
+                    padding-top: 20px;
+                    .colabora-creciendo-numero-cont{
+                        padding-bottom: 20px;
+                        .colabora-creciendo-numero{
+                            &-int{
+                                width: 40px;
+                                height: 40px;
+                                background-color: $ultra-dark-grey;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                span{
+                                    display: block;
+                                    font-family: $montserrat;
+                                    @include fontLine(1.6rem, 1.3rem);
+                                }
+                            }
+                            + div{
+                                font-family: $lato;
+                                color: $white-grey;
+                                @include fontLine(1.3rem, 1.5rem);
+                                font-weight: bold;
+                                span{
+                                    font-style: italic;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .colabora-tabs{
+            text-align: center;
+            .column{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include fontLine(2rem, 1.8rem);
+                color: #ffffff;
+                font-family: $century;
+                font-weight: bold;
+                height: 100px;
+                background-color: $ultra-dark-grey;
+                border-right: 1px solid #ffffff;
+                &:last-child{
+                    border: none;
+                }
+                &.active{
+                    background-color: $calidra-red;
+                    position: relative;
+                    &::after{
+                        content: ' ';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 100%);
+                        width: 0; 
+                        height: 0; 
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-top: 20px solid $calidra-red;
+                    }
+                }
+            }
+        }
+        .colabora-tabs-contenido{
+            @include especificContainer(800px);
+            padding: 80px 10px;
+            color: $grey;
+            h4{
+                font-family: $century;
+                font-style: italic;
+                font-weight: bold;
+                @include fontLine(4rem, 4rem);
+                margin-bottom: 50px;
+            }
+            ul{
+                padding-left: 1em;
+                li{
+                    @include fontLine(1.8rem, 1.8rem);
+                    margin: 10px 0;
+                    &::before{
+                        content: "\2022";
+                        color: $calidra-red;
+                        font-weight: bold;
+                        display: inline-block; 
+                        width: 1em;
+                        margin-left: -1em;
+                    }
+                }
+            }
         }
     }
 }

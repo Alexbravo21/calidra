@@ -23,12 +23,26 @@
         line-height: 2rem;
     }
 }
-@mixin fontLine($font-size){
+@mixin fontLine($font-size, $line-height){
     font-size: $font-size;
-    line-height: $font-size;
+    line-height: $line-height;
 }
 @mixin homeRestoSections($url){
     background: url($url) center center no-repeat;
     background-size: cover;
     height: 500px;
+}
+@mixin especificContainer($width){
+    width: $width;
+    max-width: 100%;
+    margin: 0 auto;
+}
+@mixin fullWidthSection(){
+    @include maxWidth($lg - 1){
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        margin-top: -.75rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

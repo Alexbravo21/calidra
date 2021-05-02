@@ -25,7 +25,7 @@
                     <div class="column is-half">
                         <div class="home-productos-item">
                             <p class="productos-numero">1</p>
-                            <img src="<?=get_template_directory_uri()?>/assets/img/icono_productos.png" class="productos-icono" alt="">
+                            <img src="<?=get_template_directory_uri()?>/assets/img/home/icono_productos.png" class="productos-icono" alt="">
                             <p class="producto-titulo">Alimenticia y Agrícola</p>
                             <div class="producto-separador"></div>
                             <p class="producto-desc">
@@ -37,7 +37,7 @@
                     <div class="column is-half is-hidden-touch">
                         <div class="home-productos-item">
                             <p class="productos-numero">2</p>
-                            <img src="<?=get_template_directory_uri()?>/assets/img/icono_productos.png" class="productos-icono" alt="">
+                            <img src="<?=get_template_directory_uri()?>/assets/img/home/icono_productos.png" class="productos-icono" alt="">
                             <p class="producto-titulo">Alimenticia y Agrícola</p>
                             <div class="producto-separador"></div>
                             <p class="producto-desc">
