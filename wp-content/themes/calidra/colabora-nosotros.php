@@ -3,7 +3,8 @@
     Template Name: ColaboraNosotros
     */
     get_header();
-    $imageSectionHero = get_template_directory_uri() . '/assets/img/corporativo/colabora-nosotros-hero.jpg';
+    $templateUriSection = get_template_directory_uri() . '/assets/img/corporativo/';
+    $imageSectionHero = $templateUriSection . 'colabora-nosotros-hero.jpg';
     $copySide = 'derecho';
     $color = 'blanco';
     include 'section-header.php';
@@ -19,14 +20,14 @@
                 <div class="column">
                     <div class="colabora-vacantes">
                         <h3>Vacantes</h3>
-                        <img src="<?=get_template_directory_uri() ?>/assets/img/corporativo/colabora-vacantes.jpg" alt="">
+                        <img src="<?=$templateUriSection ?>colabora-vacantes.jpg" alt="">
                         <p>Si quieres formar parte de una gran familia, de un gran equipo de trabajo, estás en el lugar correcto. Conoce las vacantes que tenemos para que tu desarrollo laboral comience a crecer junto con nosotros, junto a Calidra.</p>
                     </div>
                 </div>
                 <div class="column">
                     <div class="colabora-vacantes">
                         <h3>Jóvenes en<br>entrenamiento</h3>
-                        <img src="<?=get_template_directory_uri() ?>/assets/img/corporativo/colabora-jovenes.jpg" alt="">
+                        <img src="<?=$templateUriSection ?>colabora-jovenes.jpg" alt="">
                         <p>Nuestro proyecto jóvenes en entrenamiento quiere ser un punto de contacto entre gente joven que está estudiando y que busca la posibilidad de realizar actividades para renovar la industria de la cal.</p>
                     </div>
                 </div>
@@ -112,9 +113,15 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/corporativo/equipo.png" alt="">
+                    <img src="<?=$templateUriSection ?>equipo.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<?php 
+    include 'contacto.php';
+    get_footer();
+?>

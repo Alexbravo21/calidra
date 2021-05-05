@@ -4,7 +4,8 @@
     */
     global $site_url;
     get_header();
-    $imageSectionHero = get_template_directory_uri() . '/assets/img/corporativo/corporativo.jpg';
+    $templateUriSection = get_template_directory_uri() . '/assets/img/corporativo/';
+    $imageSectionHero = $templateUriSection . 'corporativo.jpg';
     include 'section-header.php';
     $iconos_texto = Array(
         "Integridad y Honestidad",
@@ -31,7 +32,7 @@
         <div class="columns quienes-somos-iconos">
             <?php for ($i = 0; $i < count($iconos_texto); $i++):?>
                 <div class="column">
-                    <img src="<?=get_template_directory_uri() ?>/assets/img/corporativo/quienes_somos_icono<?=$i+1 ?>.jpg" alt="" class="quienes-somos-icono">
+                    <img src="<?=$templateUriSection ?>quienes_somos_icono<?=$i+1 ?>.jpg" alt="" class="quienes-somos-icono">
                     <p><?=$iconos_texto[$i] ?></p>
                 </div>
             <?php endfor;?>
@@ -39,7 +40,7 @@
     </div>
     <div class="responsabilidad-social">
         <div class="responsabilidad-social-imagen-cont">
-            <img src="<?=get_template_directory_uri() ?>/assets/img/corporativo/responsabilidad-social.jpg" alt="">
+            <img src="<?=$templateUriSection ?>responsabilidad-social.jpg" alt="">
         </div>
         <div class="responsabilidad-social-texto container">
             <h2>Responsabilidad<br>Social</h2>
@@ -51,7 +52,7 @@
     <div class="colabora-nosotros container">
         <div class="colabora-imagen">
             <div class="colabora-imagen-over">
-                <img src="<?=get_template_directory_uri() ?>/assets/img/corporativo/colabora-nosotros.jpg" alt="">
+                <img src="<?=$templateUriSection ?>colabora-nosotros.jpg" alt="">
             </div>
             <h2>Colabora con nosotros</h2>
         </div>
@@ -72,7 +73,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur</p>
                 </div>
                 <div class="corporativo-iniciativas-slider-imagen column">
-                    <img src="<?= get_template_directory_uri()?>/assets/img/corporativo/iniciativas.jpg" alt="">
+                    <img src="<?=$templateUriSection ?>iniciativas.jpg" alt="">
                     <div class="corporativo-navegador">
                         <div class="corporativo-navegador-izq">
                             <span><</span>

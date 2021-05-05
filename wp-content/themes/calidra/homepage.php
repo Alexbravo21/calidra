@@ -4,12 +4,12 @@
     */
     get_header();
 ?>
-<div class="hero-banner" style="background: url(<?=the_field('hero_banner') ?>) center no-repeat; background-size: cover">
+<div class="hero-banner" style="background: url(<?php the_field('hero_banner') ?>) center no-repeat; background-size: cover">
     <div class="hero-copy-container">
         <div class="hero-copy">
-            <p class="hero-big-copy"><?=the_field('big_copy') ?></p>
-            <p><?=the_field('small_copy') ?></p>
-            <button class="hero-cta"><?=the_field('cta_banner') ?></button>
+            <p class="hero-big-copy"><?php the_field('big_copy') ?></p>
+            <p><?php the_field('small_copy') ?></p>
+            <button class="hero-cta"><?php the_field('cta_banner') ?></button>
         </div>
     </div>
 </div>
@@ -17,8 +17,8 @@
     <div class="home-productos container">
         <div class="columns is-vcentered">
             <div class="home-productos-desc column is-4">
-                <h2><?=the_field('titulo_productos_home') ?></h2>
-                <p><?=the_field('texto_productos_home') ?></p>
+                <h2><?php the_field('titulo_productos_home') ?></h2>
+                <p><?php the_field('texto_productos_home') ?></p>
             </div>
             <div class="home-productos-item-cont column is-8">
                 <div class="columns">

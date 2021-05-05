@@ -79,6 +79,64 @@ a, a:link, a:visited, a:focus {
   }
 }
 
+footer {
+  background: url(../img/footer_pleca.png) bottom -10px center no-repeat;
+  background-size: contain;
+  font-family: "Lato", sans-serif;
+  color: #3e3e3e;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+@media screen and (max-width: 1023px) {
+  footer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top: -.75rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+footer .top-footer {
+  padding-top: 30px;
+}
+
+footer .top-footer ul {
+  font-weight: bold;
+}
+
+footer .top-footer ul li {
+  margin-bottom: 3px;
+}
+
+footer .top-footer .footer-correo i {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 10px;
+}
+
+footer .top-footer .footer-correo i:nth-of-type(2) {
+  margin-top: 30px;
+}
+
+footer .footer-bottom {
+  margin-top: 100px;
+  background-color: #ed1d24;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+}
+
+footer .footer-bottom-border {
+  display: inline-block;
+  border-right: 2px solid #ffffff;
+  padding-right: 40px;
+  margin: 7px 0;
+}
+
 .nav-container {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.5rem;
@@ -654,13 +712,32 @@ a, a:link, a:visited, a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
 }
 
+@media screen and (min-width: 1024px) {
+  .seccion-hero .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .seccion-hero .container.derecho {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .seccion-hero .container.derecho {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .seccion-hero .container p {
@@ -671,6 +748,7 @@ a, a:link, a:visited, a:focus {
   font-family: "Century Gothic", sans-serif;
   font-weight: bold;
   padding-bottom: 20px;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.65);
 }
 
 @media screen and (min-width: 1024px) {
@@ -682,6 +760,7 @@ a, a:link, a:visited, a:focus {
 
 .seccion-hero .container p.blanco {
   color: #ffffff;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
 }
 
 .quienes-somos {
@@ -1040,8 +1119,8 @@ a, a:link, a:visited, a:focus {
 
 @media screen and (min-width: 1024px) {
   .colabora-nosotros-seccion .colabora-vacantes-cont {
-    font-size: 4.5rem;
-    line-height: 4.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     background: #1a1a1a;
     background: -webkit-gradient(linear, left top, left bottom, from(#1a1a1a), color-stop(50%, #1a1a1a), color-stop(50%, white), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(180deg, #1a1a1a 0%, #1a1a1a 50%, white 50%, rgba(255, 255, 255, 0) 100%);
@@ -1274,5 +1353,240 @@ a, a:link, a:visited, a:focus {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.usos-cotidianos {
+  padding-top: 50px;
+}
+
+.usos-cotidianos-desc {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.usos-cotidianos-desc p {
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #3e3e3e;
+}
+
+.usos-cotidianos-acordeon-item {
+  padding: 30px 0;
+  border-bottom: 1px solid #808080;
+}
+
+.usos-cotidianos-acordeon-item-header p {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.2rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  .usos-cotidianos-acordeon-item-header p {
+    font-size: 4rem;
+    line-height: 3.7rem;
+  }
+}
+
+.usos-cotidianos-acordeon-item-header .acordeon-down-arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #ed1d24;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .usos-cotidianos-acordeon-item-header .acordeon-down-arrow {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.usos-cotidianos-acordeon-item-header .acordeon-down-arrow .flecha_down {
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 12px;
+  height: 12px;
+  margin-bottom: 6px;
+}
+
+@media screen and (min-width: 1024px) {
+  .usos-cotidianos-acordeon-item-header .acordeon-down-arrow .flecha_down {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.usos-cotidianos-acordeon-item-header .acordeon-down-arrow .flecha_down.is-active {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-bottom: -4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .usos-cotidianos-acordeon-item-header .acordeon-down-arrow .flecha_down.is-active {
+    margin-bottom: -5px;
+  }
+}
+
+.usos-cotidianos-acordeon-item-body {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.usos-cotidianos-acordeon-item-body.is-active {
+  max-height: 1000px;
+}
+
+.seccion-template-desc {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #3e3e3e;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: "Lato", sans-serif;
+}
+
+.seccion-template-desc p {
+  margin-bottom: 20px;
+}
+
+.seccion-template-productos h3 {
+  text-align: center;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-family: "Century Gothic", sans-serif;
+  color: #3e3e3e;
+  margin-bottom: 50px;
+}
+
+.seccion-template-localizador {
+  background: url(../img/seccion_template/localizador_back.jpg) top center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.seccion-template-localizador-cta {
+  display: inline-block;
+  text-align: left;
+}
+
+.seccion-template-localizador-cta h3 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.seccion-template-localizador-cta p {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 30px;
+}
+
+.seccion-template-localizador button {
+  color: #ffffff;
+  border: none;
+  background-color: #202020;
+  padding: 20px 50px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  .seccion-template-localizador button {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+.seccion-template-videos h3 {
+  font-size: 5rem;
+  line-height: 5rem;
+  font-family: "Century Gothic", sans-serif;
+  color: #3e3e3e;
+  margin: 50px 0;
+}
+
+.seccion-template-videos .video-cont {
+  width: 100%;
+  position: relative;
+  background: url(../img/seccion_template/video.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.seccion-template-videos .video-cont.video-big {
+  height: 500px;
+}
+
+.seccion-template-videos .video-cont.video-small {
+  height: 245px;
+}
+
+.seccion-template-videos .video-cont.video-small:first-child {
+  margin-bottom: 10px;
+}
+
+.seccion-template-videos .video-cont .black-screen {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.seccion-template-videos .video-cont .black-screen .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 100%;
+}
+
+.seccion-template-videos .video-cont .black-screen .play-button .play-arrow {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border-style: solid;
+  border-width: 22px 0 22px 44px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
