@@ -18,7 +18,7 @@
                 <i class="far fa-envelope"></i>
                 <p><a href="mailto:contacto@calidra.com.mx">contacto@calidra.com.mx</a></p>
             </div>
-            <div class="column">
+            <div class="column redes">
                 <div class="columns is-centered">
                     <div class="column is-4">
                         <div class="columns is-mobile">
@@ -41,8 +41,8 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-5">
-                    <div class="columns is-vcentered">
-                        <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        <div class="column is-8-mobile">
                             <p class="footer-aviso-border">2021 Calidra. Todos los derechos reservados</p>
                         </div>
                         <div class="column">

@@ -88,6 +88,6 @@
     </div>
 </div>
 <?php 
-    include 'contacto.php';
+    include 'contacto-banner.php';
     get_footer();
 ?>
