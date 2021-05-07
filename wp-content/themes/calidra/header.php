@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/css/bulma-collapsible.min.css">
+    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/css/style.css">
     <title>Calidra</title>
 </head>
@@ -36,7 +36,7 @@
     <div class="top-menu">
         <div class="search-container container">
             <p>blog</p>
-            <p>contacto</p>
+            <p><a href="<?=$site_url ?>contacto">contacto</a></p>
             <p><i class="fas fa-search"></i></p>
         </div>
     </div>

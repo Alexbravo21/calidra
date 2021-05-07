@@ -19,6 +19,7 @@ footer{
     background-size: contain;
     font-family: $lato;
     color: $grey;
+    border-top: 1px solid $white-dark-grey;
     @include fontLine(1.3rem, 1.8rem);
     .top-footer{
         padding-top: 30px;
@@ -974,6 +975,7 @@ footer{
         h3{
             text-align: center;
             @include fontLine(4rem, 4rem);
+            font-weight: bold;
             @include minWidth($lg){
                 @include fontLine(5rem, 5rem);
             }
@@ -1009,6 +1011,7 @@ footer{
     &-videos{
         h3{
             @include fontLine(4rem, 4rem);
+            font-weight: bold;
             @include minWidth($lg){
                 @include fontLine(5rem, 5rem);
             }
@@ -1174,6 +1177,147 @@ footer{
                     }
                 }
             }
+        }
+    }
+}
+.blog-thumbnails{
+    padding: 80px 0 50px;
+    background-color: $white-dark-grey;
+    position: relative;
+    overflow-x: hidden;
+    h2{
+        @include fontLine(5rem, 5rem);
+        color: $grey;
+        font-family: $century;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+    .slider-navigation-previous-calidra, .slider-navigation-next-calidra{
+        background-color: $calidra-red;
+        z-index: 1000;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        .flecha{
+            border-left: 4px solid #ffffff;
+            border-bottom: 4px solid #ffffff;
+            transform: rotate(45deg);
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+        }
+        @include minWidth($lg){
+            width: 150px;
+            height: 150px;
+            .flecha{
+                border-left: 4px solid #ffffff;
+                border-bottom: 4px solid #ffffff;
+                transform: rotate(45deg);
+                width: 28px;
+                height: 28px;
+                margin-right: 25px;
+            }
+        }
+    }
+    .slider-navigation-next-calidra{
+        left: auto;
+        right: 0;
+        transform: translate(50%, -50%);
+        justify-content: flex-start;
+        .flecha{
+            transform: rotate(-135deg);
+            margin-left: 15px;
+        }
+        @include minWidth($lg){
+            .flecha{
+                margin-right: 25px;
+            }
+        }
+    }
+    .container{
+        .carousel{
+            overflow: hidden;
+            .car-item{
+                padding: 0 15px;
+                img{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-family: $century;
+                    font-weight: bold;
+                    @include fontLine(1.8rem, 2.4rem);
+                    color: $ultra-light-grey;
+                    max-width: 80%;
+                }
+            }
+            .slider-navigation-previous, .slider-navigation-next{
+                display: none;
+            }
+        }
+    }
+}
+.contacto{
+    &-parrafo{
+        @include especificContainer(800px);
+        font-family: $lato;
+        color: $grey;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    &-form{
+        @include especificContainer(800px);
+        &-item{
+            padding: 15px 0;
+            label{
+                display: block;
+                font-family: $century;
+                font-weight: bold;
+                @include fontLine(2.5rem, 2.5rem);
+                color: $ultra-dark-grey;
+            }
+            input[type="text"]{
+                border: none;
+                border-bottom: 1px solid $ultra-light-grey;
+                display: block;
+                width: 100%;
+                font-family: $century;
+                padding: 5px 0;
+            }
+        }
+        &-interesado{
+            border: 1px solid $ultra-light-grey;
+            box-shadow: 0px 0px 7px 1px rgba(76,76,76,.6);
+            padding: 15px 0;
+            font-family: $lato;
+            margin-top: 50px;
+            @include fontLine(1.7rem, 2.2rem);
+            p{
+                padding: 5px 25px;
+                color: $ultra-dark-grey;
+                &.titulo{
+                    color: $ultra-light-grey;
+                }
+                &.opciones{
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $ultra-dark-grey;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        button{
+            @include standardButton($calidra-red, #ffffff);
+            margin: 50px 0;
         }
     }
 }

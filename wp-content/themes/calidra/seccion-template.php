@@ -65,5 +65,6 @@
     </div>
 </div>
 <?php 
+    include 'blog-thumbnails.php';
     get_footer();
 ?>

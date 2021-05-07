@@ -122,6 +122,7 @@
 
 
 <?php 
+    include 'blog-thumbnails.php';
     include 'contacto-banner.php';
     get_footer();
 ?>

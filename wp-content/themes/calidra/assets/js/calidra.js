@@ -8,6 +8,7 @@ const Calidra = (() => {
         init: () => {
             Calidra.burgerClick();
             Calidra.accordion();
+            Calidra.bulmaCarousel();
         },
         burgerClick: () => {
             elBurger.onclick = () => {
@@ -28,7 +29,15 @@ const Calidra = (() => {
                     }
                 }
             }
-            
+        },
+        bulmaCarousel: () => {
+            const options = {
+                slidesToShow: 3,
+                pagination: false,
+                infinite: true
+            }
+            // Initialize all elements with carousel class.
+            const carousels = bulmaCarousel.attach('.carousel', options);
         }
     }  
 })();

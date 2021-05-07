@@ -84,6 +84,7 @@ footer {
   background-size: contain;
   font-family: "Lato", sans-serif;
   color: #3e3e3e;
+  border-top: 1px solid #dbdbdb;
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
@@ -1500,6 +1501,7 @@ footer .footer-bottom-border {
   text-align: center;
   font-size: 4rem;
   line-height: 4rem;
+  font-weight: bold;
   font-family: "Century Gothic", sans-serif;
   color: #3e3e3e;
   margin-bottom: 50px;
@@ -1569,6 +1571,7 @@ footer .footer-bottom-border {
 .seccion-template-videos h3 {
   font-size: 4rem;
   line-height: 4rem;
+  font-weight: bold;
   font-family: "Century Gothic", sans-serif;
   color: #3e3e3e;
   margin: 50px 0;
@@ -1835,6 +1838,206 @@ footer .footer-bottom-border {
   .localizador-mapa-info-texto h3 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+
+.blog-thumbnails {
+  padding: 80px 0 50px;
+  background-color: #dbdbdb;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.blog-thumbnails h2 {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: #3e3e3e;
+  font-family: "Century Gothic", sans-serif;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.blog-thumbnails .slider-navigation-previous-calidra, .blog-thumbnails .slider-navigation-next-calidra {
+  background-color: #ed1d24;
+  z-index: 1000;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+.blog-thumbnails .slider-navigation-previous-calidra .flecha, .blog-thumbnails .slider-navigation-next-calidra .flecha {
+  border-left: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .blog-thumbnails .slider-navigation-previous-calidra, .blog-thumbnails .slider-navigation-next-calidra {
+    width: 150px;
+    height: 150px;
+  }
+  .blog-thumbnails .slider-navigation-previous-calidra .flecha, .blog-thumbnails .slider-navigation-next-calidra .flecha {
+    border-left: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 28px;
+    height: 28px;
+    margin-right: 25px;
+  }
+}
+
+.blog-thumbnails .slider-navigation-next-calidra {
+  left: auto;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.blog-thumbnails .slider-navigation-next-calidra .flecha {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .blog-thumbnails .slider-navigation-next-calidra .flecha {
+    margin-right: 25px;
+  }
+}
+
+.blog-thumbnails .container .carousel {
+  overflow: hidden;
+}
+
+.blog-thumbnails .container .carousel .car-item {
+  padding: 0 15px;
+}
+
+.blog-thumbnails .container .carousel .car-item img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.blog-thumbnails .container .carousel .car-item p {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #808080;
+  max-width: 80%;
+}
+
+.blog-thumbnails .container .carousel .slider-navigation-previous, .blog-thumbnails .container .carousel .slider-navigation-next {
+  display: none;
+}
+
+.contacto-parrafo {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  color: #3e3e3e;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contacto-form {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contacto-form-item {
+  padding: 15px 0;
+}
+
+.contacto-form-item label {
+  display: block;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #202020;
+}
+
+.contacto-form-item input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #808080;
+  display: block;
+  width: 100%;
+  font-family: "Century Gothic", sans-serif;
+  padding: 5px 0;
+}
+
+.contacto-form-interesado {
+  border: 1px solid #808080;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(76, 76, 76, 0.6);
+          box-shadow: 0px 0px 7px 1px rgba(76, 76, 76, 0.6);
+  padding: 15px 0;
+  font-family: "Lato", sans-serif;
+  margin-top: 50px;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+
+.contacto-form-interesado p {
+  padding: 5px 25px;
+  color: #202020;
+}
+
+.contacto-form-interesado p.titulo {
+  color: #808080;
+}
+
+.contacto-form-interesado p.opciones {
+  cursor: pointer;
+}
+
+.contacto-form-interesado p.opciones:hover {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+.contacto-form button {
+  color: #ffffff;
+  border: none;
+  background-color: #ed1d24;
+  padding: 20px 50px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacto-form button {
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
