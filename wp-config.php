@@ -26,7 +26,7 @@ define( 'DB_NAME', 'calidra_db' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'niWniwf.$7889q89w' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
