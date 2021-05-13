@@ -23,13 +23,13 @@
 define( 'DB_NAME', 'calidra_db' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'my14dev' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'niWniwf.$7889q89w' );
+define( 'DB_PASSWORD', 'mytow7vn45rap' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'localhost:3306' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
