@@ -1,6 +1,6 @@
 <?php 
-    global $site_url;
-    $site_url = 'http://localhost/calidra/';
+    global $calidra_base_url;
+    $calidra_base_url = 'http://localhost/calidra/';
     $menu_items = Array(
         ["corporativo", "corporativo"],
         ["usos cotidianos", "usos-cotidianos"],
@@ -36,13 +36,13 @@
     <div class="top-menu">
         <div class="search-container container">
             <p>blog</p>
-            <p><a href="<?=$site_url ?>contacto">contacto</a></p>
+            <p><a href="<?=$calidra_base_url ?>contacto">contacto</a></p>
             <p><i class="fas fa-search"></i></p>
         </div>
     </div>
     <nav class="container">
         <div class="logo">
-            <a href="<?=$site_url ?>"><img src="<?=get_template_directory_uri()?>/assets/img/logo.png" alt="Calidra"></a>
+            <a href="<?=$calidra_base_url ?>"><img src="<?=get_template_directory_uri()?>/assets/img/logo.png" alt="Calidra"></a>
         </div>
         <div class="burger">
             <span></span>
@@ -53,7 +53,7 @@
         <ul class="nav-ul">
             <?php 
                 foreach ($menu_items as $menu_item){
-                    echo "<a href='".$site_url.$menu_item[1]."'><li>".$menu_item[0]."</li></a>";
+                    echo "<a href='".$calidra_base_url.$menu_item[1]."'><li>".$menu_item[0]."</li></a>";
                 }
             ?>
         </ul>

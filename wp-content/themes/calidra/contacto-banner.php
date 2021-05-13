@@ -3,7 +3,7 @@
         <div class="contacto-copy">
             <p class="contacto-big-copy">¡Contáctanos!</p>
             <p>¿Tienes alguna duda? Nosotros tenemos la respuesta a tus preguntas sobre nuestros productos</p>
-            <a href="<?=$site_url ?>contacto"><button class="contacto-cta">Contactar</button></a>
+            <a href="<?=$calidra_base_url ?>contacto"><button class="contacto-cta">Contactar</button></a>
         </div>
     </div>
 </div>

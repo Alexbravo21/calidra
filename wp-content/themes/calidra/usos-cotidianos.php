@@ -2,7 +2,7 @@
     /*
     Template Name: Usos cotidianos
     */
-    global $site_url;
+    global $calidra_base_url;
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/usos_cotidianos/';
     $imageSectionHero = $templateUriSection . 'usos-cotidianos.jpg';

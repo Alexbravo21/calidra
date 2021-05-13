@@ -2,7 +2,7 @@
     /*
     Template Name: Corporativo
     */
-    global $site_url;
+    global $calidra_base_url;
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/corporativo/';
     $imageSectionHero = $templateUriSection . 'corporativo.jpg';
@@ -57,7 +57,7 @@
             <h2>Colabora con nosotros</h2>
         </div>
         <p>Si quieres formar parte de una gran familia, de un gran equipo de trabajo, estás en el lugar correcto. Conoce las vacantes que tenemos para que tu desarrollo laboral comience a crecer junto con nosotros, junto a Calidra.</p>
-        <a href="<?=$site_url ?>corporativo/colabora-con-nosotros"><p class="colabora-vermas">ver más</p></a>
+        <a href="<?=$calidra_base_url ?>corporativo/colabora-con-nosotros"><p class="colabora-vermas">ver más</p></a>
     </div>
     <div class="corporativo-iniciativas-cont">
         <div class="container">

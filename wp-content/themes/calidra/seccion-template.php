@@ -2,7 +2,7 @@
     /*
     Template Name: Seccion template
     */
-    global $site_url;
+    global $calidra_base_url;
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/seccion_template/';
     $imageSectionHero = get_field('hero_image');
