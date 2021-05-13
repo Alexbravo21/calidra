@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'calidra_db' );
 
 /** MySQL database username */
-define( 'DB_USER', 'my14dev' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'mytow7vn45rap' );
+define( 'DB_PASSWORD', '' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -77,7 +77,7 @@ $table_prefix = 'cal_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* That's all, stop editing! Happy publishing. */
 
