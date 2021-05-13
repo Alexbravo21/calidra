@@ -1,6 +1,6 @@
 <?php 
     global $calidra_base_url;
-    $calidra_base_url = 'http://localhost/calidra/';
+    $calidra_base_url = '/';
     $menu_items = Array(
         ["corporativo", "corporativo"],
         ["usos cotidianos", "usos-cotidianos"],
