@@ -1,0 +1,1 @@
+<h2>Adios <?=get_the_title() ?></h2>

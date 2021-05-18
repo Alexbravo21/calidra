@@ -376,6 +376,7 @@ footer .footer-bottom-border {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  cursor: pointer;
   margin-top: 50px;
 }
 
@@ -717,6 +718,7 @@ footer .footer-bottom-border {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  cursor: pointer;
   margin-top: 50px;
 }
 
@@ -1514,131 +1516,6 @@ footer .footer-bottom-border {
   }
 }
 
-.seccion-template-localizador {
-  background: url(../img/seccion_template/localizador_back.jpg) top center no-repeat;
-  background-size: cover;
-  color: #ffffff;
-  padding-top: 80px;
-  text-align: center;
-}
-
-@media screen and (max-width: 1023px) {
-  .seccion-template-localizador {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    margin-top: -.75rem;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-.seccion-template-localizador-cta {
-  display: inline-block;
-  text-align: left;
-}
-
-.seccion-template-localizador-cta h3 {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 3rem;
-  line-height: 3.5rem;
-  margin-bottom: 20px;
-}
-
-.seccion-template-localizador-cta p {
-  font-family: "Lato", sans-serif;
-  margin-bottom: 30px;
-}
-
-.seccion-template-localizador button {
-  color: #ffffff;
-  border: none;
-  background-color: #202020;
-  padding: 20px 50px;
-  font-family: 'Century Gothic', sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width: 1024px) {
-  .seccion-template-localizador button {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-}
-
-.seccion-template-videos h3 {
-  font-size: 4rem;
-  line-height: 4rem;
-  font-weight: bold;
-  font-family: "Century Gothic", sans-serif;
-  color: #3e3e3e;
-  margin: 50px 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .seccion-template-videos h3 {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
-}
-
-.seccion-template-videos .video-cont {
-  width: 100%;
-  position: relative;
-  background: url(../img/seccion_template/video.jpg) center center no-repeat;
-  background-size: cover;
-}
-
-.seccion-template-videos .video-cont.video-big {
-  height: 500px;
-}
-
-.seccion-template-videos .video-cont.video-small {
-  height: 245px;
-}
-
-.seccion-template-videos .video-cont.video-small:first-child {
-  margin-bottom: 10px;
-}
-
-.seccion-template-videos .video-cont .black-screen {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.seccion-template-videos .video-cont .black-screen .play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  border-radius: 100%;
-}
-
-.seccion-template-videos .video-cont .black-screen .play-button .play-arrow {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 44px;
-  height: 44px;
-  border-style: solid;
-  border-width: 22px 0 22px 44px;
-  border-color: transparent transparent transparent #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-40%, -50%);
-          transform: translate(-40%, -50%);
-}
-
 .localizador {
   padding-top: 50px;
   padding-bottom: 0;
@@ -1719,6 +1596,7 @@ footer .footer-bottom-border {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  cursor: pointer;
   display: inline-block;
   width: 20%;
   height: 50px;
@@ -2031,6 +1909,7 @@ footer .footer-bottom-border {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  cursor: pointer;
   margin: 50px 0;
 }
 
@@ -2039,5 +1918,135 @@ footer .footer-bottom-border {
     font-size: 2rem;
     line-height: 2rem;
   }
+}
+
+.template-localizador {
+  background: url(../img/seccion_template/localizador_back.jpg) top center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding-top: 80px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .template-localizador {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top: -.75rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.template-localizador-cta {
+  display: inline-block;
+  text-align: left;
+}
+
+.template-localizador-cta h3 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.template-localizador-cta p {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 30px;
+}
+
+.template-localizador button {
+  color: #ffffff;
+  border: none;
+  background-color: #202020;
+  padding: 20px 50px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .template-localizador button {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+.template-videos {
+  padding-bottom: 80px;
+}
+
+.template-videos h3 {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: bold;
+  font-family: "Century Gothic", sans-serif;
+  color: #3e3e3e;
+  margin: 50px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .template-videos h3 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+.template-videos .video-cont {
+  width: 100%;
+  position: relative;
+  background: url(../img/seccion_template/video.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.template-videos .video-cont.video-big {
+  height: 500px;
+}
+
+.template-videos .video-cont.video-small {
+  height: 245px;
+}
+
+.template-videos .video-cont.video-small:first-child {
+  margin-bottom: 10px;
+}
+
+.template-videos .video-cont .black-screen {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.template-videos .video-cont .black-screen .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 100%;
+}
+
+.template-videos .video-cont .black-screen .play-button .play-arrow {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border-style: solid;
+  border-width: 22px 0 22px 44px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
