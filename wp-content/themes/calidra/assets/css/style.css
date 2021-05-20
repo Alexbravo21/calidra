@@ -2050,16 +2050,6 @@ footer .footer-bottom-border {
           transform: translate(-40%, -50%);
 }
 
-@media screen and (max-width: 1023px) {
-  .producto-interior {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    margin-top: -.75rem;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 .producto-interior-cont {
   padding: 50px 0;
   width: 1200px;
@@ -2184,6 +2174,16 @@ footer .footer-bottom-border {
   background-color: #202020;
   padding: 50px 0 80px;
   text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .producto-interior-otros {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top: -.75rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .producto-interior-otros-cont {

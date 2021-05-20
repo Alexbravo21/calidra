@@ -1324,7 +1324,6 @@ footer{
     }
 }
 .producto-interior{
-    @include fullWidthSection();
     &-cont{
         padding: 50px 0;
         @include especificContainer(1200px);
@@ -1405,6 +1404,7 @@ footer{
         background-color: $ultra-dark-grey;
         padding: 50px 0 80px;
         text-align: center;
+        @include fullWidthSection();
         &-cont{
             @include especificContainer(1200px);
             h2{

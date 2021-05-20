@@ -2,7 +2,7 @@
 *.css.map
 # Ignore css files in the assets/sass folder
 /wp-content/themes/calidra/assets/css/scss/*.css
-/wp-content/themes/calidra/assets/css/scss/*.css.map
+/wp-content/themes/calidra/assets/css/*.css.map
 
 #Ignnore all css and sass files created in wp-admin
 /wp-admin/**/*.css
