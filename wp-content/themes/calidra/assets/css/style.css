@@ -2049,4 +2049,169 @@ footer .footer-bottom-border {
   -webkit-transform: translate(-40%, -50%);
           transform: translate(-40%, -50%);
 }
+
+@media screen and (max-width: 1023px) {
+  .producto-interior {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top: -.75rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.producto-interior-cont {
+  padding: 50px 0;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.producto-interior-cont h2 {
+  color: #3e3e3e;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Century Gothic", sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+  .producto-interior-cont-circulo {
+    margin-left: -15%;
+  }
+}
+
+.producto-interior-cont-circulo-int {
+  border-radius: 100%;
+  border: 2px solid #3e3e3e;
+  width: 250px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .producto-interior-cont-circulo-int {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.producto-interior-cont-circulo-int img {
+  max-height: 80%;
+  max-width: 80%;
+  margin-left: -20px;
+}
+
+.producto-interior-cont-ficha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .producto-interior-cont-ficha {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.producto-interior-cont-ficha span:first-of-type {
+  width: 80px;
+  height: 80px;
+  background-color: #ed1d24;
+  display: block;
+  border-radius: 100%;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 4rem;
+  line-height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: normal;
+  margin-right: 20px;
+}
+
+.producto-interior-cont-ficha span:nth-of-type(2) {
+  font-family: "Century Gothic", sans-serif;
+  color: #ed1d24;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.producto-interior-cont-desc {
+  font-family: "Lato", sans-serif;
+  color: #3e3e3e;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+@media screen and (min-width: 1024px) {
+  .producto-interior-cont-desc {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+}
+
+.producto-interior-otros {
+  background-color: #202020;
+  padding: 50px 0 80px;
+  text-align: center;
+}
+
+.producto-interior-otros-cont {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.producto-interior-otros-cont h2 {
+  color: #ffffff;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 50px;
+}
+
+.producto-interior-otros-cont-image {
+  background-color: #ffffff;
+}
+
+.producto-interior-otros-cont-image img {
+  max-width: 80%;
+}
+
+.producto-interior-otros-cont-text {
+  background-color: #ed1d24;
+  color: #ffffff;
+  padding: 15px;
+}
 /*# sourceMappingURL=style.css.map */

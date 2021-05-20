@@ -1323,3 +1323,108 @@ footer{
         }
     }
 }
+.producto-interior{
+    @include fullWidthSection();
+    &-cont{
+        padding: 50px 0;
+        @include especificContainer(1200px);
+        h2{
+            color: $grey;
+            @include fontLine(5rem, 5rem);
+            font-style: italic;
+            font-weight: bold;
+            font-family: $century;
+        }
+        &-circulo{
+            @include minWidth($lg){
+                margin-left: -15%;
+            }
+            &-int{
+                border-radius: 100%;
+                border: 2px solid $grey;
+                width: 250px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                @include minWidth($lg){
+                    width: 500px;
+                    height: 500px;
+                }
+                img{
+                    max-height: 80%;
+                    max-width: 80%;
+                    margin-left: -20px;
+                }
+            }
+        }
+        &-ficha{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include minWidth($lg){
+                justify-content: flex-start;
+            }
+            span{
+                &:first-of-type{
+                    width: 80px;
+                    height: 80px;
+                    background-color: $calidra-red;
+                    display: block;
+                    border-radius: 100%;
+                    color: rgba($color: #ffffff, $alpha: .9);
+                    @include fontLine(4rem, 4rem);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: normal;
+                    margin-right: 20px;
+                }
+                &:nth-of-type(2){
+                    font-family: $century;
+                    color: $calidra-red;
+                    font-weight: bold;
+                    @include fontLine(1.6rem, 1.6rem);
+                }
+            }
+        }
+        &-desc{
+            font-family: $lato;
+            color: $grey;
+            @include especificContainer(800px);
+            margin-top: 30px;
+            font-weight: bold;
+            text-align: justify;
+            @include minWidth($lg){
+                @include fontLine(1.6rem, 2.1rem);
+            }
+        }
+    }
+    &-otros{
+        background-color: $ultra-dark-grey;
+        padding: 50px 0 80px;
+        text-align: center;
+        &-cont{
+            @include especificContainer(1200px);
+            h2{
+                color: #ffffff;
+                font-family: $century;
+                font-weight: bold;
+                @include fontLine(3.5rem, 3.5rem);
+                margin-bottom: 50px;
+            }
+            &-image{
+                background-color: #ffffff;
+                img{
+                    max-width: 80%;
+                }
+            }
+            &-text{
+                background-color: $calidra-red;
+                color: #ffffff;
+                padding: 15px;
+            }
+        }
+    }
+}

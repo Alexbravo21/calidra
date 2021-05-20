@@ -1,17 +1,112 @@
 <?php
 
 get_header();
-$category_array = get_the_category();
+$categoryArray = Array(
+    'alimenticia' => 35,
+    'quimica' => 47,
+    'mineria' => 52,
+    'estabilizacion' => 57,
+    'construccion' => 61,
+);
+$category = get_field('tipo_producto')["value"];
 $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
-$imageSectionHero = $templateUriSection . 'localizador.jpg';
+$imageSectionHero = get_field('hero_image', $categoryArray[$category]);
+$copySide = 'derecho';
 $color = 'blanco';
 include 'section-header.php';
+$args = array(
+	'numberposts'	=> 4,
+	'post_type'		=> 'producto',
+    'orderby'        => 'rand'
+	//'meta_key'		=> 'tipo_producto',
+	//'meta_value'	=> 'alimenticia'
+);
+$productos_query = new WP_Query( $args );
 
 ?>
 <div class="producto-interior section">
-    <h2>Hola <?=get_the_title() ?></h2>
-    <p><?php print_r($category_array[0]->name); ?></p>
-    <?php include 'localizador-videos-template.php'; ?>
+    <div class="producto-interior-cont">
+        <div class="columns">
+            <div class="column is-5">
+                <h2><?=get_the_title() ?></h2>
+            </div>
+            <div class="column is-5 producto-interior-cont-circulo">
+                <div class="producto-interior-cont-circulo-int">
+                    <img src="<?=the_post_thumbnail_url(); ?>" alt="">
+                </div>
+            </div>
+            <div class="column is-3 is-align-self-flex-end producto-interior-cont-ficha">
+                <span><i class="far fa-file-alt"></i></span><span>FICHA TÉCNICA</span>
+            </div>
+        </div>
+        <div class="producto-interior-cont-desc"><?=get_the_content(); ?></div>
+    </div>
+    <div class="template-localizador">
+        <div class="columns is-vcentered">
+            <div class="column">
+                <div class="template-localizador-cta">
+                    <h3><strong>Busca</strong> a tu asesor</h3>
+                    <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
+                    <button>LOCALIZAR</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="producto-interior-otros">
+        <div class="producto-interior-otros-cont">
+            <h2>OTROS PRODUCTOS</h2>
+            <div class="columns is-justify-content-space-between">
+                <?php if($productos_query->have_posts()) : ?>
+                    <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
+                        <div class="column is-one-quarter">
+                            <div class="producto-interior-otros-cont-image">
+                                <img src="<?=the_post_thumbnail_url(); ?>" alt="">
+                            </div>
+                            <div class="producto-interior-otros-cont-text">
+                                <h3><?=get_the_title(); ?></h3>
+                                <p><?=get_field('tipo_producto')["label"]; ?></p>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_query(); ?>
+            </div>
+        </div>
+    </div>
+    <div class="template-videos container">
+        <h3>Videos</h3>
+        <div class="template-videos-cont">
+            <div class="columns">
+                <div class="column is-8">
+                    <div class="video-big video-cont">
+                        <div class="black-screen">
+                            <div class="play-button">
+                                <div class="play-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="video-small video-cont">
+                        <div class="black-screen">
+                            <div class="play-button">
+                                <div class="play-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-small video-cont">
+                        <div class="black-screen">
+                            <div class="play-button">
+                                <div class="play-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
