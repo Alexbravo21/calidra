@@ -35,7 +35,7 @@
 <div class="nav-container">
     <div class="top-menu">
         <div class="search-container container">
-            <p>blog</p>
+            <p><a href="<?=$calidra_base_url ?>blog">blog</a></p>
             <p><a href="<?=$calidra_base_url ?>contacto">contacto</a></p>
             <p><i class="fas fa-search"></i></p>
         </div>
