@@ -1499,6 +1499,13 @@ footer .footer-bottom-border {
   margin-bottom: 20px;
 }
 
+.seccion-template-productos {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0 50px;
+}
+
 .seccion-template-productos h3 {
   text-align: center;
   font-size: 4rem;
@@ -1506,7 +1513,7 @@ footer .footer-bottom-border {
   font-weight: bold;
   font-family: "Century Gothic", sans-serif;
   color: #3e3e3e;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1514,6 +1521,74 @@ footer .footer-bottom-border {
     font-size: 5rem;
     line-height: 5rem;
   }
+}
+
+.seccion-template-productos-cont {
+  border: 1px solid #3e3e3e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.seccion-template-productos-cont-image {
+  padding: 20px;
+}
+
+.seccion-template-productos-cont-text {
+  color: #ffffff;
+  background-color: #202020;
+  padding: 50px 15px 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.seccion-template-productos-cont-text h4 {
+  font-family: "Century Gothic", sans-serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.seccion-template-productos-cont-text p {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+}
+
+.seccion-template-productos-cont-text-mas {
+  background-color: rgba(237, 29, 36, 0.7);
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.seccion-template-productos-cont-text-mas span {
+  display: block;
+  width: 50%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.seccion-template-productos-cont-text-mas span:nth-of-type(2) {
+  width: 5px;
+  height: 50%;
 }
 
 .localizador {

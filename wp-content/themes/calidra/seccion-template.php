@@ -9,6 +9,14 @@
     $copySide = 'derecho';
     $color = 'blanco';
     include 'section-header.php';
+    $args = array(
+        'numberposts'	=> 4,
+        'post_type'		=> 'producto',
+        'orderby'        => 'rand',
+        'meta_key'		=> 'tipo_producto',
+        'meta_value'	=> 'alimenticia'
+    );
+    $productos_query = new WP_Query( $args );
 ?>
 <div class="seccion-template section">
     <div class="seccion-template-desc">
@@ -16,6 +24,26 @@
     </div>
     <div class="seccion-template-productos">
         <h3>NUESTROS PRODUCTOS</h3>
+        <div class="columns is-justify-content-space-between">
+            <?php if($productos_query->have_posts()) : ?>
+                <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
+                    <div class="column is-one-quarter is-flex">
+                        <div class="seccion-template-productos-cont">
+                            <div class="seccion-template-productos-cont-image">
+                                <img src="<?=the_post_thumbnail_url(); ?>" alt="">
+                            </div>
+                            <div class="seccion-template-productos-cont-text">
+                                <a href="<?=get_post_permalink(); ?>"><div class="seccion-template-productos-cont-text-mas">
+                                    <span></span><span></span>
+                                </div></a>
+                                <h4><?=get_the_title(); ?></h4>
+                                <p><?=get_field('intro_producto'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; wp_reset_query(); ?>
+        </div>
     </div>
     <div class="template-localizador">
         <div class="columns is-vcentered">

@@ -62,13 +62,15 @@ $productos_query = new WP_Query( $args );
                 <?php if($productos_query->have_posts()) : ?>
                     <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
                         <div class="column is-one-quarter">
-                            <div class="producto-interior-otros-cont-image">
-                                <img src="<?=the_post_thumbnail_url(); ?>" alt="">
-                            </div>
-                            <div class="producto-interior-otros-cont-text">
-                                <h3><?=get_the_title(); ?></h3>
-                                <p><?=get_field('tipo_producto')["label"]; ?></p>
-                            </div>
+                            <a href="<?=get_post_permalink(); ?>">
+                                <div class="producto-interior-otros-cont-image">
+                                    <img src="<?=the_post_thumbnail_url(); ?>" alt="">
+                                </div>
+                                <div class="producto-interior-otros-cont-text">
+                                    <h3><?=get_the_title(); ?></h3>
+                                    <p><?=get_field('tipo_producto')["label"]; ?></p>
+                                </div>
+                            </a>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; wp_reset_query(); ?>
