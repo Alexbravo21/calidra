@@ -3,12 +3,17 @@ const Calidra = (() => {
     const elBurger = document.querySelector('.burger');
     const elUl = document.querySelector('.nav-ul');
     const acordeonButtons = document.querySelectorAll('.acordeon-down-arrow');
+    const iniciativasDer = document.querySelector('.corporativo-navegador-der');
+    const iniciativasIzq = document.querySelector('.corporativo-navegador-izq');
 
     return{
         init: () => {
             Calidra.burgerClick();
             Calidra.accordion();
-            Calidra.bulmaCarousel();
+            Calidra.bulmaCarousel('.carousel', 3);
+            Calidra.bulmaCarousel('.home-carousel', 2);
+            iniciativasDer.onclick = () => {Calidra.iniciativasCarousel('derecha')};
+            iniciativasIzq.onclick = () => {Calidra.iniciativasCarousel('izquierda')};
         },
         burgerClick: () => {
             elBurger.onclick = () => {
@@ -30,14 +35,17 @@ const Calidra = (() => {
                 }
             }
         },
-        bulmaCarousel: () => {
+        bulmaCarousel: (clase, slides) => {
             const options = {
-                slidesToShow: 3,
+                slidesToShow: slides,
                 pagination: false,
                 infinite: true
             }
             // Initialize all elements with carousel class.
-            const carousels = bulmaCarousel.attach('.carousel', options);
+            const carousels = bulmaCarousel.attach(clase, options);
+        },
+        iniciativasCarousel: (lado) => {
+            console.log(lado)
         }
     }  
 })();

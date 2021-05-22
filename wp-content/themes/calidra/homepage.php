@@ -3,6 +3,14 @@
     Template Name: HomePage
     */
     get_header();
+    $productos_slider = [
+        'alimenticia-y-agricola' => ['Alimenticia y Agrícola', 'La cal dentro del ramo agrícola se usa para la neutralización de suelos ácidos, además de aportar Calcio y magnesio a los cultivos.'],
+        'quimica' => ['Química', 'Se usa como materia prima en muchos procesos químicos y como coadyuvante en los procesos del cuidado del medio ambiente.'],
+        'mineria-y-siderurgica' => ['Minería y Siderúrigica', 'En la minería, la cal estabiliza el pH de los minerales, en sus diversos procesos.
+        En la siderurgia facilita la purificación del acero y asegura la protección de recubrimiento refractario de los hornos fundidores del acero.'],
+        'estabilizacion-de-suelos' => ['Estabilización de suelos', 'La estabilización con cal es un proceso químico entre los minerales de arcilla presentes en el suelo y el calcio, que propicia la disminución de plasticidad gracias a las reacciones puzolánicas.'],
+        'construccion' => ['Construcción', 'Es utilizado para la elaboración de mezclas de albañilería, morteros a base de cal, repellos, acabados finos, acabados gruesos, pegado de block, pegado de ladrillo, pegado de adobe.']
+    ];
 ?>
 <div class="hero-banner" style="background: url(<?php the_field('hero_banner') ?>) center no-repeat; background-size: cover">
     <div class="hero-copy-container">
@@ -21,37 +29,25 @@
                 <p><?php the_field('texto_productos_home') ?></p>
             </div>
             <div class="home-productos-item-cont column is-8">
-                <div class="columns">
-                    <div class="column is-half">
+                <div class="home-carousel">
+                <?php $cont = 1; foreach($productos_slider as $key => $cat) :?>
+                    <div class="item-<?=$cont ?> productos-carousel-item">
                         <div class="home-productos-item">
-                            <p class="productos-numero">1</p>
-                            <img src="<?=get_template_directory_uri()?>/assets/img/home/icono_productos.png" class="productos-icono" alt="">
-                            <p class="producto-titulo">Alimenticia y Agrícola</p>
+                            <p class="productos-numero"><?=$cont ?></p>
+                            <img src="<?=get_template_directory_uri()?>/assets/img/home/icono_productos-<?=$cont ?>.png" class="productos-icono" alt="">
+                            <p class="producto-titulo"><?=$cat[0] ?></p>
                             <div class="producto-separador"></div>
-                            <p class="producto-desc">
-                                La cal dentro del ramo agrícola se usa para la neutralización de suelos ácidos, además de aportar Calcio y magnesio a los cultivos.
-                            </p>
-                            <p class="producto-vermas">ver más</p>
+                            <p class="producto-desc"><?=$cat[1] ?></p>
+                            <p class="producto-vermas"><a href="<?=$calidra_base_url.$key?>">ver más</a></p>
                         </div>
                     </div>
-                    <div class="column is-half is-hidden-touch">
-                        <div class="home-productos-item">
-                            <p class="productos-numero">2</p>
-                            <img src="<?=get_template_directory_uri()?>/assets/img/home/icono_productos.png" class="productos-icono" alt="">
-                            <p class="producto-titulo">Alimenticia y Agrícola</p>
-                            <div class="producto-separador"></div>
-                            <p class="producto-desc">
-                                La cal dentro del ramo agrícola se usa para la neutralización de suelos ácidos, además de aportar Calcio y magnesio a los cultivos.
-                            </p>
-                            <p class="producto-vermas">ver más</p>
-                        </div>
-                    </div>
+                <?php $cont = $cont +1; endforeach; ?>
                 </div>
                 <div class="productos-navegador">
-                    <div class="productos-navegador-izq">
+                    <div class="productos-navegador-izq slider-navigation-previous-calidra">
                         <span><</span>
                     </div>
-                    <div class="productos-navegador-der">
+                    <div class="productos-navegador-der slider-navigation-next-calidra">
                         <span>></span>
                     </div>
                 </div>

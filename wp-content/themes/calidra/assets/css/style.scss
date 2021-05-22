@@ -14,6 +14,9 @@ a, a:link, a:visited, a:focus{
         padding: 0;
     }
 }
+.slider-navigation-previous, .slider-navigation-next{
+    display: none;
+}
 footer{
     background: url(../img/footer_pleca.png) bottom -10px center no-repeat;
     background-size: contain;
@@ -231,23 +234,33 @@ footer{
     }
     &-item-cont{
         position: relative;
-        @include minWidth($lg){
-            padding: 0 0 0 50px;
+        // @include minWidth($lg){
+        //     padding: 0 0 0 50px;
+        // }
+        overflow: hidden;
+        .slider-item{
+            @include minWidth($lg){
+                padding: 0 15px;
+            }
+        }
+        .productos-carousel-item{
+            height: 100%;
         }
         .home-productos-item{
             background-color: $ultra-dark-grey;
-            padding: 40px 50px 100px;
+            padding: 40px 10px 100px;
             color: #ffffff;
             position: relative;
+            height: 100%;
             @include minWidth($lg){
-                padding: 40px 50px 200px;
+                padding: 40px 50px 150px;
             }
             .productos-numero{
                 position: absolute;
                 top: 5px;
                 left: 15px;
                 color: rgba($color: $grey, $alpha: 0.5);
-               @include fontLine(10rem, 10rem);
+               @include fontLine(12rem, 12rem);
                font-family: $montserrat;
             }
             .productos-icono{
@@ -295,13 +308,11 @@ footer{
             background-color: rgba($color: $calidra-red, $alpha: 0.9);
             border-radius: 100%;
             display: flex;
-            @include minWidth($lg){
-                left: calc(50% + 25px);
-            }
             div{
                 position: relative;
                 width: 70px;
                 height: 140px;
+                cursor: pointer;
                 span{
                     position: absolute;
                     top: 50%;
@@ -311,6 +322,7 @@ footer{
                     font-family: $century;
                     font-size: 5rem;
                     line-height: 4.5rem;
+                    user-select: none; 
                 }
             }
         }
@@ -666,6 +678,7 @@ footer{
                             position: relative;
                             width: 70px;
                             height: 140px;
+                            cursor: pointer;
                             span{
                                 position: absolute;
                                 top: 50%;
@@ -675,6 +688,7 @@ footer{
                                 font-family: $century;
                                 font-size: 5rem;
                                 line-height: 4.5rem;
+                                user-select: none;
                             }
                         }
                     }
@@ -1230,8 +1244,93 @@ footer{
                     max-width: 80%;
                 }
             }
-            .slider-navigation-previous, .slider-navigation-next{
-                display: none;
+        }
+    }
+}
+.blog-section{
+    padding: 80px 0;
+    @include especificContainer(1100px);
+    &-mini-text{
+        h3{
+            @include fontLine(3rem, 3rem);
+            color: $ultra-dark-grey;
+            font-style: italic;  
+            font-weight: bold;
+            margin-bottom: 20px;          
+        }
+        &-desc{
+            color: $grey;
+        }
+        &-meta{
+            @include fontLine(1.2rem, 1.5rem);
+            font-family: $lato;
+            margin: 10px 0;
+            span{
+                color: $calidra-red;
+                font-weight: bold;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.blog-interior{
+    padding: 50px 0 80px;
+    h2{
+        font-family: $century;
+        @include fontLine(3.5rem, 3.5rem);
+        color: $ultra-dark-grey;
+        font-style: italic;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    &-meta{
+        @include fontLine(1.2rem, 1.5rem);
+        font-family: $lato;
+        margin: 10px 0;
+        span{
+            color: $calidra-red;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+    &-text{
+        font-family: $lato;
+        text-align: justify;
+        color: $grey;
+        p{
+            margin-bottom: 15px;
+        }
+    }
+    &-img{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+            min-width: 100%;
+            min-height: 100%;
+            max-width: 200%;
+        }
+        &-mid{
+            display: flex;
+            height: 400px;
+            &-item{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img{
+                    max-width: 200%;
+                    min-height: 100%;
+                    flex-basis: 100%;
+                }
             }
         }
     }
