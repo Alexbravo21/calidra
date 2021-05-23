@@ -69,11 +69,13 @@
         <div class="corporativo-iniciativas-slider">
             <div class="columns">
                 <div class="corporativo-iniciativas-slider-texto column">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur</p>
+                    <h3 class="slider-anim">Lorem ipsum dolor</h3>
+                    <p class="slider-anim">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur</p>
                 </div>
                 <div class="corporativo-iniciativas-slider-imagen column">
-                    <img src="<?=$templateUriSection ?>iniciativas.jpg" alt="">
+                    <div class="corporativo-iniciativas-slider-imagen-cont">
+                        <img class="slider-anim" src="<?=$templateUriSection ?>iniciativas.jpg" alt="">
+                    </div>
                     <div class="corporativo-navegador">
                         <div class="corporativo-navegador-izq">
                             <span><</span>

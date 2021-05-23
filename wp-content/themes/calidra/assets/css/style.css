@@ -83,6 +83,15 @@ a, a:link, a:visited, a:focus {
   display: none;
 }
 
+.slider-anim {
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+}
+
+.slider-anim.animado {
+  opacity: 0;
+}
+
 footer {
   background: url(../img/footer_pleca.png) bottom -10px center no-repeat;
   background-size: contain;
@@ -1066,6 +1075,17 @@ footer .footer-bottom-border {
       flex-shrink: 0;
   position: relative;
   padding-left: 0;
+}
+
+.quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas-slider .columns .corporativo-iniciativas-slider-imagen-cont {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas-slider .columns .corporativo-iniciativas-slider-imagen-cont img {
+  min-width: 100%;
+  min-height: 100%;
 }
 
 @media screen and (min-width: 1024px) {

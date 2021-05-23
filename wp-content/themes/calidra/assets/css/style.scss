@@ -17,6 +17,12 @@ a, a:link, a:visited, a:focus{
 .slider-navigation-previous, .slider-navigation-next{
     display: none;
 }
+.slider-anim{
+    transition: opacity 400ms ease-in-out;
+    &.animado{
+        opacity: 0;
+    }
+}
 footer{
     background: url(../img/footer_pleca.png) bottom -10px center no-repeat;
     background-size: contain;
@@ -657,6 +663,15 @@ footer{
                     flex-shrink: 0;
                     position: relative;
                     padding-left: 0;
+                    &-cont{
+                        width: 600px;
+                        height: 400px;
+                        overflow: hidden;
+                        img{
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
                     @include minWidth($lg){
                         top: -80px;
                     }
