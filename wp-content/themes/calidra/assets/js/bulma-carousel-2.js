@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["bulmaCarousel"] = factory();
+		exports["bulmaCarousel2"] = factory();
 	else
-		root["bulmaCarousel"] = factory();
+		root["bulmaCarousel2"] = factory();
 })(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -498,15 +498,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var bulmaCarousel = function (_EventEmitter) {
-  _inherits(bulmaCarousel, _EventEmitter);
+var bulmaCarousel2 = function (_EventEmitter) {
+  _inherits(bulmaCarousel2, _EventEmitter);
 
-  function bulmaCarousel(selector) {
+  function bulmaCarousel2(selector) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    _classCallCheck(this, bulmaCarousel);
+    _classCallCheck(this, bulmaCarousel2);
 
-    var _this = _possibleConstructorReturn(this, (bulmaCarousel.__proto__ || Object.getPrototypeOf(bulmaCarousel)).call(this));
+    var _this = _possibleConstructorReturn(this, (bulmaCarousel2.__proto__ || Object.getPrototypeOf(bulmaCarousel2)).call(this));
 
     _this.element = Object(__WEBPACK_IMPORTED_MODULE_2__utils_type__["c" /* isString */])(selector) ? document.querySelector(selector) : selector;
     // An invalid selector or non-DOM node has been provided.
@@ -540,7 +540,7 @@ var bulmaCarousel = function (_EventEmitter) {
    */
 
 
-  _createClass(bulmaCarousel, [{
+  _createClass(bulmaCarousel2, [{
     key: '_init',
 
 
@@ -953,7 +953,7 @@ var bulmaCarousel = function (_EventEmitter) {
       var elements = Object(__WEBPACK_IMPORTED_MODULE_2__utils_type__["c" /* isString */])(selector) ? document.querySelectorAll(selector) : Array.isArray(selector) ? selector : [selector];
       [].forEach.call(elements, function (element) {
         if (typeof element[_this7.constructor.name] === 'undefined') {
-          var instance = new bulmaCarousel(element, options);
+          var instance = new bulmaCarousel2(element, options);
           element[_this7.constructor.name] = instance;
           instances.push(instance);
         } else {
@@ -965,10 +965,10 @@ var bulmaCarousel = function (_EventEmitter) {
     }
   }]);
 
-  return bulmaCarousel;
+  return bulmaCarousel2;
 }(__WEBPACK_IMPORTED_MODULE_3__utils_eventEmitter__["a" /* default */]);
 
-/* harmony default export */ __webpack_exports__["default"] = (bulmaCarousel);
+/* harmony default export */ __webpack_exports__["default"] = (bulmaCarousel2);
 
 /***/ }),
 /* 6 */
@@ -1517,8 +1517,8 @@ var Navigation = function () {
 		value: function init() {
 			this.node = document.createRange().createContextualFragment(Object(__WEBPACK_IMPORTED_MODULE_0__templates_navigation__["a" /* default */])(this.slider.options.icons));
 			this._ui = {
-				previous: this.node.querySelector('.slider-navigation-previous'),
-				next: this.node.querySelector('.slider-navigation-next')
+				previous: document.querySelector('.slider-navigation-previous-calidra'),
+				next: document.querySelector('.slider-navigation-next-calidra')
 			};
 
 			this._unbindEvents();

@@ -361,6 +361,9 @@ footer{
         }
         .usos-cotidianos{
             @include homeRestoSections('../img/home/usos_cotidianos.jpg');
+            h3{
+                margin-top: -90px;
+            }
         }
         .home-blog{
             @include homeRestoSections('../img/home/blog.jpg');
@@ -978,11 +981,19 @@ footer{
                 }
             }
             &-body{
+                position: relative;
                 max-height: 0;
                 overflow: hidden;
                 transition: all 500ms ease-in-out;
+                @include especificContainer(1100px);
                 &.is-active{
                     max-height: 1000px;
+                }
+                &-nav{
+                    position: absolute;
+                    top: 50px;
+                    left: 100px;
+                    z-index: 10;
                 }
             }
         }

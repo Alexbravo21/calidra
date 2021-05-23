@@ -14,15 +14,17 @@ const Calidra = (() => {
         ['HOLA CALIDRA', 'HOLA Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur', 'responsabilidad-social.jpg'],
         ['ADIOS CALIDRA', 'ADIOS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur', 'colabora-vacantes.jpg']
     ]
+    let carousels;
 
     return{
         init: () => {
             Calidra.burgerClick();
             Calidra.accordion();
-            Calidra.bulmaCarousel('.carousel', 3);
-            Calidra.bulmaCarousel('.home-carousel', 2);
-            iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
-            iniciativasIzq.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('i')};
+            Calidra.bulmaCarousel2('.carousel', 3);
+            Calidra.bulmaCarousel2('.home-carousel', 2);
+            Calidra.bulmaCarousel('.usos-carousel', 1);
+            if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
+            if (iniciativasIzq) iniciativasIzq.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('i')};
         },
         burgerClick: () => {
             elBurger.onclick = () => {
@@ -34,6 +36,7 @@ const Calidra = (() => {
             for (var i = 0; i < acordeonButtons.length; i++){
                 acordeonButtons[i].onclick = (e) => {
                     e.stopPropagation();
+                    carousels[1].reset();
                     if(e.target.className === 'acordeon-down-arrow'){
                         e.path[3].childNodes[3].classList.toggle('is-active');
                         e.target.children[0].classList.toggle('is-active');
@@ -51,7 +54,16 @@ const Calidra = (() => {
                 infinite: true
             }
             // Initialize all elements with carousel class.
-            const carousels = bulmaCarousel.attach(clase, options);
+            carousels = bulmaCarousel.attach(clase, options);
+        },
+        bulmaCarousel2: (clase, slides) => {
+            const options = {
+                slidesToShow: slides,
+                pagination: false,
+                infinite: true
+            }
+            // Initialize all elements with carousel class.
+            carousels = bulmaCarousel2.attach(clase, options);
         },
         iniciativasCarousel: (lado) => {
             sumrest = lado === 'd' ? 1 : -1;

@@ -56,6 +56,7 @@
 </footer>
 
 <script src="<?=get_template_directory_uri()?>/assets/js/bulma-carousel.js"></script>
+<script src="<?=get_template_directory_uri()?>/assets/js/bulma-carousel-2.js"></script>
 <script src="<?=get_template_directory_uri()?>/assets/js/calidra.js"></script>
     
 </body>
