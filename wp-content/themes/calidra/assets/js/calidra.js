@@ -7,10 +7,11 @@ const Calidra = (() => {
     const iniciativasIzq = document.querySelector('.corporativo-navegador-izq');
     const sliderItem = document.querySelectorAll('.slider-anim');
     const cerrarVideo = document.querySelector('.close');
-    const videoCont = document.querySelector('.video-cont');
+    const videoCont = document.querySelector('.video-cont-fullscreen');
     const videoUsosHome = document.querySelector('.usos-cotidianos-home');
     const cerrarDireccion = document.querySelector('.cerrar');
     const localizadorInfo = document.querySelector('.localizador-mapa-info');
+    const usosPlayButton = document.querySelectorAll('.play-button');
     
     let sliderContador = 0;
     let corporativo,  prev_attr, index_attr, subtr_attr, new_attr, sumrest;
@@ -25,14 +26,30 @@ const Calidra = (() => {
         init: () => {
             Calidra.burgerClick();
             Calidra.accordion();
-            Calidra.bulmaCarousel2('.carousel', 3);
+            //setTimeout(()=>{
+                Calidra.bulmaCarousel2('.carousel', 2);       
+            //}, 2000)
             Calidra.bulmaCarousel2('.home-carousel', 2);
-            Calidra.bulmaCarousel('.usos-carousel', 1);
+            Calidra.bulmaCarousel('.usos-carsousel', 1);
+            Calidra.clickEvents();
+        },
+        clickEvents: () => {
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
             if (iniciativasIzq) iniciativasIzq.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('i')};
             if (cerrarVideo) cerrarVideo.onclick = (e) => {e.stopPropagation(); Calidra.cerrarVideoM()};
             if (videoUsosHome) videoUsosHome.onclick = (e) => {e.stopPropagation(); Calidra.abrirVideo('https://www.youtube.com/embed/lf7sA6H_c7k')};
             if (cerrarDireccion) cerrarDireccion.onclick = (e) => {e.stopPropagation(); Calidra.cerrarDireccion()};
+            if (usosPlayButton){
+                for (var i = 0; i < usosPlayButton.length; i++){
+                    usosPlayButton[i].onclick = (e) => {
+                        e.stopPropagation(); 
+                        if (e.target.dataset.src) {
+                            let src = e.target.dataset.src;
+                            Calidra.abrirVideo(src);
+                        }
+                    };
+                }
+            }
         },
         burgerClick: () => {
             elBurger.onclick = () => {

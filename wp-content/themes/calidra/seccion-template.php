@@ -17,6 +17,14 @@
         'meta_value'	=> 'alimenticia'
     );
     $productos_query = new WP_Query( $args );
+    $seccion = get_field('tag_seccion');
+    $videos = json_decode(json_encode([
+        "alimenticia" => ['D12MlWtzUE0'],
+        "quimica" => ['U3yUJkGUbgE'],
+        "mineria" => ['U3yUJkGUbgE'],
+        "estabilizacion" => ['QflDe0W470s'],
+        "construccion" => ['gm3RDq1hTQU']
+    ]));
 ?>
 <div class="seccion-template section">
     <div class="seccion-template-desc">
@@ -66,8 +74,8 @@
                 <div class="column is-8">
                     <div class="video-big video-cont">
                         <div class="black-screen">
-                            <div class="play-button">
-                                <div class="play-arrow"></div>
+                            <div class="play-button" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>">
+                                <div class="play-arrow" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>"></div>
                             </div>
                         </div>
                     </div>

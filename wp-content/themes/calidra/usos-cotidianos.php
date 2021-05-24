@@ -39,6 +39,7 @@
                                     <h2><?=$uso->titulo ?></h2>
                                 </div>
                                 <div class="column is-5 usos-cotidianos-acordeon-item-body-circulo">
+                                    <div class="play-button" data-src="<?=$uso->videoURL ?>"><div class="play-arrow" data-src="<?=$uso->videoURL ?>"></div></div>
                                     <img src="<?=$templateUriSection ?>slider/hogar-<?=$cont ?>.png" alt="">
                                 </div>
                                 <div class="column is-3 is-align-self-flex-end usos-cotidianos-acordeon-item-body-texto">
@@ -73,6 +74,7 @@
                                     <h2><?=$uso->titulo ?></h2>
                                 </div>
                                 <div class="column is-5 usos-cotidianos-acordeon-item-body-circulo">
+                                    <div class="play-button" data-src="<?=$uso->videoURL ?>"><div class="play-arrow" data-src="<?=$uso->videoURL ?>"></div></div>
                                     <img src="<?=$templateUriSection ?>slider/limpieza-<?=$cont ?>.png" alt="">
                                 </div>
                                 <div class="column is-3 is-align-self-flex-end usos-cotidianos-acordeon-item-body-ficha">
@@ -107,6 +109,7 @@
                                     <h2><?=$uso->titulo ?></h2>
                                 </div>
                                 <div class="column is-5 usos-cotidianos-acordeon-item-body-circulo">
+                                    <div class="play-button" data-src="<?=$uso->videoURL ?>"><div class="play-arrow" data-src="<?=$uso->videoURL ?>"></div></div>
                                     <img src="<?=$templateUriSection ?>slider/mascotas-<?=$cont ?>.png" alt="">
                                 </div>
                                 <div class="column is-3 is-align-self-flex-end usos-cotidianos-acordeon-item-body-texto">
@@ -141,6 +144,7 @@
                                     <h2><?=$uso->titulo ?></h2>
                                 </div>
                                 <div class="column is-5 usos-cotidianos-acordeon-item-body-circulo">
+                                    <div class="play-button" data-src="<?=$uso->videoURL ?>"><div class="play-arrow" data-src="<?=$uso->videoURL ?>"></div></div>
                                     <img src="<?=$templateUriSection ?>slider/jardineria-<?=$cont ?>.png" alt="">
                                 </div>
                                 <div class="column is-3 is-align-self-flex-end usos-cotidianos-acordeon-item-body-texto">
@@ -175,6 +179,7 @@
                                     <h2><?=$uso->titulo ?></h2>
                                 </div>
                                 <div class="column is-5 usos-cotidianos-acordeon-item-body-circulo">
+                                    <div class="play-button" data-src="<?=$uso->videoURL ?>"><div class="play-arrow" data-src="<?=$uso->videoURL ?>"></div></div>
                                     <img src="<?=$templateUriSection ?>slider/otros-<?=$cont ?>.png" alt="">
                                 </div>
                                 <div class="column is-3 is-align-self-flex-end usos-cotidianos-acordeon-item-body-texto">

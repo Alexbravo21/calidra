@@ -1006,8 +1006,31 @@ footer{
                     padding: 50px 0;
                 }
                 &-circulo{
+                    position: relative;
                     @include minWidth($lg){
                         margin-left: -15%;
+                    }
+                    .play-button{
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        transform: translate(50%, -50%);
+                        width: 100px;
+                        height: 100px;
+                        background-color: rgba($color: $calidra-red, $alpha: 0.95);
+                        border-radius: 100%;
+                        .play-arrow{
+                            box-sizing: border-box;
+                            width: 44px;
+                            height: 44px;
+                            border-style: solid;
+                            border-width: 22px 0 22px 44px;
+                            border-color: transparent transparent transparent #ffffff;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-40%, -50%);
+                        }
                     }
                 }
                 &-texto{
@@ -1017,6 +1040,11 @@ footer{
                     @include especificContainer(1100px);
                     overflow: hidden;
                     font-family: $lato;
+                    &#limpieza{
+                        .slider-navigation-previous, .slider-navigation-next{
+                            top: 150px;
+                        }
+                    }
                     h2{
                         font-family: $century;
                         font-weight: bold;
@@ -1250,7 +1278,7 @@ footer{
     padding: 80px 0 50px;
     background-color: $white-dark-grey;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     h2{
         @include fontLine(5rem, 5rem);
         color: $grey;
@@ -1308,7 +1336,9 @@ footer{
             }
         }
     }
-    .container{
+    &-contenedor{
+        @include especificContainer(1000px);
+        overflow: hidden;
         .carousel{
             overflow: hidden;
             .car-item{
@@ -1524,34 +1554,34 @@ footer{
             }
         }
         .black-screen{
-          position: absolute;
-          background-color: rgba(0, 0, 0, 0.5);
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          .play-button{
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            border-radius: 100%;
-            .play-arrow{
-                box-sizing: border-box;
-                width: 44px;
-                height: 44px;
-                border-style: solid;
-                border-width: 22px 0 22px 44px;
-                border-color: transparent transparent transparent #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            .play-button{
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-40%, -50%);
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: 100px;
+                background-color: $calidra-red;
+                border-radius: 100%;
+                .play-arrow{
+                    box-sizing: border-box;
+                    width: 44px;
+                    height: 44px;
+                    border-style: solid;
+                    border-width: 22px 0 22px 44px;
+                    border-color: transparent transparent transparent #ffffff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-40%, -50%);
+                }
             }
-          }
         }
     }
 }
@@ -1660,7 +1690,7 @@ footer{
         }
     }
 }
-.video-cont{
+.video-cont-fullscreen{
     position: fixed;
     top: 0;
     left: 0;
