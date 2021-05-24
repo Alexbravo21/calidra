@@ -32,6 +32,7 @@
     <title>Calidra</title>
 </head>
 <body>
+    <?php include 'video.php'; ?>
 <div class="nav-container">
     <div class="top-menu">
         <div class="search-container container">

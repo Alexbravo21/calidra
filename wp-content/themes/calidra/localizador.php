@@ -21,7 +21,7 @@
     <div class="localizador-mapa">
         <div class="localizador-mapa-info">
             <div class="cerrar"><span>X</span></div>
-            <div class="container">
+            <div class="container localizador-mapa-info-display">
                 <div class="columns">
                     <div class="column localizador-mapa-info-texto is-6">
                         <h4>REGIÓN ORIENTE</h4>

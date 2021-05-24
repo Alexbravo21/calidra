@@ -6,6 +6,11 @@ const Calidra = (() => {
     const iniciativasDer = document.querySelector('.corporativo-navegador-der');
     const iniciativasIzq = document.querySelector('.corporativo-navegador-izq');
     const sliderItem = document.querySelectorAll('.slider-anim');
+    const cerrarVideo = document.querySelector('.close');
+    const videoCont = document.querySelector('.video-cont');
+    const videoUsosHome = document.querySelector('.usos-cotidianos-home');
+    const cerrarDireccion = document.querySelector('.cerrar');
+    const localizadorInfo = document.querySelector('.localizador-mapa-info');
     
     let sliderContador = 0;
     let corporativo,  prev_attr, index_attr, subtr_attr, new_attr, sumrest;
@@ -25,6 +30,9 @@ const Calidra = (() => {
             Calidra.bulmaCarousel('.usos-carousel', 1);
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
             if (iniciativasIzq) iniciativasIzq.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('i')};
+            if (cerrarVideo) cerrarVideo.onclick = (e) => {e.stopPropagation(); Calidra.cerrarVideoM()};
+            if (videoUsosHome) videoUsosHome.onclick = (e) => {e.stopPropagation(); Calidra.abrirVideo('https://www.youtube.com/embed/lf7sA6H_c7k')};
+            if (cerrarDireccion) cerrarDireccion.onclick = (e) => {e.stopPropagation(); Calidra.cerrarDireccion()};
         },
         burgerClick: () => {
             elBurger.onclick = () => {
@@ -36,7 +44,6 @@ const Calidra = (() => {
             for (var i = 0; i < acordeonButtons.length; i++){
                 acordeonButtons[i].onclick = (e) => {
                     e.stopPropagation();
-                    carousels[1].reset();
                     if(e.target.className === 'acordeon-down-arrow'){
                         e.path[3].childNodes[3].classList.toggle('is-active');
                         e.target.children[0].classList.toggle('is-active');
@@ -51,7 +58,11 @@ const Calidra = (() => {
             const options = {
                 slidesToShow: slides,
                 pagination: false,
-                infinite: true
+                infinite: true,
+                icons: {
+                    previous: '<p>ANTERIOR</p>',
+                    next: '<p>SIGUIENTE</p>'
+                }
             }
             // Initialize all elements with carousel class.
             carousels = bulmaCarousel.attach(clase, options);
@@ -89,6 +100,24 @@ const Calidra = (() => {
                     }, 100);
                 }, 450);})(i);
             }
+        },
+        cerrarVideoM: () =>{
+            videoCont.classList.add('cerrado');
+            setTimeout(() => {
+                videoCont.style.display = 'none';
+                videoCont.children[0].children[1].setAttribute('src', '');
+            }, 450);
+        },
+        abrirVideo: (src) =>{
+            videoCont.style.display = 'flex';
+            videoCont.classList.remove('cerrado');
+            videoCont.children[0].children[1].setAttribute('src', src);
+        },
+        cerrarDireccion: () => {
+            localizadorInfo.classList.add('cerrado');
+            setTimeout(() => {
+                localizadorInfo.style.display = 'none';
+            }, 450);
         }
     }  
 })();

@@ -9,6 +9,9 @@ a, a:link, a:visited, a:focus{
     color: inherit;
     text-decoration: none;
 }
+.cerrado{
+    opacity: 0;
+}
 .section{
     @include minWidth($lg){
         padding: 0;
@@ -359,8 +362,9 @@ footer{
                 width: 35%;
             }
         }
-        .usos-cotidianos{
+        .usos-cotidianos-home{
             @include homeRestoSections('../img/home/usos_cotidianos.jpg');
+            padding-top: 50px;//por alguna razón el flex necesita esto para no mover el h3 de abajo
             h3{
                 margin-top: -90px;
             }
@@ -933,8 +937,18 @@ footer{
     &-acordeon{
         &-item{
             padding: 30px 0;
-            border-bottom: 1px solid $ultra-light-grey;
-            &-header{
+            //&:last-of-type{
+                // .usos-cotidianos-acordeon-item-header{
+                //     border-bottom: none;
+                // }
+            //}
+            &-header{                
+                @include especificContainer(1100px);
+                border-bottom: 1px solid $ultra-light-grey;
+                padding-bottom: 20px;
+                &:not(:last-child){
+                    margin-bottom: 0;                    
+                }
                 p{
                     font-family: $century;
                     @include fontLine(2.5rem, 2.2rem);
@@ -984,16 +998,54 @@ footer{
                 position: relative;
                 max-height: 0;
                 overflow: hidden;
-                transition: all 500ms ease-in-out;
-                @include especificContainer(1100px);
+                transition: all 400ms ease-in-out;
+                background-color: $ultra-dark-grey;
+                color: #ffffff;
                 &.is-active{
                     max-height: 1000px;
+                    padding: 50px 0;
                 }
-                &-nav{
-                    position: absolute;
-                    top: 50px;
-                    left: 100px;
-                    z-index: 10;
+                &-circulo{
+                    @include minWidth($lg){
+                        margin-left: -15%;
+                    }
+                }
+                &-texto{
+                    @include fontLine(1.3rem, 1.8rem);
+                }
+                .usos-carousel-cont{
+                    @include especificContainer(1100px);
+                    overflow: hidden;
+                    font-family: $lato;
+                    h2{
+                        font-family: $century;
+                        font-weight: bold;
+                        @include fontLine(4rem, 4rem);
+                        font-style: italic;
+                        width: 80%;
+                    }
+                    .slider-navigation-previous, .slider-navigation-next{
+                        display: inline-block;
+                        width: auto;
+                        height: auto;
+                        color: $calidra-red;
+                        font-weight: bold;
+                        @include fontLine(1.3rem, 1.8rem);
+                        background: none;
+                        box-shadow: none;
+                        border: none;
+                        top: 120px;
+                        left: 130px;
+                        &:hover{
+                            transform: scale(1);
+                        }
+                    }
+                    .slider-navigation-previous{
+                        transform: translate(-180%, 0);
+                        &:hover{
+                            transform: scale(1) translate(-180%, 0);
+                        }
+                    }
                 }
             }
         }
@@ -1145,6 +1197,7 @@ footer{
             text-align: center;
             padding: 60px 15px 30px;
             position: relative;
+            transition: opacity 400ms ease-in-out;
             @include minWidth($lg){
                 padding: 60px 0 100px;
             }
@@ -1160,6 +1213,8 @@ footer{
                 left: 50%;
                 transform: translate(-50%, -40%);
                 padding-top: 20px;
+                user-select: none;
+                cursor: pointer;
             }
             p{
                 @include fontLine(1.3rem, 1.8rem);
@@ -1601,6 +1656,56 @@ footer{
                 background-color: $calidra-red;
                 color: #ffffff;
                 padding: 15px;
+            }
+        }
+    }
+}
+.video-cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000000;
+    background-color: rgba($color: $ultra-dark-grey, $alpha: 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 400ms ease-in-out;
+    .youtube-cont{
+        position: relative;
+        max-width: 85%;
+        iframe{
+            max-width: 100%;
+            @include maxWidth($lg - 1){
+                max-height: 400px;
+            }
+        }
+        .close {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #000000;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            &:before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+            &:before, &:after {
+                position: absolute;
+                top: 8px;
+                left: 24px;
+                content: ' ';
+                height: 33px;
+                width: 2px;
+                border-radius: 5px;
+                background-color: $ultra-light-grey;
             }
         }
     }
