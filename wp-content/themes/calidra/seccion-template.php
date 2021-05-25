@@ -8,16 +8,16 @@
     $imageSectionHero = get_field('hero_image');
     $copySide = 'derecho';
     $color = 'blanco';
-    include 'section-header.php';
+    include 'section-header-2.php';
+    $seccion = get_field('tag_seccion');
     $args = array(
         'numberposts'	=> 4,
         'post_type'		=> 'producto',
         'orderby'        => 'rand',
         'meta_key'		=> 'tipo_producto',
-        'meta_value'	=> 'alimenticia'
+        'meta_value'	=> $seccion
     );
     $productos_query = new WP_Query( $args );
-    $seccion = get_field('tag_seccion');
     $videos = json_decode(json_encode([
         "alimenticia" => ['D12MlWtzUE0'],
         "quimica" => ['U3yUJkGUbgE'],

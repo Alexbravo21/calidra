@@ -4,7 +4,7 @@
     $imageSectionHero = $templateUriSection . 'blog.jpg';
     $color = 'blanco';
     $post_id = 'Blog';
-    include 'section-header.php';
+    include 'section-header-2.php';
 ?>
 <div class="blog-interior section">
     <div class="container">

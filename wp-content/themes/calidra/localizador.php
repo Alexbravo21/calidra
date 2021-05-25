@@ -6,7 +6,7 @@
     $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
     $imageSectionHero = $templateUriSection . 'localizador.jpg';
     $color = 'blanco';
-    include 'section-header.php';
+    include 'section-header-2.php';
 ?>
 
 <div class="localizador section">

@@ -6,7 +6,7 @@
     $templateUriSection = get_template_directory_uri() . '/assets/img/blog/';
     $imageSectionHero = $templateUriSection . 'blog.jpg';
     $color = 'blanco';
-    include 'section-header.php';
+    include 'section-header-2.php';
     $args = array(
         'numberposts'	=> 15,
         'post_type'		=> 'post',

@@ -8,7 +8,7 @@
     $imageSectionHero = $templateUriSection . 'colabora-nosotros-hero.jpg';
     $copySide = 'derecho';
     $color = 'blanco';
-    include 'section-header.php';
+    include 'section-header-2.php';
 ?>
 <div class="colabora-nosotros-seccion section">
     <div class="colabora-nosotros-titulo-cont">

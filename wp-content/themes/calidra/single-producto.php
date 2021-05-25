@@ -13,7 +13,7 @@ $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
 $imageSectionHero = get_field('hero_image', $categoryArray[$category]);
 $copySide = 'derecho';
 $color = 'blanco';
-include 'section-header.php';
+include 'section-header-2.php';
 $args = array(
 	'numberposts'	=> 4,
 	'post_type'		=> 'producto',
