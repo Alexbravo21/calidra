@@ -1664,6 +1664,10 @@ footer{
             @include minWidth($lg){
                 justify-content: flex-start;
             }
+            a{
+                display: flex;
+                align-items: center;
+            }
             span{
                 &:first-of-type{
                     width: 80px;

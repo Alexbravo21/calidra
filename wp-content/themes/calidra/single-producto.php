@@ -22,7 +22,7 @@ $args = array(
 	//'meta_value'	=> 'alimenticia'
 );
 $productos_query = new WP_Query( $args );
-
+$ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica") : '#';
 ?>
 <div class="producto-interior section">
     <div class="producto-interior-cont">
@@ -36,7 +36,9 @@ $productos_query = new WP_Query( $args );
                 </div>
             </div>
             <div class="column is-3 is-align-self-flex-end producto-interior-cont-ficha">
-                <span><i class="far fa-file-alt"></i></span><span>FICHA TÉCNICA</span>
+                <a href="<?=$ficha_tecnica ?>" target="_blank">
+                    <span><i class="far fa-file-alt"></i></span><span>FICHA TÉCNICA</span>
+                </a>
             </div>
         </div>
         <div class="producto-interior-cont-desc"><?=get_the_content(); ?></div>

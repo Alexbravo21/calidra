@@ -1,7 +1,7 @@
 <?php 
-    if (isset($category) && $category !== undefinded ) {
+    if (isset($category) && $category !== "undefined") {
         $post_id = $categoryArray[$category];
-    }else if (isset($post_id) && $post_id !== undefined){
+    }else if (isset($post_id) && $post_id !== "undefined"){
         $post_id = $post_id;
     }else{
         $post_id = null;
