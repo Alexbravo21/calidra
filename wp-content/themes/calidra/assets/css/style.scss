@@ -1458,6 +1458,9 @@ footer{
         @include especificContainer(800px);
         &-item{
             padding: 15px 0;
+            &.comentarios{
+                margin-top: 50px;
+            }
             label{
                 display: block;
                 font-family: $century;
@@ -1473,29 +1476,63 @@ footer{
                 font-family: $century;
                 padding: 5px 0;
             }
-        }
-        &-interesado{
-            border: 1px solid $ultra-light-grey;
-            box-shadow: 0px 0px 7px 1px rgba(76,76,76,.6);
-            padding: 15px 0;
-            font-family: $lato;
-            margin-top: 50px;
-            @include fontLine(1.7rem, 2.2rem);
-            p{
-                padding: 5px 25px;
-                color: $ultra-dark-grey;
-                &.titulo{
-                    color: $ultra-light-grey;
+            .select{
+                width: 100%;
+                &:not(.is-multiple):not(.is-loading)::after{
+                    background: url('../img/contacto/drop.png') center center no-repeat;
+                    background-size: contain;
+                    border: none;
+                    transform: none;
+                    width: 30px;
+                    height: 30px;
                 }
-                &.opciones{
-                    cursor: pointer;
-                    &:hover{
-                        background-color: $ultra-dark-grey;
-                        color: #ffffff;
+                select{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid $ultra-light-grey;
+                    font-family: $century;
+                    font-weight: bold;
+                    @include fontLine(2.5rem, 2.5rem);
+                    border-radius: 0;
+                    padding-left: 0;
+                    option{
+                        @include fontLine(1.8rem, 2rem);
                     }
                 }
             }
         }
+        &-terminos{
+            margin-top: 50px;
+            font-family: $lato;
+            input[type="checkbox"]{
+                margin-right: 5px;
+            }
+            a{
+                text-decoration: underline;
+            }
+        }
+        // &-interesado{
+        //     border: 1px solid $ultra-light-grey;
+        //     box-shadow: 0px 0px 7px 1px rgba(76,76,76,.6);
+        //     padding: 15px 0;
+        //     font-family: $lato;
+        //     margin-top: 50px;
+        //     @include fontLine(1.7rem, 2.2rem);
+        //     p{
+        //         padding: 5px 25px;
+        //         color: $ultra-dark-grey;
+        //         &.titulo{
+        //             color: $ultra-light-grey;
+        //         }
+        //         &.opciones{
+        //             cursor: pointer;
+        //             &:hover{
+        //                 background-color: $ultra-dark-grey;
+        //                 color: #ffffff;
+        //             }
+        //         }
+        //     }
+        // }
         button{
             @include standardButton($calidra-red, #ffffff);
             margin: 50px 0;

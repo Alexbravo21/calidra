@@ -38,13 +38,27 @@
                 </div>
             </div>
         </div>
-        <div class="contacto-form-interesado">
-            <p class="titulo">Estoy interesado en:</p>
-            <p class="opciones">Asesoría técnica</p>
-            <p class="opciones">Quiero comprar</p>
-            <p class="opciones">Quiero trabajar en Calidra</p>
-            <p class="opciones">Jóvenes en entrenamiento</p>
-            <p class="opciones">Quiero ser proveedor de Calidra</p>
+        <div class="contacto-form-item">
+            <div class="select">
+            <select name="interesado" id="interesado">
+                <option value="" selected disabled hidden>Estoy interesado en:*</option>
+                <option value="1">&nbspAsesoría técnica</option>
+                <option value="2">&nbspQuiero comprar</option>
+                <option value="3">&nbspQuiero trabajar en Calidra</option>
+                <option value="4">&nbspJóvenes en entrenamiento</option>
+                <option value="5">&nbspQuiero ser proveedor de Calidra</option>
+            </select>
+            </div>
+        </div>
+        <div class="contacto-form-item comentarios">
+            <label for="comentarios">Comentarios</label>
+            <input type="text" name="comentarios" id="comentarios">
+        </div>
+        <div class="contacto-form-terminos">
+            <label class="checkbox">
+                <input type="checkbox">
+                <span>He leído y aceptado el <a href="#">Aviso de privacidad</a></span>
+            </label>
         </div>
         <button>ENVIAR</button>
     </div>

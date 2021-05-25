@@ -1,4 +1,12 @@
-<?php $post_id = $categoryArray[$category] ?? $post_id ?? null; ?>
+<?php 
+    if (isset($category) && $category !== undefinded ) {
+        $post_id = $categoryArray[$category];
+    }else if (isset($post_id) && $post_id !== undefined){
+        $post_id = $post_id;
+    }else{
+        $post_id = null;
+    }
+?>
 <div class="seccion-hero" style="background-image:url(<?=$imageSectionHero ?? '' ?>)">
     <div class="container <?=$copySide ?? 'izquierdo'?>">
         <p class="<?=$color ?? 'negro' ?>">

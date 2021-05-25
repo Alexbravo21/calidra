@@ -2212,6 +2212,10 @@ footer .footer-bottom-border {
   padding: 15px 0;
 }
 
+.contacto-form-item.comentarios {
+  margin-top: 50px;
+}
+
 .contacto-form-item label {
   display: block;
   font-family: "Century Gothic", sans-serif;
@@ -2230,33 +2234,48 @@ footer .footer-bottom-border {
   padding: 5px 0;
 }
 
-.contacto-form-interesado {
-  border: 1px solid #808080;
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(76, 76, 76, 0.6);
-          box-shadow: 0px 0px 7px 1px rgba(76, 76, 76, 0.6);
-  padding: 15px 0;
-  font-family: "Lato", sans-serif;
+.contacto-form-item .select {
+  width: 100%;
+}
+
+.contacto-form-item .select:not(.is-multiple):not(.is-loading)::after {
+  background: url("../img/contacto/drop.png") center center no-repeat;
+  background-size: contain;
+  border: none;
+  -webkit-transform: none;
+          transform: none;
+  width: 30px;
+  height: 30px;
+}
+
+.contacto-form-item .select select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #808080;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.contacto-form-item .select select option {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.contacto-form-terminos {
   margin-top: 50px;
-  font-size: 1.7rem;
-  line-height: 2.2rem;
+  font-family: "Lato", sans-serif;
 }
 
-.contacto-form-interesado p {
-  padding: 5px 25px;
-  color: #202020;
+.contacto-form-terminos input[type="checkbox"] {
+  margin-right: 5px;
 }
 
-.contacto-form-interesado p.titulo {
-  color: #808080;
-}
-
-.contacto-form-interesado p.opciones {
-  cursor: pointer;
-}
-
-.contacto-form-interesado p.opciones:hover {
-  background-color: #202020;
-  color: #ffffff;
+.contacto-form-terminos a {
+  text-decoration: underline;
 }
 
 .contacto-form button {

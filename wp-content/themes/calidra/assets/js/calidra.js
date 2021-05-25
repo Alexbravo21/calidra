@@ -30,7 +30,7 @@ const Calidra = (() => {
                 Calidra.bulmaCarousel2('.carousel', 2);       
             //}, 2000)
             Calidra.bulmaCarousel2('.home-carousel', 2);
-            Calidra.bulmaCarousel('.usos-carsousel', 1);
+            Calidra.bulmaCarousel('.usos-carousel', 1);
             Calidra.clickEvents();
         },
         clickEvents: () => {
@@ -77,8 +77,8 @@ const Calidra = (() => {
                 pagination: false,
                 infinite: true,
                 icons: {
-                    previous: '<p>ANTERIOR</p>',
-                    next: '<p>SIGUIENTE</p>'
+                    previous: '<p style="user-select:none;">ANTERIOR</p>',
+                    next: '<p style="user-select:none;">SIGUIENTE</p>'
                 }
             }
             // Initialize all elements with carousel class.
