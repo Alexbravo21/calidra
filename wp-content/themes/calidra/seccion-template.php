@@ -71,7 +71,7 @@
         <h3>Videos</h3>
         <div class="template-videos-cont">
             <div class="columns">
-                <div class="column is-8">
+                <div class="column <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>is-8 <?php endif; ?>">
                     <div class="video-big video-cont" style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[0]?>/maxresdefault.jpg">
                         <div class="black-screen">
                             <div class="play-button" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>">
@@ -80,22 +80,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="video-small video-cont" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[1]?>/maxresdefault.jpg" <?php endif; ?>>
-                        <div class="black-screen">
-                            <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>>
-                                <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>></div>
+                <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>
+                    <div class="column">
+                        <div class="video-small video-cont" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[1]?>/maxresdefault.jpg" <?php endif; ?>>
+                            <div class="black-screen">
+                                <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>>
+                                    <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-small video-cont" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[2]?>/maxresdefault.jpg" <?php endif; ?>>
-                        <div class="black-screen">
-                            <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>>
-                                <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>></div>
+                        <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>
+                            <div class="video-small video-cont" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[2]?>/maxresdefault.jpg" <?php endif; ?>>
+                                <div class="black-screen">
+                                    <div class="play-button" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>>
+                                        <div class="play-arrow" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
