@@ -61,8 +61,8 @@ $usosCotidianos = json_decode(json_encode([
     ],
     'otros' => [
         [
-            'titulo' => 'Reactivo',
-            'texto' => '¿Sabías que puedes fortalecer tu dentadura con enjuague bucal a base de agua con cal? Esta práctica se recomienda hacerla una vez por semana, además de disminuir los azúcares y el uso de hilo dental.',
+            'titulo' => 'Estabilizador',
+            'texto' => '¿Sabías que en la construcción de calles o avenidas, se usa cal para modificar, compactar y estabilizar el suelo? ',
             'videoURL' => 'https://www.youtube.com/embed/lf7sA6H_c7k'
         ],
         [
@@ -71,18 +71,18 @@ $usosCotidianos = json_decode(json_encode([
             'videoURL' => 'https://www.youtube.com/embed/KyZq5zJVwwI'
         ],
         [
-            'titulo' => 'Estabilizador',
-            'texto' => '¿Sabías que en la construcción de calles o avenidas, se usa cal para modificar, compactar y estabilizar el suelo? ',
+            'titulo' => 'Reactivo',
+            'texto' => '¿Sabías que puedes fortalecer tu dentadura con enjuague bucal a base de agua con cal? Esta práctica se recomienda hacerla una vez por semana, además de disminuir los azúcares y el uso de hilo dental.',
             'videoURL' => 'https://www.youtube.com/embed/QYYMHV95Q68'
-        ],
-        [
-            'titulo' => 'Recubrimiento de losas',
-            'texto' => 'La impermeabilización de losas vírgenes con Calidra son la mejor opción para mantener tu casa o negocio libre de goteras.',
-            'videoURL' => 'https://www.youtube.com/embed/-IyyZ7kcUOM'
         ],
         [
             'titulo' => 'Suplemento',
             'texto' => '¿Sabías que los suplementos alimenticios a base de cal son de gran ayuda para el fortalecimiento de huesos? Calidra presente en la elaboración de medicamentos como suplementos de calcio.',
+            'videoURL' => 'https://www.youtube.com/embed/-IyyZ7kcUOM'
+        ],
+        [
+            'titulo' => 'Recubrimiento de losas',
+            'texto' => 'La impermeabilización de losas vírgenes con Calidra son la mejor opción para mantener tu casa o negocio libre de goteras.',
             'videoURL' => 'https://www.youtube.com/embed/XACoh50J-88'
         ]
     ]

@@ -14,7 +14,7 @@
             </div>
             <div class="column has-text-centered footer-correo">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quibus rebus efficiuntur voluptat.</p>
+                <p>Oficinas Corporativas CDMX</p>
                 <i class="far fa-envelope"></i>
                 <p><a href="mailto:contacto@calidra.com.mx">contacto@calidra.com.mx</a></p>
             </div>
