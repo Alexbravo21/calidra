@@ -628,7 +628,7 @@ footer{
         padding: 150px 0 0;
         @include fullWidthSection();
         .contenedor{
-            @include especificContainer(1200px)
+            @include especificContainer(1200px);
             .corporativo-iniciativas{
                 width: 800px;
                 max-width: 100%;
