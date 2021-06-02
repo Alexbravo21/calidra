@@ -56,12 +56,11 @@
     </div>
 </div>
 <div class="home-resto-contenido section">
-    <div class="container">
+    <div class="contenedor">
         <div class="columns">
             <div class="column">
                 <div class="usos-cotidianos-home">
                     <h3>Usos Cotidianos</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quibus rebus efficiuntur voluptates, eae non sunt in potestate sapientis. Nam, ut paulo ante docui.</p>
                 </div>
             </div>
             <div class="column">

@@ -21,9 +21,9 @@
     $videos = json_decode(json_encode([
         "alimenticia" => ['D12MlWtzUE0'],
         "quimica" => ['U3yUJkGUbgE'],
-        "mineria" => ['U3yUJkGUbgE'],
-        "estabilizacion" => ['QflDe0W470s'],
-        "construccion" => ['gm3RDq1hTQU']
+        "mineria" => ['nMBzT1alKxg', 'XnTJfH3q2VQ'],
+        "estabilizacion" => ['QflDe0W470s', 'hNS--mhuuXI', 'biynAo7RBzY'],
+        "construccion" => ['gm3RDq1hTQU', 'SOFdvebKSX8', 'gFqjVxlCgMg', 'gx1IPAvIbGA', 'bxc3dFvYxn0', 'PaDnweI1OJw', 'AJj7T5rQoLg']
     ]));
 ?>
 <div class="seccion-template section">
@@ -72,7 +72,7 @@
         <div class="template-videos-cont">
             <div class="columns">
                 <div class="column is-8">
-                    <div class="video-big video-cont">
+                    <div class="video-big video-cont" style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[0]?>/maxresdefault.jpg">
                         <div class="black-screen">
                             <div class="play-button" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>">
                                 <div class="play-arrow" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>"></div>
@@ -81,17 +81,17 @@
                     </div>
                 </div>
                 <div class="column">
-                    <div class="video-small video-cont">
+                    <div class="video-small video-cont" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[1]?>/maxresdefault.jpg" <?php endif; ?>>
                         <div class="black-screen">
-                            <div class="play-button">
-                                <div class="play-arrow"></div>
+                            <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>>
+                                <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>></div>
                             </div>
                         </div>
                     </div>
-                    <div class="video-small video-cont">
+                    <div class="video-small video-cont" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[2]?>/maxresdefault.jpg" <?php endif; ?>>
                         <div class="black-screen">
-                            <div class="play-button">
-                                <div class="play-arrow"></div>
+                            <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>>
+                                <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>></div>
                             </div>
                         </div>
                     </div>

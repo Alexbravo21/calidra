@@ -42,14 +42,14 @@
         <div class="responsabilidad-social-imagen-cont">
             <img src="<?=$templateUriSection ?>responsabilidad-social.jpg" alt="">
         </div>
-        <div class="responsabilidad-social-texto container">
+        <div class="responsabilidad-social-texto">
             <h2>Responsabilidad<br>Social</h2>
             <p>Grupo Calidra lleva a cabo acciones de responsabilidad social que demuestran nuestro compromiso e interés por mejorar nuestro entorno y colaborar por un bienestar común.</p>
             <p>Apoyamos a comunidades para la restauración y construcción de calles, escuelas, obras públicas, colaboramos en reforestaciones voluntarias, con fundaciones de asistencia social y campañas de salud internas para nuestro personal.</p>
             <p>Tenemos muy presente el rol tan importante de las empresas en la creación de valor y fomento al desarrollo en nuestra sociedad.</p>
         </div>
     </div>
-    <div class="colabora-nosotros container">
+    <div class="colabora-nosotros">
         <div class="colabora-imagen">
             <div class="colabora-imagen-over">
                 <img src="<?=$templateUriSection ?>colabora-nosotros.jpg" alt="">
@@ -60,7 +60,7 @@
         <a href="<?=$calidra_base_url ?>corporativo/colabora-con-nosotros"><p class="colabora-vermas">ver más</p></a>
     </div>
     <div class="corporativo-iniciativas-cont">
-        <div class="container">
+        <div class="contenedor">
             <div class="corporativo-iniciativas">
                 <h2>Iniciativas</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur; Etenim semper illud extra est, quod arte comprehenditur. Te ipsum, dignissimum maioribus tuis, voluptasne induxit, ut adolescentulus eriperes P. Duo Reges: constructio interrete. Cum autem in quo sapienter dicimus, id a primo rectissime dicitur. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.</p>

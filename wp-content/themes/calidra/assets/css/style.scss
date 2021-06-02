@@ -342,11 +342,12 @@ footer{
     padding-bottom: 30px;
     position: relative;
     z-index: 2;
-    .container{
+    .contenedor{
         background: rgb(255,255,255);
         background: linear-gradient(90deg, rgba(255,255,255,0) 45%, rgba(237,29,36,1) 45%, rgba(237,29,36,1) 45%, rgba(237,29,36,1) 50%, rgba(237,29,36,1) 55%, rgba(255,255,255,0) 55%);
         position: relative;
         padding-top: 10px;
+        @include especificContainer(1200px);
         @include minWidth($lg){
             padding-top: 80px;
         }
@@ -546,6 +547,7 @@ footer{
             color: #ffffff;
             text-shadow: $outter-shadow;
             width: 100%;
+            @include especificContainer(1200px);
             @include minWidth($lg){
                 position: absolute;
                 top: 50%;
@@ -560,7 +562,7 @@ footer{
                 margin-bottom: 30px;
                 font-weight: bold;
                 @include minWidth($lg){
-                    @include fontLine(7rem, 7rem);
+                    @include fontLine(6rem, 6rem);
                 }
             }
             p{
@@ -572,6 +574,7 @@ footer{
         }
     }
     .colabora-nosotros{
+        @include especificContainer(1200px);
         padding: 80px 0;
         .colabora-imagen{
             position: relative;
@@ -597,7 +600,7 @@ footer{
                 bottom: 0;
                 transform: translate(0, 25%);
                 @include minWidth($lg){
-                    @include fontLine(8rem, 8rem);
+                    @include fontLine(7rem, 7rem);
                 }
             }
         }
@@ -624,19 +627,22 @@ footer{
         color: #ffffff;
         padding: 150px 0 0;
         @include fullWidthSection();
-        .corporativo-iniciativas{
-            width: 800px;
-            max-width: 100%;
-            margin-bottom: 80px;
-            h2{
-                font-family: $century;
-                @include fontLine(4rem, 4rem);
-                margin-bottom: 40px;
-                font-weight: bold;
-            }
-            p{
-                font-family: $lato;
-                @include fontLine(1.5rem, 2rem);
+        .contenedor{
+            @include especificContainer(1200px)
+            .corporativo-iniciativas{
+                width: 800px;
+                max-width: 100%;
+                margin-bottom: 80px;
+                h2{
+                    font-family: $century;
+                    @include fontLine(4rem, 4rem);
+                    margin-bottom: 40px;
+                    font-weight: bold;
+                }
+                p{
+                    font-family: $lato;
+                    @include fontLine(1.5rem, 2rem);
+                }
             }
         }
         .corporativo-iniciativas-slider{
@@ -672,11 +678,16 @@ footer{
                     padding-left: 0;
                     &-cont{
                         width: 600px;
-                        height: 400px;
                         overflow: hidden;
+                        max-width: 100%;
+                        @include minWidth($lg){
+                            height: 400px;
+                        }
                         img{
                             min-width: 100%;
-                            min-height: 100%;
+                            @include minWidth($lg){
+                                min-height: 100%;
+                            }
                         }
                     }
                     @include minWidth($lg){
@@ -1579,7 +1590,9 @@ footer{
     .video-cont{
         width: 100%;
         position: relative;
-        background: url(../img/seccion_template/video.jpg) center center no-repeat;
+        background-image: url(../img/seccion_template/video.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
         background-size: cover;
         &.video-big{
             height: 500px;

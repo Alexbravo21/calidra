@@ -37,7 +37,7 @@ const Calidra = (() => {
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
             if (iniciativasIzq) iniciativasIzq.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('i')};
             if (cerrarVideo) cerrarVideo.onclick = (e) => {e.stopPropagation(); Calidra.cerrarVideoM()};
-            if (videoUsosHome) videoUsosHome.onclick = (e) => {e.stopPropagation(); Calidra.abrirVideo('https://www.youtube.com/embed/lf7sA6H_c7k')};
+            if (videoUsosHome) videoUsosHome.onclick = (e) => {e.stopPropagation(); Calidra.abrirVideo('https://www.youtube.com/embed/videoseries?list=PLkr_M5XFXGIhVRmy005mQ4j8zo7FhRB2p')};
             if (cerrarDireccion) cerrarDireccion.onclick = (e) => {e.stopPropagation(); Calidra.cerrarDireccion()};
             if (usosPlayButton){
                 for (var i = 0; i < usosPlayButton.length; i++){

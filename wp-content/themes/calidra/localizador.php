@@ -12,7 +12,7 @@
 <div class="localizador section">
     <div class="localizador-buscador">
         <h2>Localizador</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur; Etenim semper illud extra est, quod arte comprehenditur. Te ipsum, dignissimum maioribus tuis, voluptasne induxit,</p>
+        <p>Encuentra tu distribuidor más cercano a lo largo de toda la República Mexicana, Calidra siempre ahí.</p>
         <div class="localizador-buscador-input">
             <input type="text" placeholder="INGRESA ESTADO, LOCALIDAD Y/O CÓDIGO POSTAL">
             <button type="button">BUSCAR</button>

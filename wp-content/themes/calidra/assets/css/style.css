@@ -394,6 +394,10 @@ footer .footer-bottom-border {
   line-height: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 50ms ease-in-out;
+  transition: -webkit-transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
   margin-top: 50px;
 }
 
@@ -402,6 +406,13 @@ footer .footer-bottom-border {
     font-size: 2rem;
     line-height: 2rem;
   }
+}
+
+.hero-banner .hero-copy-container .hero-cta:hover {
+  color: #ffffff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #000000;
 }
 
 @media screen and (min-width: 1024px) {
@@ -569,21 +580,24 @@ footer .footer-bottom-border {
   z-index: 2;
 }
 
-.home-resto-contenido .container {
+.home-resto-contenido .contenedor {
   background: white;
   background: -webkit-gradient(linear, left top, right top, color-stop(45%, rgba(255, 255, 255, 0)), color-stop(45%, #ed1d24), color-stop(45%, #ed1d24), color-stop(50%, #ed1d24), color-stop(55%, #ed1d24), color-stop(55%, rgba(255, 255, 255, 0)));
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 45%, #ed1d24 45%, #ed1d24 45%, #ed1d24 50%, #ed1d24 55%, rgba(255, 255, 255, 0) 55%);
   position: relative;
   padding-top: 10px;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
-  .home-resto-contenido .container {
+  .home-resto-contenido .contenedor {
     padding-top: 80px;
   }
 }
 
-.home-resto-contenido .container h3 {
+.home-resto-contenido .contenedor h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 5rem;
   line-height: 5rem;
@@ -595,23 +609,23 @@ footer .footer-bottom-border {
 }
 
 @media screen and (min-width: 1024px) {
-  .home-resto-contenido .container h3 {
+  .home-resto-contenido .contenedor h3 {
     width: 35%;
   }
 }
 
-.home-resto-contenido .container .usos-cotidianos-home {
+.home-resto-contenido .contenedor .usos-cotidianos-home {
   background: url("../img/home/usos_cotidianos.jpg") center center no-repeat;
   background-size: cover;
   height: 500px;
   padding-top: 50px;
 }
 
-.home-resto-contenido .container .usos-cotidianos-home h3 {
+.home-resto-contenido .contenedor .usos-cotidianos-home h3 {
   margin-top: -90px;
 }
 
-.home-resto-contenido .container .home-blog {
+.home-resto-contenido .contenedor .home-blog {
   background: url("../img/home/blog.jpg") center center no-repeat;
   background-size: cover;
   height: 500px;
@@ -619,12 +633,12 @@ footer .footer-bottom-border {
 }
 
 @media screen and (min-width: 1024px) {
-  .home-resto-contenido .container .home-blog {
+  .home-resto-contenido .contenedor .home-blog {
     margin-top: 0;
   }
 }
 
-.home-resto-contenido .container .home-asesor {
+.home-resto-contenido .contenedor .home-asesor {
   background: url("../img/home/asesor.jpg") center center no-repeat;
   background-size: cover;
   height: 500px;
@@ -633,11 +647,11 @@ footer .footer-bottom-border {
   z-index: 2;
 }
 
-.home-resto-contenido .container .home-asesor h3 {
+.home-resto-contenido .contenedor .home-asesor h3 {
   top: -40px;
 }
 
-.home-resto-contenido .container .go-down-arrow {
+.home-resto-contenido .contenedor .go-down-arrow {
   width: 160px;
   height: 160px;
   background-color: rgba(237, 29, 36, 0.9);
@@ -656,7 +670,7 @@ footer .footer-bottom-border {
           align-items: flex-end;
 }
 
-.home-resto-contenido .container .go-down-arrow .flecha_down {
+.home-resto-contenido .contenedor .go-down-arrow .flecha_down {
   border-left: 4px solid #ffffff;
   border-bottom: 4px solid #ffffff;
   -webkit-transform: rotate(-45deg);
@@ -746,6 +760,10 @@ footer .footer-bottom-border {
   line-height: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 50ms ease-in-out;
+  transition: -webkit-transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
   margin-top: 50px;
 }
 
@@ -754,6 +772,13 @@ footer .footer-bottom-border {
     font-size: 2rem;
     line-height: 2rem;
   }
+}
+
+.contacto-banner .contacto-copy-container .contacto-cta:hover {
+  color: #ed1d24;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffff;
 }
 
 .seccion-hero {
@@ -894,6 +919,9 @@ footer .footer-bottom-border {
   color: #ffffff;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
   width: 100%;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -918,8 +946,8 @@ footer .footer-bottom-border {
 
 @media screen and (min-width: 1024px) {
   .quienes-somos .responsabilidad-social-texto h2 {
-    font-size: 7rem;
-    line-height: 7rem;
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 
@@ -931,6 +959,9 @@ footer .footer-bottom-border {
 }
 
 .quienes-somos .colabora-nosotros {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 80px 0;
 }
 
@@ -970,8 +1001,8 @@ footer .footer-bottom-border {
 
 @media screen and (min-width: 1024px) {
   .quienes-somos .colabora-nosotros .colabora-imagen h2 {
-    font-size: 8rem;
-    line-height: 8rem;
+    font-size: 7rem;
+    line-height: 7rem;
   }
 }
 
@@ -1012,13 +1043,19 @@ footer .footer-bottom-border {
   }
 }
 
-.quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas {
+.quienes-somos .corporativo-iniciativas-cont .contenedor {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.quienes-somos .corporativo-iniciativas-cont .contenedor .corporativo-iniciativas {
   width: 800px;
   max-width: 100%;
   margin-bottom: 80px;
 }
 
-.quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas h2 {
+.quienes-somos .corporativo-iniciativas-cont .contenedor .corporativo-iniciativas h2 {
   font-family: "Century Gothic", sans-serif;
   font-size: 4rem;
   line-height: 4rem;
@@ -1026,7 +1063,7 @@ footer .footer-bottom-border {
   font-weight: bold;
 }
 
-.quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas p {
+.quienes-somos .corporativo-iniciativas-cont .contenedor .corporativo-iniciativas p {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1088,13 +1125,24 @@ footer .footer-bottom-border {
 
 .quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas-slider .columns .corporativo-iniciativas-slider-imagen-cont {
   width: 600px;
-  height: 400px;
   overflow: hidden;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas-slider .columns .corporativo-iniciativas-slider-imagen-cont {
+    height: 400px;
+  }
 }
 
 .quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas-slider .columns .corporativo-iniciativas-slider-imagen-cont img {
   min-width: 100%;
-  min-height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .quienes-somos .corporativo-iniciativas-cont .corporativo-iniciativas-slider .columns .corporativo-iniciativas-slider-imagen-cont img {
+    min-height: 100%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1824,6 +1872,10 @@ footer .footer-bottom-border {
   line-height: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 50ms ease-in-out;
+  transition: -webkit-transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
   display: inline-block;
   width: 20%;
   height: 50px;
@@ -1835,6 +1887,13 @@ footer .footer-bottom-border {
     font-size: 2rem;
     line-height: 2rem;
   }
+}
+
+.localizador-buscador-input button:hover {
+  color: #ed1d24;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffff;
 }
 
 .localizador-mapa {
@@ -2289,6 +2348,10 @@ footer .footer-bottom-border {
   line-height: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 50ms ease-in-out;
+  transition: -webkit-transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
   margin: 50px 0;
 }
 
@@ -2297,6 +2360,13 @@ footer .footer-bottom-border {
     font-size: 2rem;
     line-height: 2rem;
   }
+}
+
+.contacto-form button:hover {
+  color: #ed1d24;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffff;
 }
 
 .template-localizador {
@@ -2345,6 +2415,10 @@ footer .footer-bottom-border {
   line-height: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 50ms ease-in-out;
+  transition: -webkit-transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
 }
 
 @media screen and (min-width: 1024px) {
@@ -2352,6 +2426,13 @@ footer .footer-bottom-border {
     font-size: 2rem;
     line-height: 2rem;
   }
+}
+
+.template-localizador button:hover {
+  color: #202020;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffff;
 }
 
 .template-videos {
@@ -2377,7 +2458,9 @@ footer .footer-bottom-border {
 .template-videos .video-cont {
   width: 100%;
   position: relative;
-  background: url(../img/seccion_template/video.jpg) center center no-repeat;
+  background-image: url(../img/seccion_template/video.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
