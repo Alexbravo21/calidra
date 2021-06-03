@@ -46,14 +46,14 @@ $ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica"
     <div class="template-localizador">
         <div class="columns is-vcentered">
             <div class="column">
-                <div class="template-localizador-cta">
+                <div class="template-localizador-cta reliable-old-lady">
                     <h3><strong>Busca</strong> a tu asesor</h3>
                     <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
                     <button>LOCALIZAR</button>
                 </div>
             </div>
             <div class="column">
-                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="">
+                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="" class="reliable-old-lady-right">
             </div>
         </div>
     </div>

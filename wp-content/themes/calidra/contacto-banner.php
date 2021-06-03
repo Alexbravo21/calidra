@@ -1,6 +1,6 @@
 <div class="contacto-banner" style="background: url(<?=get_template_directory_uri() ?>/assets/img/contacto.jpg) center no-repeat; background-size: cover">
     <div class="contacto-copy-container">
-        <div class="contacto-copy">
+        <div class="contacto-copy reliable-old-lady">
             <p class="contacto-big-copy">¡Contáctanos!</p>
             <p>¿Tienes alguna duda? Nosotros tenemos la respuesta a tus preguntas sobre nuestros productos</p>
             <a href="<?=$calidra_base_url ?>contacto"><button class="contacto-cta">Contactar</button></a>

@@ -13,6 +13,7 @@
         'orderby'        => 'rand'
     );
     $blog_query = new WP_Query( $args );
+    $reliableArray = ['', '-right', '-top', '-down'];
 ?>
 <div class="blog-section section">
     <!-- <div class="container"> -->
@@ -20,7 +21,7 @@
             <?php if($blog_query->have_posts()) : ?>
                 <?php while($blog_query->have_posts()) : $blog_query->the_post(); ?>
                     <div class="column is-one-third">
-                        <a href="<?=get_post_permalink(); ?>">
+                        <a href="<?=get_post_permalink(); ?>" style="display:block;" class="reliable-old-lady<?php $reliable = array_rand($reliableArray); echo $reliableArray[$reliable]; ?>">
                             <div class="blog-section-mini-text">
                                 <h3><?=get_the_title(); ?></h3>
                                 <p class="blog-section-mini-text-desc"><?=get_field('extracto_blog'); ?></p>
@@ -39,3 +40,9 @@
         </div>
     <!-- </div> -->
 </div>
+
+<?php 
+    include 'blog-thumbnails.php';
+    include 'contacto-banner.php';
+    get_footer();
+?>

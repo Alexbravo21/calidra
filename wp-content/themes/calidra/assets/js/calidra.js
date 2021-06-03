@@ -12,6 +12,10 @@ const Calidra = (() => {
     const cerrarDireccion = document.querySelector('.cerrar');
     const localizadorInfo = document.querySelector('.localizador-mapa-info');
     const usosPlayButton = document.querySelectorAll('.play-button');
+    const viejaConfiable = document.querySelectorAll('.reliable-old-lady');
+    const viejaConfiableRight = document.querySelectorAll('.reliable-old-lady-right');
+    const viejaConfiableUp = document.querySelectorAll('.reliable-old-lady-up');
+    const viejaConfiableDown = document.querySelectorAll('.reliable-old-lady-down');
     
     let sliderContador = 0;
     let corporativo,  prev_attr, index_attr, subtr_attr, new_attr, sumrest;
@@ -21,6 +25,8 @@ const Calidra = (() => {
         ['ADIOS CALIDRA', 'ADIOS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur', 'colabora-vacantes.jpg']
     ]
     let carousels;
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
 
     return{
         init: () => {
@@ -32,6 +38,7 @@ const Calidra = (() => {
             Calidra.bulmaCarousel2('.home-carousel', 2);
             Calidra.bulmaCarousel('.usos-carousel', 1);
             Calidra.clickEvents();
+            Calidra.scrollFunction();
         },
         clickEvents: () => {
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
@@ -135,6 +142,51 @@ const Calidra = (() => {
             setTimeout(() => {
                 localizadorInfo.style.display = 'none';
             }, 450);
+        },
+        scrollFunction: () => {
+            const scrollAction = (scrollPos) => {
+                viejaConfiable.forEach((oldLady)=>{
+                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                        oldLady.classList.add('animado');
+                    }
+                });
+                viejaConfiableRight.forEach((oldLady)=>{
+                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                        oldLady.classList.add('animado');
+                    }
+                });
+                viejaConfiableUp.forEach((oldLady)=>{
+                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                        oldLady.classList.add('animado');
+                    }
+                });
+                viejaConfiableDown.forEach((oldLady)=>{
+                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                        oldLady.classList.add('animado');
+                    }
+                });
+            }
+              
+            document.addEventListener('scroll', function(e) {
+                lastKnownScrollPosition = window.scrollY;
+                
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        scrollAction(lastKnownScrollPosition);
+                        ticking = false;
+                    });
+                
+                    ticking = true;
+                }
+            });
+        },
+        isInViewport: (element) => {
+            const rect = element.getBoundingClientRect();
+            const elementHEight = element.offsetHeight;
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight + elementHEight*.25 || document.documentElement.clientHeight + elementHEight*.25)
+            );
         }
     }  
 })();

@@ -20,10 +20,10 @@
         <div class="pleca-roja">
             <div class="flecha-derecha"></div>
         </div>
-        <h2>QUIÉNES SOMOS</h2>
+        <h2 class="reliable-old-lady">QUIÉNES SOMOS</h2>
     </div>
     <div class="quienes-somos-mini-cont">
-        <div class="quienes-somos-texto">
+        <div class="quienes-somos-texto reliable-old-lady-right">
             <p>Durante un siglo de existencia, grupo Calidra se ha consolidado como líder en la industria de la cal. Con ayuda de estrategias internas y esfuerzos entre colaboradores hemos crecido guiados por el compromiso de ofrecer productos de excelente calidad.</p>
             <p>Calidra está enfocada en la formación de profesionales y el desarrollo de sus habilidades, como el desempeño de sus funciones y capacitación laboral continua. Cada uno de nuestros colaboradores y empleados sabe que la actitud de servicio es esencial para cumplir con las expectativas de la propia empresa y sus clientes.</p>
             <p><strong>Misión:</strong> Ser una empresa competitiva y sustentable a nivel mundial que nos permita satisfacer las necesidades y expectativas razonables de nuestros clientes, del personal, de los accionistas y de la sociedad de forma ejemplar.</p>
@@ -32,7 +32,7 @@
         <div class="columns quienes-somos-iconos">
             <?php for ($i = 0; $i < count($iconos_texto); $i++):?>
                 <div class="column">
-                    <img src="<?=$templateUriSection ?>quienes_somos_icono<?=$i+1 ?>.jpg" alt="" class="quienes-somos-icono">
+                    <img src="<?=$templateUriSection ?>quienes_somos_icono<?=$i+1 ?>.jpg" alt="" class="quienes-somos-icono reliable-old-lady-down">
                     <p><?=$iconos_texto[$i] ?></p>
                 </div>
             <?php endfor;?>
@@ -40,26 +40,26 @@
     </div>
     <div class="responsabilidad-social">
         <div class="responsabilidad-social-imagen-cont">
-            <img src="<?=$templateUriSection ?>responsabilidad-social.jpg" alt="">
+            <img src="<?=$templateUriSection ?>responsabilidad-social.jpg" alt="" class="reliable-old-lady-right">
         </div>
         <div class="responsabilidad-social-texto">
-            <h2>Responsabilidad<br>Social</h2>
-            <p>Grupo Calidra lleva a cabo acciones de responsabilidad social que demuestran nuestro compromiso e interés por mejorar nuestro entorno y colaborar por un bienestar común.</p>
-            <p>Apoyamos a comunidades para la restauración y construcción de calles, escuelas, obras públicas, colaboramos en reforestaciones voluntarias, con fundaciones de asistencia social y campañas de salud internas para nuestro personal.</p>
-            <p>Tenemos muy presente el rol tan importante de las empresas en la creación de valor y fomento al desarrollo en nuestra sociedad.</p>
+            <h2 class="reliable-old-lady">Responsabilidad<br>Social</h2>
+            <p class="reliable-old-lady">Grupo Calidra lleva a cabo acciones de responsabilidad social que demuestran nuestro compromiso e interés por mejorar nuestro entorno y colaborar por un bienestar común.</p>
+            <p class="reliable-old-lady">Apoyamos a comunidades para la restauración y construcción de calles, escuelas, obras públicas, colaboramos en reforestaciones voluntarias, con fundaciones de asistencia social y campañas de salud internas para nuestro personal.</p>
+            <p class="reliable-old-lady">Tenemos muy presente el rol tan importante de las empresas en la creación de valor y fomento al desarrollo en nuestra sociedad.</p>
         </div>
     </div>
     <div class="colabora-nosotros">
         <div class="colabora-imagen">
             <div class="colabora-imagen-over">
-                <img src="<?=$templateUriSection ?>colabora-nosotros.jpg" alt="">
+                <img src="<?=$templateUriSection ?>colabora-nosotros.jpg" alt="" class="reliable-old-lady-right">
             </div>
-            <h2>Colabora con nosotros</h2>
+            <h2 class="reliable-old-lady">Colabora con nosotros</h2>
         </div>
-        <p>Si quieres formar parte de una gran familia, de un gran equipo de trabajo, estás en el lugar correcto. Conoce las vacantes que tenemos para que tu desarrollo laboral comience a crecer junto con nosotros, junto a Calidra.</p>
-        <a href="<?=$calidra_base_url ?>corporativo/colabora-con-nosotros"><p class="colabora-vermas">ver más</p></a>
+        <p class="reliable-old-lady">Si quieres formar parte de una gran familia, de un gran equipo de trabajo, estás en el lugar correcto. Conoce las vacantes que tenemos para que tu desarrollo laboral comience a crecer junto con nosotros, junto a Calidra.</p>
+        <a href="<?=$calidra_base_url ?>corporativo/colabora-con-nosotros"><p class="colabora-vermas reliable-old-lady">ver más</p></a>
     </div>
-    <div class="corporativo-iniciativas-cont">
+    <div class="corporativo-iniciativas-cont" style="display:none;"><!-- Este display es mientras cliente aprueba esta sección -->
         <div class="contenedor">
             <div class="corporativo-iniciativas">
                 <h2>Iniciativas</h2>

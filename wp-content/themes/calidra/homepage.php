@@ -14,7 +14,7 @@
 ?>
 <div class="hero-banner" style="background: url(<?php the_field('hero_banner') ?>) center no-repeat; background-size: cover">
     <div class="hero-copy-container">
-        <div class="hero-copy">
+        <div class="hero-copy reliable-old-lady">
             <p class="hero-big-copy"><?php the_field('big_copy') ?></p>
             <p><?php the_field('small_copy') ?></p>
             <button class="hero-cta"><?php the_field('cta_banner') ?></button>
@@ -24,11 +24,11 @@
 <div class="section">
     <div class="home-productos container">
         <div class="columns is-vcentered">
-            <div class="home-productos-desc column is-4">
+            <div class="home-productos-desc column is-4 reliable-old-lady">
                 <h2><?php the_field('titulo_productos_home') ?></h2>
                 <p><?php the_field('texto_productos_home') ?></p>
             </div>
-            <div class="home-productos-item-cont column is-8">
+            <div class="home-productos-item-cont column is-8 reliable-old-lady-right">
                 <div class="home-carousel">
                 <?php $cont = 1; foreach($productos_slider as $key => $cat) :?>
                     <div class="item-<?=$cont ?> productos-carousel-item">
@@ -59,19 +59,19 @@
     <div class="contenedor">
         <div class="columns">
             <div class="column">
-                <div class="usos-cotidianos-home">
+                <div class="usos-cotidianos-home reliable-old-lady">
                     <h3>Usos Cotidianos</h3>
                 </div>
             </div>
             <div class="column">
-                <div class="home-blog">
+                <div class="home-blog reliable-old-lady-right">
                     <h3>Blog</h3>
                 </div>
             </div>
         </div>
         <div class="columns">
             <div class="column">
-                <div class="home-asesor column">
+                <div class="home-asesor column reliable-old-lady">
                     <h3>Busca tu asesor</h3>
                 </div>
             </div>

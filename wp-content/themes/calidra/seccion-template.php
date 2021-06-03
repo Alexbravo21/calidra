@@ -27,16 +27,16 @@
     ]));
 ?>
 <div class="seccion-template section">
-    <div class="seccion-template-desc">
+    <div class="seccion-template-desc reliable-old-lady">
         <?php the_field('descripcion_de_seccion'); ?>
     </div>
     <div class="seccion-template-productos">
-        <h3>NUESTROS PRODUCTOS</h3>
+        <h3 class="reliable-old-lady">NUESTROS PRODUCTOS</h3>
         <div class="columns is-justify-content-space-between">
             <?php if($productos_query->have_posts()) : ?>
                 <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
                     <div class="column is-one-quarter is-flex">
-                        <div class="seccion-template-productos-cont">
+                        <div class="seccion-template-productos-cont reliable-old-lady-up">
                             <div class="seccion-template-productos-cont-image">
                                 <img src="<?=the_post_thumbnail_url(); ?>" alt="">
                             </div>
@@ -56,14 +56,14 @@
     <div class="template-localizador">
         <div class="columns is-vcentered">
             <div class="column">
-                <div class="template-localizador-cta">
+                <div class="template-localizador-cta reliable-old-lady">
                     <h3><strong>Busca</strong> a tu asesor</h3>
                     <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
                     <button>LOCALIZAR</button>
                 </div>
             </div>
             <div class="column">
-                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="">
+                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="" class="reliable-old-lady-right">
             </div>
         </div>
     </div>
@@ -71,8 +71,8 @@
         <h3>Videos</h3>
         <div class="template-videos-cont">
             <div class="columns">
-                <div class="column <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>is-8 <?php endif; ?>">
-                    <div class="video-big video-cont" style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[0]?>/maxresdefault.jpg">
+                <div class="column <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>is-8 <?php endif; ?> ">
+                    <div class="video-big video-cont reliable-old-lady" style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[0]?>/maxresdefault.jpg">
                         <div class="black-screen">
                             <div class="play-button" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>">
                                 <div class="play-arrow" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>"></div>
@@ -82,7 +82,7 @@
                 </div>
                 <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>
                     <div class="column">
-                        <div class="video-small video-cont" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[1]?>/maxresdefault.jpg" <?php endif; ?>>
+                        <div class="video-small video-cont reliable-old-lady-right" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[1]?>/maxresdefault.jpg" <?php endif; ?>>
                             <div class="black-screen">
                                 <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>>
                                     <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>></div>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                         <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>
-                            <div class="video-small video-cont" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[2]?>/maxresdefault.jpg" <?php endif; ?>>
+                            <div class="video-small video-cont reliable-old-lady-right" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[2]?>/maxresdefault.jpg" <?php endif; ?>>
                                 <div class="black-screen">
                                     <div class="play-button" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>>
                                         <div class="play-arrow" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>></div>
