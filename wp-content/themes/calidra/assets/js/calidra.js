@@ -39,6 +39,7 @@ const Calidra = (() => {
             Calidra.bulmaCarousel('.usos-carousel', 1);
             Calidra.clickEvents();
             Calidra.scrollFunction();
+            Calidra.scrollAction();
         },
         clickEvents: () => {
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
@@ -143,40 +144,39 @@ const Calidra = (() => {
                 localizadorInfo.style.display = 'none';
             }, 450);
         },
-        scrollFunction: () => {
-            const scrollAction = (scrollPos) => {
-                viejaConfiable.forEach((oldLady)=>{
-                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
-                        oldLady.classList.add('animado');
-                    }
-                });
-                viejaConfiableRight.forEach((oldLady)=>{
-                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
-                        oldLady.classList.add('animado');
-                    }
-                });
-                viejaConfiableUp.forEach((oldLady)=>{
-                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
-                        oldLady.classList.add('animado');
-                    }
-                });
-                viejaConfiableDown.forEach((oldLady)=>{
-                    if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
-                        oldLady.classList.add('animado');
-                    }
-                });
-            }
-              
+        scrollFunction: () => {              
             document.addEventListener('scroll', function(e) {
                 lastKnownScrollPosition = window.scrollY;
                 
                 if (!ticking) {
                     window.requestAnimationFrame(() => {
-                        scrollAction(lastKnownScrollPosition);
+                        Calidra.scrollAction(lastKnownScrollPosition);
                         ticking = false;
                     });
                 
                     ticking = true;
+                }
+            });
+        },
+        scrollAction: (scrollPos) => {
+            viejaConfiable.forEach((oldLady)=>{
+                if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                    oldLady.classList.add('animado');
+                }
+            });
+            viejaConfiableRight.forEach((oldLady)=>{
+                if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                    oldLady.classList.add('animado');
+                }
+            });
+            viejaConfiableUp.forEach((oldLady)=>{
+                if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                    oldLady.classList.add('animado');
+                }
+            });
+            viejaConfiableDown.forEach((oldLady)=>{
+                if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
+                    oldLady.classList.add('animado');
                 }
             });
         },
@@ -185,7 +185,7 @@ const Calidra = (() => {
             const elementHEight = element.offsetHeight;
             return (
                 rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight + elementHEight*.25 || document.documentElement.clientHeight + elementHEight*.25)
+                rect.bottom <= (window.innerHeight + elementHEight*.35 || document.documentElement.clientHeight + elementHEight*.35)
             );
         }
     }  
