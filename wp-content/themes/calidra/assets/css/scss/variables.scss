@@ -22,6 +22,31 @@ $xl: 1200px;
 $xxl: 1400px;
 $xxxl: 1800px;
 
+@font-face {
+    font-family: "Century Gothic";
+    src: url("../fonts/gothic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Century Gothic";
+    src: url("../fonts/gothicb.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Century Gothic";
+    src: url("../fonts/gothici.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Century Gothic";
+    src: url("../fonts/gothicbi.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
 //fuentes
 $century: 'Century Gothic', sans-serif;
 $open-sans: 'Open Sans Condensed', sans-serif;

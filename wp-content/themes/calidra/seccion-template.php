@@ -57,7 +57,7 @@
         <div class="columns is-vcentered">
             <div class="column">
                 <div class="template-localizador-cta reliable-old-lady">
-                    <h3><strong>Busca</strong> a tu asesor</h3>
+                    <h3><strong>Encuentra</strong> tu distribuidor</h3>
                     <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
                     <button>LOCALIZAR</button>
                 </div>

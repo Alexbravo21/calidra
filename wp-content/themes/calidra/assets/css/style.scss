@@ -350,13 +350,14 @@ footer{
             padding-top: 80px;
         }
         h3{
-            font-family: $montserrat;
-            @include fontLine(5rem, 5rem);
+            font-family: $century;
+            @include fontLine(6.5rem, 6rem);
             position: relative;
             top: -30px;
             text-shadow: $outter-shadow;
             color: #ffffff;
             width: 100%;
+            font-weight: bold;
             @include minWidth($lg){
                 width: 35%;
             }
@@ -507,7 +508,7 @@ footer{
         margin: 50px auto 70px;
         .quienes-somos-texto{
             margin-bottom: 30px;
-            font-family: $lato;
+            font-family: $century;
             p{
                 margin-bottom: 20px;
                 text-align: justify;
@@ -563,7 +564,7 @@ footer{
             }
             p{
                 margin-bottom: 20px;
-                font-family: $lato;
+                font-family: $century;
                 width: 750px;
                 max-width: 100%;
             }
@@ -603,7 +604,7 @@ footer{
         p{
             color: $grey;
             margin: 50px 0;
-            font-family: $lato;
+            font-family: $century;
             @include fontLine(1.6rem, 2.2rem);
         }
         .colabora-vermas{
@@ -730,6 +731,7 @@ footer{
     .colabora-nosotros-titulo-cont {
         @include especificContainer(800px);
         margin-bottom: 50px;
+        font-family: $century;
         @include minWidth($lg){
             margin-top: 50px;
             margin-bottom: 50px;
@@ -739,7 +741,6 @@ footer{
             color: $grey;
             @include fontLine(3rem, 3rem);
             text-transform: uppercase;
-            font-family: $century;
             font-weight: bold;
             margin-bottom: 70px;
             @include minWidth($lg){
@@ -819,8 +820,8 @@ footer{
             padding: 100px 0 50px;
             .colabora-creciendo-int{
                 @include especificContainer(800px);
+                font-family: $century;
                 h3{
-                    font-family: $century;
                     font-weight: bold;
                     @include fontLine(4rem, 4rem);
                     text-align: center;
@@ -852,7 +853,7 @@ footer{
                                 }
                             }
                             + div{
-                                font-family: $lato;
+                                font-family: $century;
                                 color: $white-grey;
                                 @include fontLine(1.3rem, 1.5rem);
                                 font-weight: bold;
@@ -936,7 +937,7 @@ footer{
         margin-bottom: 50px;
         p{
             margin-bottom: 20px;
-            font-family: $lato;
+            font-family: $century;
             @include fontLine(1.5rem, 2rem);
             color: $grey;
         }
@@ -1042,6 +1043,7 @@ footer{
                 }
                 &-texto{
                     @include fontLine(1.3rem, 1.8rem);
+                    font-family: $century;
                 }
                 .usos-carousel-cont{
                     @include especificContainer(1100px);
@@ -1076,9 +1078,31 @@ footer{
                         }
                     }
                     .slider-navigation-previous{
-                        transform: translate(-180%, 0);
+                        transform: translate(-200%, 0);
                         &:hover{
                             transform: scale(1) translate(-180%, 0);
+                        }
+                        &::after{
+                            content: '';
+                            background:url(../img/usos_cotidianos/slider/atras.png);
+                            width: 22px;
+                            height: 22px;
+                            position: absolute;
+                            right: -5px;
+                            top: -3px;
+                            transform: translate(100%, 0);
+                        }
+                    }
+                    .slider-navigation-next{
+                        &::before{
+                            content: '';
+                            background:url(../img/usos_cotidianos/slider/adelante.png);
+                            width: 22px;
+                            height: 22px;
+                            position: absolute;
+                            left: -5px;
+                            top: -3px;
+                            transform: translate(-100%, 0);
                         }
                     }
                 }
@@ -1093,7 +1117,11 @@ footer{
         @include fontLine(1.5rem, 2rem);
         margin-top: 60px;
         margin-bottom: 60px;
-        font-family: $lato;
+        font-family: $century;
+        ul{
+            list-style: disc;
+            padding-left: 15px;
+        }
         p{
             margin-bottom: 20px;
         }
@@ -1368,6 +1396,7 @@ footer{
 .blog-section{
     padding: 80px 0;
     @include especificContainer(1100px);
+    font-family: $century;
     &-mini-text{
         h3{
             @include fontLine(3rem, 3rem);
@@ -1381,7 +1410,6 @@ footer{
         }
         &-meta{
             @include fontLine(1.2rem, 1.5rem);
-            font-family: $lato;
             margin: 10px 0;
             span{
                 color: $calidra-red;
@@ -1563,7 +1591,7 @@ footer{
             margin-bottom: 20px;
         }
         p{
-            font-family: $lato;
+            font-family: $century;
             margin-bottom: 30px;
         }
     }

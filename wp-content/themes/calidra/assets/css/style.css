@@ -1,3 +1,59 @@
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothicb.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothici.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothicbi.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothicb.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothici.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/gothicbi.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
 .burger {
   width: 40px;
   height: 35px;
@@ -600,14 +656,15 @@ footer .footer-bottom-border {
 }
 
 .home-resto-contenido .contenedor h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 5rem;
-  line-height: 5rem;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 6.5rem;
+  line-height: 6rem;
   position: relative;
   top: -30px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.65);
   color: #ffffff;
   width: 100%;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1024px) {
@@ -867,7 +924,7 @@ footer .footer-bottom-border {
 
 .quienes-somos-mini-cont .quienes-somos-texto {
   margin-bottom: 30px;
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .quienes-somos-mini-cont .quienes-somos-texto p {
@@ -957,7 +1014,7 @@ footer .footer-bottom-border {
 
 .quienes-somos .responsabilidad-social-texto p {
   margin-bottom: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   width: 750px;
   max-width: 100%;
 }
@@ -1013,7 +1070,7 @@ footer .footer-bottom-border {
 .quienes-somos .colabora-nosotros p {
   color: #3e3e3e;
   margin: 50px 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
@@ -1206,6 +1263,7 @@ footer .footer-bottom-border {
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
+  font-family: "Century Gothic", sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1221,7 +1279,6 @@ footer .footer-bottom-border {
   font-size: 3rem;
   line-height: 3rem;
   text-transform: uppercase;
-  font-family: "Century Gothic", sans-serif;
   font-weight: bold;
   margin-bottom: 70px;
 }
@@ -1329,10 +1386,10 @@ footer .footer-bottom-border {
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .colabora-nosotros-seccion .colabora-creciendo-cont .colabora-creciendo .colabora-creciendo-int h3 {
-  font-family: "Century Gothic", sans-serif;
   font-weight: bold;
   font-size: 4rem;
   line-height: 4rem;
@@ -1380,7 +1437,7 @@ footer .footer-bottom-border {
 }
 
 .colabora-nosotros-seccion .colabora-creciendo-cont .colabora-creciendo .colabora-creciendo-int .colabora-creciendo-numeros .colabora-creciendo-numero-cont .colabora-creciendo-numero + div {
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   color: #e3e3e3;
   font-size: 1.3rem;
   line-height: 1.5rem;
@@ -1488,7 +1545,7 @@ footer .footer-bottom-border {
 
 .usos-cotidianos-desc p {
   margin-bottom: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #3e3e3e;
@@ -1633,6 +1690,7 @@ footer .footer-bottom-border {
 .usos-cotidianos-acordeon-item-body-texto {
   font-size: 1.3rem;
   line-height: 1.8rem;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .usos-cotidianos-acordeon-item-body .usos-carousel-cont {
@@ -1678,13 +1736,37 @@ footer .footer-bottom-border {
 }
 
 .usos-cotidianos-acordeon-item-body .usos-carousel-cont .slider-navigation-previous {
-  -webkit-transform: translate(-180%, 0);
-          transform: translate(-180%, 0);
+  -webkit-transform: translate(-200%, 0);
+          transform: translate(-200%, 0);
 }
 
 .usos-cotidianos-acordeon-item-body .usos-carousel-cont .slider-navigation-previous:hover {
   -webkit-transform: scale(1) translate(-180%, 0);
           transform: scale(1) translate(-180%, 0);
+}
+
+.usos-cotidianos-acordeon-item-body .usos-carousel-cont .slider-navigation-previous::after {
+  content: '';
+  background: url(../img/usos_cotidianos/slider/atras.png);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: -5px;
+  top: -3px;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.usos-cotidianos-acordeon-item-body .usos-carousel-cont .slider-navigation-next::before {
+  content: '';
+  background: url(../img/usos_cotidianos/slider/adelante.png);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: -5px;
+  top: -3px;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
 }
 
 .seccion-template-desc {
@@ -1696,7 +1778,12 @@ footer .footer-bottom-border {
   line-height: 2rem;
   margin-top: 60px;
   margin-bottom: 60px;
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
+}
+
+.seccion-template-desc ul {
+  list-style: disc;
+  padding-left: 15px;
 }
 
 .seccion-template-desc p {
@@ -2137,6 +2224,7 @@ footer .footer-bottom-border {
   width: 1100px;
   max-width: 100%;
   margin: 0 auto;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .blog-section-mini-text h3 {
@@ -2155,7 +2243,6 @@ footer .footer-bottom-border {
 .blog-section-mini-text-meta {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  font-family: "Lato", sans-serif;
   margin: 10px 0;
 }
 
@@ -2404,7 +2491,7 @@ footer .footer-bottom-border {
 }
 
 .template-localizador-cta p {
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   margin-bottom: 30px;
 }
 
