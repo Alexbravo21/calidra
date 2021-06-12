@@ -2280,7 +2280,8 @@ footer .footer-bottom-border {
   color: #202020;
   font-style: italic;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  min-height: 100px;
 }
 
 .blog-section-mini-cont-text-desc {
