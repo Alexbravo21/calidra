@@ -5,6 +5,7 @@
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
     $imageSectionHero = $templateUriSection . 'localizador.jpg';
+    $imageSectionHeroMobile = $templateUriSection . 'localizador-mobile.jpg';
     $color = 'blanco';
     include 'section-header-2.php';
 ?>

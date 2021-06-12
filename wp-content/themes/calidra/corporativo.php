@@ -6,6 +6,7 @@
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/corporativo/';
     $imageSectionHero = $templateUriSection . 'corporativo.jpg';
+    $imageSectionHeroMobile = $templateUriSection . 'corporativo-mobile.jpg';
     include 'section-header-2.php';
     $iconos_texto = Array(
         "Integridad y Honestidad",

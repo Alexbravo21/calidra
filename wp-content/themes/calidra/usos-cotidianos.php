@@ -6,6 +6,7 @@
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/usos_cotidianos/';
     $imageSectionHero = $templateUriSection . 'usos-cotidianos.jpg';
+    $imageSectionHero = $templateUriSection . 'usos-cotidianos-mobile.jpg';
     $copySide = 'derecho';
     include 'section-header-2.php';
     @include 'usos-array.php';

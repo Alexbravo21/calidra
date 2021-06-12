@@ -6,6 +6,7 @@
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/seccion_template/';
     $imageSectionHero = get_field('hero_image');
+    $imageSectionHeroMobile = get_field('hero_image_mobile');
     $copySide = 'derecho';
     $color = 'blanco';
     include 'section-header-2.php';

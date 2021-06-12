@@ -5,6 +5,7 @@
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/blog/';
     $imageSectionHero = $templateUriSection . 'blog.jpg';
+    $imageSectionHeroMobile = $templateUriSection . 'blog-mobile.jpg';
     $color = 'blanco';
     include 'section-header-2.php';
     $args = array(

@@ -5,6 +5,7 @@
     get_header();
     $templateUriSection = get_template_directory_uri() . '/assets/img/contacto/';
     $imageSectionHero = $templateUriSection . 'contacto.jpg';
+    $imageSectionHeroMobile = $templateUriSection . 'contacto-mobile.jpg';
     $color = 'blanco';
     include 'section-header-2.php';
 ?>
