@@ -17,7 +17,9 @@ const Calidra = (() => {
     const viejaConfiableUp = document.querySelectorAll('.reliable-old-lady-up');
     const viejaConfiableDown = document.querySelectorAll('.reliable-old-lady-down');
     
+    let windowWidth = window.innerWidth;
     let sliderContador = 0;
+    let element;
     let corporativo,  prev_attr, index_attr, subtr_attr, new_attr, sumrest;
     const iniciativasContenido = [
         ['LOREM IPSUM DOLOR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de hominis summo bono quaeritur', 'iniciativas.jpg'],
@@ -32,14 +34,11 @@ const Calidra = (() => {
         init: () => {
             Calidra.burgerClick();
             Calidra.accordion();
-            //setTimeout(()=>{
-                Calidra.bulmaCarousel2('.carousel', 2);       
-            //}, 2000)
-            Calidra.bulmaCarousel2('.home-carousel', 2);
-            Calidra.bulmaCarousel('.usos-carousel', 1);
+            Calidra.startAllSliders();
             Calidra.clickEvents();
             Calidra.scrollFunction();
             Calidra.scrollAction();
+            window.addEventListener('resize', Calidra.restartAllSliders);
         },
         clickEvents: () => {
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
@@ -96,12 +95,13 @@ const Calidra = (() => {
             const options = {
                 slidesToShow: slides,
                 pagination: false,
-                infinite: true
+                infinite: true,
+                breakpoints: [{ changePoint: 900, slidesToShow: 1, slidesToScroll: 1 } ]
             }
             // Initialize all elements with carousel class.
             carousels = bulmaCarousel2.attach(clase, options);
         },
-        iniciativasCarousel: (lado) => {
+        iniciativasCarousel: lado => {
             sumrest = lado === 'd' ? 1 : -1;
             sliderContador = sliderContador + sumrest;
             sliderContador = sliderContador === -1 ? iniciativasContenido.length - 1 : sliderContador === iniciativasContenido.length ? 0 : sliderContador;
@@ -133,7 +133,7 @@ const Calidra = (() => {
                 videoCont.children[0].children[1].setAttribute('src', '');
             }, 450);
         },
-        abrirVideo: (src) =>{
+        abrirVideo: src =>{
             videoCont.style.display = 'flex';
             videoCont.classList.remove('cerrado');
             videoCont.children[0].children[1].setAttribute('src', src);
@@ -158,35 +158,52 @@ const Calidra = (() => {
                 }
             });
         },
-        scrollAction: (scrollPos) => {
-            viejaConfiable.forEach((oldLady)=>{
+        scrollAction: () => {
+            viejaConfiable.forEach( oldLady =>{
                 if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
                     oldLady.classList.add('animado');
                 }
             });
-            viejaConfiableRight.forEach((oldLady)=>{
+            viejaConfiableRight.forEach( oldLady =>{
                 if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
                     oldLady.classList.add('animado');
                 }
             });
-            viejaConfiableUp.forEach((oldLady)=>{
+            viejaConfiableUp.forEach( oldLady =>{
                 if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
                     oldLady.classList.add('animado');
                 }
             });
-            viejaConfiableDown.forEach((oldLady)=>{
+            viejaConfiableDown.forEach( oldLady =>{
                 if (!oldLady.classList.contains('animado') && Calidra.isInViewport(oldLady)){
                     oldLady.classList.add('animado');
                 }
             });
         },
-        isInViewport: (element) => {
+        isInViewport: element => {
             const rect = element.getBoundingClientRect();
             const elementHEight = element.offsetHeight;
             return (
                 rect.top >= 0 &&
                 rect.bottom <= (window.innerHeight + elementHEight*.35 || document.documentElement.clientHeight + elementHEight*.35)
             );
+        },
+        startAllSliders: () => {
+            Calidra.bulmaCarousel2('.carousel', 2);       
+            Calidra.bulmaCarousel2('.home-carousel', 2);
+            Calidra.bulmaCarousel('.usos-carousel', 1);
+        },
+        restartAllSliders: (e) => {
+            if(window.innerWidth === windowWidth) return false;
+            Calidra.restartSlider('.carousel');       
+            Calidra.restartSlider('.home-carousel');
+            Calidra.restartSlider('.usos-carousel');
+        },
+        restartSlider: clase => {
+            let element = document.querySelector(clase);
+            if(element){
+                element.Function.reset();
+            }
         }
     }  
 })();

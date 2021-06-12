@@ -4,7 +4,12 @@
 
 
 html { font-size: 62.5%; }
-body{font-size: 1.4rem;line-height: 2rem; }
+body{
+    font-size: 1.4rem;line-height: 2rem; 
+    @include maxWidth($lg){
+        overflow-x: hidden;
+    }
+}
 a, a:link, a:visited, a:focus{
     color: inherit;
     text-decoration: none;
@@ -241,12 +246,13 @@ footer{
     }
     &-item-cont{
         position: relative;
-        // @include minWidth($lg){
-        //     padding: 0 0 0 50px;
-        // }
+        padding: 0;
         overflow: hidden;
         .slider-item{
-            @include minWidth($lg){
+            @include minWidth($md){
+                padding: 0 5px;
+            }
+            @include minWidth($xl){
                 padding: 0 15px;
             }
         }
@@ -274,6 +280,9 @@ footer{
                 width: 25%;
                 display: block;
                 margin: 0 auto 30px;
+                @include minWidth($lg){
+                    width: 30%;
+                }
             }
             .producto-titulo{
                 font-family: $century;
@@ -283,6 +292,13 @@ footer{
                 text-align: center;
                 width: 45%;
                 margin: 0 auto;
+                min-height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include minWidth($lg){
+                    width: 70%;
+                }
             }
             .producto-separador{
                 margin: 30px auto;

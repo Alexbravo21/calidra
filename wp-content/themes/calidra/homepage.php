@@ -17,7 +17,7 @@
         <div class="hero-copy reliable-old-lady">
             <p class="hero-big-copy"><?php the_field('big_copy') ?></p>
             <p><?php the_field('small_copy') ?></p>
-            <button class="hero-cta"><?php the_field('cta_banner') ?></button>
+            <a href="<?=$calidra_base_url ?>corporativo"><button class="hero-cta"><?php the_field('cta_banner') ?></button></a>
         </div>
     </div>
 </div>
@@ -35,7 +35,7 @@
                         <div class="home-productos-item">
                             <p class="productos-numero"><?=$cont ?></p>
                             <img src="<?=get_template_directory_uri()?>/assets/img/home/icono_productos-<?=$cont ?>.png" class="productos-icono" alt="">
-                            <p class="producto-titulo"><?=$cat[0] ?></p>
+                            <p class="producto-titulo"><span><?=$cat[0] ?></span></p>
                             <div class="producto-separador"></div>
                             <p class="producto-desc"><?=$cat[1] ?></p>
                             <p class="producto-vermas"><a href="<?=$calidra_base_url.$key?>">ver más</a></p>
