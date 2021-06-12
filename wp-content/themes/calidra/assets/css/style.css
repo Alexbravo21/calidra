@@ -712,11 +712,6 @@ footer .footer-bottom-border {
   background: url("../img/home/usos_cotidianos.jpg") center center no-repeat;
   background-size: cover;
   height: 500px;
-  padding-top: 50px;
-}
-
-.home-resto-contenido .contenedor .usos-cotidianos-home h3 {
-  margin-top: -90px;
 }
 
 .home-resto-contenido .contenedor .home-blog {
@@ -2262,7 +2257,24 @@ footer .footer-bottom-border {
   font-family: "Century Gothic", sans-serif;
 }
 
-.blog-section-mini-text h3 {
+.blog-section-mini-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.blog-section-mini-cont-text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.blog-section-mini-cont-text h3 {
   font-size: 3rem;
   line-height: 3rem;
   color: #202020;
@@ -2271,22 +2283,30 @@ footer .footer-bottom-border {
   margin-bottom: 20px;
 }
 
-.blog-section-mini-text-desc {
+.blog-section-mini-cont-text-desc {
   color: #3e3e3e;
 }
 
-.blog-section-mini-text-meta {
+.blog-section-mini-cont-text-meta {
   font-size: 1.2rem;
   line-height: 1.5rem;
   margin: 10px 0;
 }
 
-.blog-section-mini-text-meta span {
+.blog-section-mini-cont-text-meta span {
   color: #ed1d24;
   font-weight: bold;
   text-transform: uppercase;
   display: inline-block;
   margin-right: 10px;
+}
+
+.blog-section-mini-cont-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .blog-interior {

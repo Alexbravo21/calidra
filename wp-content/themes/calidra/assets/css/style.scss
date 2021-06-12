@@ -380,10 +380,10 @@ footer{
         }
         .usos-cotidianos-home{
             @include homeRestoSections('../img/home/usos_cotidianos.jpg');
-            padding-top: 50px;//por alguna razón el flex necesita esto para no mover el h3 de abajo
-            h3{
-                margin-top: -90px;
-            }
+            // padding-top: 50px;//por alguna razón el flex necesita esto para no mover el h3 de abajo
+            // h3{
+            //     margin-top: -90px;
+            // }
         }
         .home-blog{
             @include homeRestoSections('../img/home/blog.jpg');
@@ -1413,27 +1413,37 @@ footer{
     padding: 80px 0;
     @include especificContainer(1100px);
     font-family: $century;
-    &-mini-text{
-        h3{
-            @include fontLine(3rem, 3rem);
-            color: $ultra-dark-grey;
-            font-style: italic;  
-            font-weight: bold;
-            margin-bottom: 20px;          
-        }
-        &-desc{
-            color: $grey;
-        }
-        &-meta{
-            @include fontLine(1.2rem, 1.5rem);
-            margin: 10px 0;
-            span{
-                color: $calidra-red;
+    &-mini-cont{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        &-text{
+            flex-grow: 1;
+            h3{
+                @include fontLine(3rem, 3rem);
+                color: $ultra-dark-grey;
+                font-style: italic;  
                 font-weight: bold;
-                text-transform: uppercase;
-                display: inline-block;
-                margin-right: 10px;
+                margin-bottom: 20px;          
             }
+            &-desc{
+                color: $grey;
+            }
+            &-meta{
+                @include fontLine(1.2rem, 1.5rem);
+                margin: 10px 0;
+                span{
+                    color: $calidra-red;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+        }
+        &-img{
+            display: flex;
+            align-self: flex-end;
         }
     }
 }
