@@ -94,28 +94,64 @@
         </div>
         <div class="colabora-tabs">
             <div class="columns">
-                <div class="column"><span>CAPACITACIÓN</span></div>
-                <div class="column"><span>UNVICAL</span></div>
-                <div class="column"><span>CRECIMIENTO</span></div>
-                <div class="column active"><span>EQUIPOS DE TRABAJO</span></div>
+                <div class="column active" data-tab="capacitacion"><span>CAPACITACIÓN</span></div>
+                <div class="column" data-tab="univcal"><span>UNIVCAL</span></div>
+                <div class="column" data-tab="crecimiento"><span>CRECIMIENTO</span></div>
+                <div class="column" data-tab="equipo"><span>EQUIPOS DE TRABAJO</span></div>
             </div>
         </div>
         <div class="colabora-tabs-contenido">
             <div class="columns is-vcentered">
                 <div class="column">
-                    <h4>Equipos de trabajo</h4>
-                    <ul>
-                        <li>Cadena de suministro.</li>
-                        <li>Administración, finanzas y TI.</li>
-                        <li>Recursos Humanos.</li>
-                        <li>Desarrollo sustentable.</li>
-                        <li>Técnica.</li>
-                        <li>Mezclas listas.</li>
-                        <li>Ventas Directas Construcción.</li>
-                    </ul>
+                    <div class="colabora-tabs-contenido-texto" data-colaboraTexto="capacitacion">
+                        <h4>Crecimiento</h4>
+                        <p>Es el pilar que te permite crecer junto con Calidra. A partir del análisis de las necesidades futuras de tu puesto y de la organización, lleva al máximo potencial tus habilidades innatas y adquiridas.</p>
+                        <p>Busca la experiencia a través de 5 programas</p>
+                        <p class="colabora-tabs-contenido-texto-exp">
+                            <span>- CREA</span>
+                            Programa de innovación
+                        </p>
+                        <p class="colabora-tabs-contenido-texto-exp">
+                            <span>- ASPIRA</span>
+                            Programa de sucesión
+                        </p>
+                        <p class="colabora-tabs-contenido-texto-exp">
+                            <span>- PERMANECES</span>
+                            Programa de continuidad
+                        </p>
+                        <p class="colabora-tabs-contenido-texto-exp">
+                            <span>- ALCANZA</span>
+                            Programa de coaching
+                        </p>
+                        <p class="colabora-tabs-contenido-texto-exp">
+                            <span>- APRENDE</span>
+                            Programa de atracción de talentos
+                        </p>
+                    </div>
+                    <div class="colabora-tabs-contenido-texto oculto" data-colaboraTexto="univcal">
+                        <h4>UNIVCAL</h4>
+                        <p>Si quieres aprender más sobre la cal puedes consultar documentos sobre su historia, su impacto en distintas industrias, formas distintas de utilizarla y mucho más. Aprende más sobre la cal y su trascendencia dando <a href="#">clic aquí.</a></p>
+                    </div>
+                    <div class="colabora-tabs-contenido-texto oculto" data-colaboraTexto="crecimiento">
+                        <h4>Capacitación</h4>
+                        <p>Es el pilar que te permite tener un mejor desempeño en tu presupuesto a través de la formación profesional y personal.
+                        Se ha diseñado para ti un plan específico de capacitación basado en el modelo de competencias Calidra, el cual se compone de un bloque obligatorio y un bloque electivo</p>
+                    </div>
+                    <div class="colabora-tabs-contenido-texto oculto" data-colaboraTexto="equipo">
+                        <h4>Equipos de trabajo</h4>
+                        <ul>
+                            <li>Cadena de suministro.</li>
+                            <li>Administración, finanzas y TI.</li>
+                            <li>Recursos Humanos.</li>
+                            <li>Desarrollo sustentable.</li>
+                            <li>Técnica.</li>
+                            <li>Mezclas listas.</li>
+                            <li>Ventas Directas Construcción.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="column">
-                    <img src="<?=$templateUriSection ?>equipo.png" alt="">
+                    <img src="<?=$templateUriSection ?>equipo.png" class="colabora-tab-img" alt="">
                 </div>
             </div>
         </div>

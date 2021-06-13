@@ -921,25 +921,44 @@ footer{
             @include especificContainer(800px);
             padding: 80px 10px;
             color: $grey;
-            h4{
-                font-family: $century;
-                font-style: italic;
-                font-weight: bold;
-                @include fontLine(4rem, 4rem);
-                margin-bottom: 50px;
-            }
-            ul{
-                padding-left: 1em;
-                li{
-                    @include fontLine(1.8rem, 1.8rem);
-                    margin: 10px 0;
-                    &::before{
-                        content: "\2022";
+            font-family: $century;
+            &-texto{
+                &.oculto{
+                    display: none;
+                }
+                h4{
+                    font-style: italic;
+                    font-weight: bold;
+                    @include fontLine(4rem, 4rem);
+                    margin-bottom: 50px;
+                }
+                &-exp{
+                    span{
                         color: $calidra-red;
+                        display: block;
                         font-weight: bold;
-                        display: inline-block; 
-                        width: 1em;
-                        margin-left: -1em;
+                    }
+                }
+                p{
+                    margin-bottom: 20px;
+                    a{
+                        color: $calidra-red;
+                        text-decoration: underline;
+                    }
+                }
+                ul{
+                    padding-left: 1em;
+                    li{
+                        @include fontLine(1.8rem, 1.8rem);
+                        margin: 10px 0;
+                        &::before{
+                            content: "\2022";
+                            color: $calidra-red;
+                            font-weight: bold;
+                            display: inline-block; 
+                            width: 1em;
+                            margin-left: -1em;
+                        }
                     }
                 }
             }

@@ -16,6 +16,7 @@ const Calidra = (() => {
     const viejaConfiableRight = document.querySelectorAll('.reliable-old-lady-right');
     const viejaConfiableUp = document.querySelectorAll('.reliable-old-lady-up');
     const viejaConfiableDown = document.querySelectorAll('.reliable-old-lady-down');
+    const colaboraPesta = document.querySelectorAll('.colabora-tabs .column');
     
     let windowWidth = window.innerWidth;
     let sliderContador = 0;
@@ -56,6 +57,11 @@ const Calidra = (() => {
                         }
                     };
                 }
+            }
+            if(colaboraPesta.length > 0){
+                colaboraPesta.forEach( tab => {
+                    tab.onclick = e => {e.stopPropagation(); Calidra.colaboraTabs(e, tab)};
+                });  
             }
         },
         burgerClick: () => {
@@ -204,6 +210,30 @@ const Calidra = (() => {
             if(element){
                 element.Function.reset();
             }
+        },
+        colaboraTabs: (e, tab) => {
+            colaboraPesta.forEach( item => {
+                item.classList.remove('active');
+            });
+            tab.classList.add('active');
+            Calidra.colaboraTabsContent(tab);
+        },
+        colaboraTabsContent: ({ dataset }) => {
+            let tipo = dataset.tab;
+            let img = document.querySelector('.colabora-tab-img');
+            let imgSrc = img.getAttribute('src');
+            let srcPos = imgSrc.indexOf('/corporativo/') + 13;
+            let newSrc = imgSrc.substring(0, srcPos);
+            img.setAttribute('src', `${newSrc+tipo}.png`);
+            let colaboraTabsTexto = document.querySelectorAll('.colabora-tabs-contenido-texto');
+            colaboraTabsTexto.forEach( item => {
+                console.log(item.dataset.colaboratexto, tipo);
+                if(item.dataset.colaboratexto === tipo) {
+                    item.classList.remove('oculto');
+                }else{
+                    if(!item.classList.contains('oculto')) item.classList.add('oculto');
+                }
+            });
         }
     }  
 })();

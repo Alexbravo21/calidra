@@ -1532,10 +1532,14 @@ footer .footer-bottom-border {
   margin: 0 auto;
   padding: 80px 10px;
   color: #3e3e3e;
+  font-family: "Century Gothic", sans-serif;
 }
 
-.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido h4 {
-  font-family: "Century Gothic", sans-serif;
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto.oculto {
+  display: none;
+}
+
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto h4 {
   font-style: italic;
   font-weight: bold;
   font-size: 4rem;
@@ -1543,17 +1547,32 @@ footer .footer-bottom-border {
   margin-bottom: 50px;
 }
 
-.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido ul {
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto-exp span {
+  color: #ed1d24;
+  display: block;
+  font-weight: bold;
+}
+
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto p {
+  margin-bottom: 20px;
+}
+
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto p a {
+  color: #ed1d24;
+  text-decoration: underline;
+}
+
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto ul {
   padding-left: 1em;
 }
 
-.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido ul li {
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto ul li {
   font-size: 1.8rem;
   line-height: 1.8rem;
   margin: 10px 0;
 }
 
-.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido ul li::before {
+.colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs-contenido-texto ul li::before {
   content: "\2022";
   color: #ed1d24;
   font-weight: bold;
