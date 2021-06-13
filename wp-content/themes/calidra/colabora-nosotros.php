@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div class="column">
-                    <img src="<?=$templateUriSection ?>equipo.png" class="colabora-tab-img" alt="">
+                    <img src="<?=$templateUriSection ?>capacitacion.png" class="colabora-tab-img" alt="">
                 </div>
             </div>
         </div>
