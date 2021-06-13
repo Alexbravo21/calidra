@@ -34,7 +34,7 @@ a, a:link, a:visited, a:focus{
 footer{
     background: url(../img/footer_pleca.png) bottom -10px center no-repeat;
     background-size: contain;
-    font-family: $lato;
+    font-family: $century;
     color: $grey;
     border-top: 1px solid $white-dark-grey;
     @include fontLine(1.3rem, 1.8rem);
@@ -896,6 +896,7 @@ footer{
                 height: 100px;
                 background-color: $ultra-dark-grey;
                 border-right: 1px solid #ffffff;
+                cursor: pointer;
                 &:last-child{
                     border: none;
                 }

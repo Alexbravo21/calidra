@@ -1,15 +1,16 @@
+<?php global $calidra_base_url; ?>
 <footer class="section">
     <div class="top-footer container">
         <div class="columns">
             <div class="column">
                 <ul>
-                    <li>Inicio</li>
-                    <li>Corporativo</li>
-                    <li>Usos Cotidianos</li>
-                    <li>Productos</li>
-                    <li>Localizador</li>
-                    <li>Blog</li>
-                    <li>Contacto</li>
+                    <li><a href="<?=$calidra_base_url ?>">Inicio</a></li>
+                    <li><a href="<?=$calidra_base_url ?>corporativo">Corporativo</a></li>
+                    <li><a href="<?=$calidra_base_url ?>usos-cotidianos">Usos Cotidianos</a></li>
+                    <li><a href="<?=$calidra_base_url ?>alimenticia-y-agricola">Productos</a></li>
+                    <li><a href="<?=$calidra_base_url ?>localizador">Localizador</a></li>
+                    <li><a href="<?=$calidra_base_url ?>blog">Blog</a></li>
+                    <li><a href="<?=$calidra_base_url ?>contacto">Contacto</a></li>
                 </ul>
             </div>
             <div class="column has-text-centered footer-correo">
@@ -23,13 +24,13 @@
                     <div class="column is-4">
                         <div class="columns is-mobile">
                             <div class="column">
-                                <img src="<?=get_template_directory_uri() ?>/assets/img/fb.png" alt="Facebook">
+                                <a href="https://www.facebook.com/CalidraMexico" target="_blank"><img src="<?=get_template_directory_uri() ?>/assets/img/fb.png" alt="Facebook"></a>
                             </div>
                             <div class="column">
-                                <img src="<?=get_template_directory_uri() ?>/assets/img/yt.png" alt="Facebook">
+                                <a href="https://www.youtube.com/channel/UCRHcxTzgqfFtRuiSLUy_Qnw" target="_blank"><img src="<?=get_template_directory_uri() ?>/assets/img/yt.png" alt="Youtube"></a>
                             </div>
                             <div class="column">
-                                <img src="<?=get_template_directory_uri() ?>/assets/img/in.png" alt="Facebook">
+                                <a href="https://www.linkedin.com/company/grupocalidra/mycompany/" target="_blank"><img src="<?=get_template_directory_uri() ?>/assets/img/in.png" alt="Linkedin"></a>
                             </div>
                         </div>
                     </div>

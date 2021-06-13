@@ -161,7 +161,7 @@ a, a:link, a:visited, a:focus {
 footer {
   background: url(../img/footer_pleca.png) bottom -10px center no-repeat;
   background-size: contain;
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   color: #3e3e3e;
   border-top: 1px solid #dbdbdb;
   font-size: 1.3rem;
@@ -1501,6 +1501,7 @@ footer .footer-bottom-border {
   height: 100px;
   background-color: #202020;
   border-right: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 .colabora-nosotros-seccion .colabora-creciendo-cont .colabora-tabs .column:last-child {
