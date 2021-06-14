@@ -33,9 +33,10 @@
     </div>
     <div class="seccion-template-productos">
         <h3 class="reliable-old-lady">NUESTROS PRODUCTOS</h3>
-        <div class="columns is-justify-content-space-between">
-            <?php if($productos_query->have_posts()) : ?>
+        <div class="columns is-justify-content-space-evenly">
+            <?php $contador = 0; if($productos_query->have_posts()) : ?>
                 <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
+                <?php if($contador < 4): ?>
                     <div class="column is-one-quarter is-flex">
                         <div class="seccion-template-productos-cont reliable-old-lady-up">
                             <div class="seccion-template-productos-cont-image">
@@ -50,6 +51,7 @@
                             </div>
                         </div>
                     </div>
+                <?php $contador = $contador + 1; endif; ?>
                 <?php endwhile; ?>
             <?php endif; wp_reset_query(); ?>
         </div>
