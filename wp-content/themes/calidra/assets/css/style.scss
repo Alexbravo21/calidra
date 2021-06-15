@@ -6,6 +6,7 @@
 html { font-size: 62.5%; }
 body{
     font-size: 1.4rem;line-height: 2rem; 
+    font-family: $century;
     @include maxWidth($lg){
         overflow-x: hidden;
     }
@@ -75,7 +76,7 @@ footer{
         background-color: $calidra-red;
         color: #ffffff;
         @include fontLine(1.2rem, 1.8rem);
-        font-family: $open-sans;
+        font-family: $century;
         font-weight: bold;
         &-border{
             display: inline-block;
@@ -86,8 +87,8 @@ footer{
     }
 }
 .nav-container{
-    font-family: $open-sans;
-    font-size: 1.5rem;
+    font-family: $century;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     .top-menu{
@@ -111,29 +112,31 @@ footer{
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
+        @include especificContainer(1300px);
+        max-width: 95%;
         .logo{
             width: 30%;
-            @include maxWidth($lg - 1){
+            @include maxWidth($xl - 1){
                 margin-left: 10px;
             }
-            @include minWidth($lg){
-                width: 20%;
+            @include minWidth($xl){
+                width: 15%;
             }
         }
         .burger{
             position: relative;
             z-index: 101;
-            @include minWidth($lg){
+            @include minWidth($xl){
                 display: none;
             }
         }
         .nav-ul{
             &.open{
-                @include maxWidth($lg - 1){
+                @include maxWidth($xl - 1){
                     transform: translate(0, 0);
                 }
             }
-            @include maxWidth($lg - 1){
+            @include maxWidth($xl - 1){
                 display: block;
                 width: 100%;
                 height: 100vh;
@@ -147,19 +150,19 @@ footer{
                 transition: all 500ms ease-in-out;
                 transform: translate(100%, 0);
             }
-            @include minWidth($lg){
+            @include minWidth($xl){
                 display: flex;
                 justify-content: space-between;
                 margin-left: 20px;
-                width: 80%;
+                width: 100%;
             }
             li{
-                @include maxWidth($lg - 1){
+                @include maxWidth($xl - 1){
                     text-align: center;
                     font-size: 2rem;
                     margin: 30px 0;
                 }
-                @include minWidth($lg){
+                @include minWidth($xl){
                     margin: 0 10px;
                 }
                 @include minWidth($xl){
@@ -222,11 +225,11 @@ footer{
         padding: 50px 0;
     }
     &-desc{
+        font-family: $century;
         @include minWidth($lg){
             padding: 0 50px 0 0;
         }
         h2{
-            font-family: $century;
             @include fontLine(3rem, 3rem);
             color: $grey;
             margin-bottom: 20px;
@@ -236,7 +239,6 @@ footer{
             }
         }
         p{
-            font-family: $lato;
             text-align: justify;
             font-size: 1.4rem;
             @include minWidth($lg){
@@ -274,7 +276,7 @@ footer{
                 left: 15px;
                 color: rgba($color: $grey, $alpha: 0.5);
                @include fontLine(12rem, 12rem);
-               font-family: $montserrat;
+               font-family: $century;
             }
             .productos-icono{
                 width: 25%;
@@ -653,7 +655,7 @@ footer{
                     font-weight: bold;
                 }
                 p{
-                    font-family: $lato;
+                    font-family: $century;
                     @include fontLine(1.5rem, 2rem);
                 }
             }
@@ -670,7 +672,7 @@ footer{
                     flex-basis: unset;
                     flex-grow: 0;
                     flex-shrink: 0;
-                    font-family: $lato;
+                    font-family: $century;
                     @include minWidth($lg){
                         padding-right: 50px;
                         width: 40%
@@ -797,7 +799,7 @@ footer{
             h3{
                 color: #ffffff;
                 text-shadow: $outter-shadow;
-                font-family: $montserrat;
+                font-family: $century;
                 font-weight: bold;
                 @include fontLine(4rem, 4rem);
                 position: absolute;
@@ -811,7 +813,7 @@ footer{
             }
             p{
                 text-align: left;
-                font-family: $lato;
+                font-family: $century;
                 color: $grey;
                 max-width: 95%;
                 margin: 20px auto 0;
@@ -864,7 +866,7 @@ footer{
                                 justify-content: center;
                                 span{
                                     display: block;
-                                    font-family: $montserrat;
+                                    font-family: $century;
                                     @include fontLine(1.6rem, 1.3rem);
                                 }
                             }
@@ -1084,7 +1086,7 @@ footer{
                 .usos-carousel-cont{
                     @include especificContainer(1100px);
                     overflow: hidden;
-                    font-family: $lato;
+                    font-family: $century;
                     &#limpieza{
                         .slider-navigation-previous, .slider-navigation-next{
                             top: 150px;
@@ -1206,7 +1208,7 @@ footer{
                     margin-bottom: 20px;
                 }
                 p{
-                    font-family: $lato;
+                    font-family: $century;
                     text-align: justify;
                 }
                 &-mas{
@@ -1259,14 +1261,14 @@ footer{
             input[type='text']{
                 padding: 10px 15px;
                 color: $grey;
-                font-family: $lato;
+                font-family: $century;
                 @include fontLine(1.6rem, 2.1rem);
                 width: 80%;
                 height: 50px;
                 border: 1px solid $light-grey;
                 &::placeholder{
                     color: $grey;
-                    font-family: $lato;
+                    font-family: $century;
                     @include fontLine(1.6rem, 2.1rem);
                 }
             }
@@ -1302,7 +1304,7 @@ footer{
             background-size: contain;
             width: 100%;
             color: #ffffff;
-            font-family: $lato;
+            font-family: $century;
             text-align: center;
             padding: 60px 15px 30px;
             position: relative;
@@ -1490,7 +1492,7 @@ footer{
     }
     &-meta{
         @include fontLine(1.2rem, 1.5rem);
-        font-family: $lato;
+        font-family: $century;
         margin: 10px 0;
         span{
             color: $calidra-red;
@@ -1501,7 +1503,7 @@ footer{
         }
     }
     &-text{
-        font-family: $lato;
+        font-family: $century;
         text-align: justify;
         color: $grey;
         p{
@@ -1541,7 +1543,7 @@ footer{
 .contacto{
     &-parrafo{
         @include especificContainer(800px);
-        font-family: $lato;
+        font-family: $century;
         color: $grey;
         margin-top: 50px;
         margin-bottom: 50px;
@@ -1595,7 +1597,7 @@ footer{
         }
         &-terminos{
             margin-top: 50px;
-            font-family: $lato;
+            font-family: $century;
             input[type="checkbox"]{
                 margin-right: 5px;
             }
@@ -1607,7 +1609,7 @@ footer{
         //     border: 1px solid $ultra-light-grey;
         //     box-shadow: 0px 0px 7px 1px rgba(76,76,76,.6);
         //     padding: 15px 0;
-        //     font-family: $lato;
+        //     font-family: $century;
         //     margin-top: 50px;
         //     @include fontLine(1.7rem, 2.2rem);
         //     p{
@@ -1786,7 +1788,7 @@ footer{
             }
         }
         &-desc{
-            font-family: $lato;
+            font-family: $century;
             color: $grey;
             @include especificContainer(800px);
             margin-top: 30px;
@@ -1813,8 +1815,14 @@ footer{
             }
             &-image{
                 background-color: #ffffff;
+                overflow: hidden;
+                display: flex;
+                align-content: center;
+                justify-content: center;
                 img{
-                    max-width: 80%;
+                    height: 308px;
+                    margin: 0 auto;
+                    max-width: none;
                 }
             }
             &-text{

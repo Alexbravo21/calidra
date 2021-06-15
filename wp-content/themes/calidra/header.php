@@ -41,7 +41,7 @@
             <p><i class="fas fa-search"></i></p>
         </div>
     </div>
-    <nav class="container">
+    <nav>
         <div class="logo">
             <a href="<?=$calidra_base_url ?>"><img src="<?=get_template_directory_uri()?>/assets/img/logo.png" alt="Calidra"></a>
         </div>

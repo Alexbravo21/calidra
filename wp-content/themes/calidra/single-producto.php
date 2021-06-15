@@ -23,6 +23,14 @@ $args = array(
 );
 $productos_query = new WP_Query( $args );
 $ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica") : '#';
+$seccion = get_field('tipo_producto')['value'];
+$videos = json_decode(json_encode([
+    "alimenticia" => ['D12MlWtzUE0'],
+    "quimica" => ['U3yUJkGUbgE'],
+    "mineria" => ['nMBzT1alKxg', 'XnTJfH3q2VQ'],
+    "estabilizacion" => ['QflDe0W470s', 'hNS--mhuuXI', 'biynAo7RBzY'],
+    "construccion" => ['gm3RDq1hTQU', 'SOFdvebKSX8', 'gFqjVxlCgMg', 'gx1IPAvIbGA', 'bxc3dFvYxn0', 'PaDnweI1OJw', 'AJj7T5rQoLg']
+]));
 ?>
 <div class="producto-interior section">
     <div class="producto-interior-cont">
@@ -61,8 +69,9 @@ $ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica"
         <div class="producto-interior-otros-cont">
             <h2>OTROS PRODUCTOS</h2>
             <div class="columns is-justify-content-space-between">
-                <?php if($productos_query->have_posts()) : ?>
+                <?php $contador = 0; if($productos_query->have_posts()) : ?>
                     <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
+                    <?php if ($contador < 4) : ?>
                         <div class="column is-one-quarter">
                             <a href="<?=get_post_permalink(); ?>">
                                 <div class="producto-interior-otros-cont-image">
@@ -74,6 +83,7 @@ $ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica"
                                 </div>
                             </a>
                         </div>
+                    <?php $contador = $contador + 1; endif; ?>
                     <?php endwhile; ?>
                 <?php endif; wp_reset_query(); ?>
             </div>
@@ -83,31 +93,35 @@ $ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica"
         <h3>Videos</h3>
         <div class="template-videos-cont">
             <div class="columns">
-                <div class="column is-8">
-                    <div class="video-big video-cont">
+                <div class="column <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>is-8 <?php endif; ?> ">
+                    <div class="video-big video-cont reliable-old-lady" style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[0]?>/maxresdefault.jpg">
                         <div class="black-screen">
-                            <div class="play-button">
-                                <div class="play-arrow"></div>
+                            <div class="play-button" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>">
+                                <div class="play-arrow" data-src="https://www.youtube.com/embed/<?=$videos->$seccion[0] ?>"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="video-small video-cont">
-                        <div class="black-screen">
-                            <div class="play-button">
-                                <div class="play-arrow"></div>
+                <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>
+                    <div class="column">
+                        <div class="video-small video-cont reliable-old-lady-right" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[1]?>/maxresdefault.jpg" <?php endif; ?>>
+                            <div class="black-screen">
+                                <div class="play-button" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>>
+                                    <div class="play-arrow" <?php if (isset($videos->$seccion[1]) && $videos->$seccion[1] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[1] ?>" <?php endif; ?>></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-small video-cont">
-                        <div class="black-screen">
-                            <div class="play-button">
-                                <div class="play-arrow"></div>
+                        <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>
+                            <div class="video-small video-cont reliable-old-lady-right" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?>style="background-image: url(https://img.youtube.com/vi/<?=$videos->$seccion[2]?>/maxresdefault.jpg" <?php endif; ?>>
+                                <div class="black-screen">
+                                    <div class="play-button" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>>
+                                        <div class="play-arrow" <?php if (isset($videos->$seccion[2]) && $videos->$seccion[2] !== null): ?> data-src="https://www.youtube.com/embed/<?=$videos->$seccion[2] ?>" <?php endif; ?>></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
