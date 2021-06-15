@@ -6,8 +6,8 @@
                 <ul>
                     <li><a href="<?=$calidra_base_url ?>">Inicio</a></li>
                     <li><a href="<?=$calidra_base_url ?>corporativo">Corporativo</a></li>
-                    <li><a href="<?=$calidra_base_url ?>usos-cotidianos">Usos Cotidianos</a></li>
-                    <li><a href="<?=$calidra_base_url ?>alimenticia-y-agricola">Productos</a></li>
+                    <!-- <li><a href="<?=$calidra_base_url ?>usos-cotidianos">Usos Cotidianos</a></li> -->
+                    <!-- <li><a href="<?=$calidra_base_url ?>alimenticia-y-agricola">Productos</a></li> -->
                     <li><a href="<?=$calidra_base_url ?>localizador">Localizador</a></li>
                     <li><a href="<?=$calidra_base_url ?>blog">Blog</a></li>
                     <li><a href="<?=$calidra_base_url ?>contacto">Contacto</a></li>

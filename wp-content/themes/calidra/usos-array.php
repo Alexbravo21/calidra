@@ -17,17 +17,17 @@ $usosCotidianos = json_decode(json_encode([
         [
             'titulo' => 'Desodorante y controlador de malos olores',
             'texto' => 'Usa agua de cal para eliminar malos olores en coladeras o céspoles, así mantendrás un ambiente desinfectado y con un control de olores al interior de casa.',
-            'videoURL' => 'https://www.youtube.com/embed/rGOtGvNld1U'
+            'videoURL' => 'https://www.youtube.com/embed/eYpUn2rGS1k'
         ],
         [
             'titulo' => 'Eliminador de moho',
             'texto' => 'Elimina moho de tu azulejo con agua de Calidra, y crea una capa protectora de larga duración.',
-            'videoURL' => 'https://www.youtube.com/embed/eYpUn2rGS1k'
+            'videoURL' => 'https://www.youtube.com/embed/OJ9acsiOCbA'
         ],
         [
             'titulo' => 'Desinfectante en la cocina',
             'texto' => 'El agua de cal es un desinfectante natural con el que puedes limpiar verduras, frutas y legumbres, conoce por qué lo recomendamos y usa Calidra para desinfectar alimentos.',
-            'videoURL' => 'https://www.youtube.com/embed/OJ9acsiOCbA'
+            'videoURL' => 'https://www.youtube.com/embed/rGOtGvNld1U'
         ]
     ],
     'mascotas' => [

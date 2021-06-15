@@ -10,7 +10,7 @@
         <div id="carousel-demo" class="carousel">
             <?php $cont = 1; foreach($posts as $post): ?>
                 <div class="item-<?=$cont ?> car-item">
-                    <a href="<?=$post->guid ?>">
+                    <a href="<?=get_post_permalink(); ?>">
                         <img src="<?=get_the_post_thumbnail_url($post->ID)?>" alt="">
                         <p><?=$post->post_title ?></p>
                     </a>

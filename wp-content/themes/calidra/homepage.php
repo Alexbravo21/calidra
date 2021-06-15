@@ -64,9 +64,9 @@
                 </div>
             </div>
             <div class="column">
-                <div class="home-blog reliable-old-lady-right">
+                <a href="<?=$calidra_base_url ?>blog"><div class="home-blog reliable-old-lady-right">
                     <h3>Blog</h3>
-                </div>
+                </div></a>
             </div>
         </div>
         <div class="columns">

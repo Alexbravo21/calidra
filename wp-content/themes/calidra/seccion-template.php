@@ -62,7 +62,7 @@
                 <div class="template-localizador-cta reliable-old-lady">
                     <h3><strong>Encuentra</strong> tu distribuidor</h3>
                     <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
-                    <button>LOCALIZAR</button>
+                    <a href="<?=$calidra_base_url ?>localizador"><button>LOCALIZAR</button></a>
                 </div>
             </div>
             <div class="column">

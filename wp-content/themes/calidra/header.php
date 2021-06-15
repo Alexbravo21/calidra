@@ -38,7 +38,6 @@
         <div class="search-container container">
             <p><a href="<?=$calidra_base_url ?>blog">blog</a></p>
             <p><a href="<?=$calidra_base_url ?>contacto">contacto</a></p>
-            <p><i class="fas fa-search"></i></p>
         </div>
     </div>
     <nav>

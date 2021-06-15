@@ -36,8 +36,10 @@
                         <p>Extensiones: 1430-1431</p>
                     </div>
                     <div class="column localizador-mapa-info-correo reliable-old-lady-right">
-                        <img src="<?=$templateUriSection ?>correo.png" alt="">
-                        <p><a href="mailto:atencion_clientes_oriente@calidra.com.mx">atencion_clientes_oriente@calidra.com.mx</a></p>
+                        <a href="mailto:atencion_clientes_oriente@calidra.com.mx">
+                            <img src="<?=$templateUriSection ?>correo.png" alt="">
+                            <p>atencion_clientes_oriente@calidra.com.mx</p>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 <?php
 
+global $calidra_base_url;
 get_header();
 $categoryArray = Array(
     'alimenticia' => 35,
@@ -8,7 +9,7 @@ $categoryArray = Array(
     'estabilizacion' => 57,
     'construccion' => 61,
 );
-$category = get_field('tipo_producto')["value"];
+$category = get_field('tipo_producto')['value'];
 $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
 $imageSectionHero = get_field('hero_image', $categoryArray[$category]);
 $copySide = 'derecho';
@@ -57,7 +58,7 @@ $videos = json_decode(json_encode([
                 <div class="template-localizador-cta reliable-old-lady">
                     <h3><strong>Encuentra</strong> tu distribuidor</h3>
                     <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
-                    <button>LOCALIZAR</button>
+                    <a href="<?=$calidra_base_url ?>localizador"><button>LOCALIZAR</button></a>
                 </div>
             </div>
             <div class="column">
