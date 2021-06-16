@@ -47,7 +47,7 @@ try {
 
     //Recipients
     $mail->setFrom('calidra.contacto.form@gmail.com', 'Calidra contacto');
-    $mail->addAddress('alexbravo21@gmail.com', 'Calidra');     //Add a recipient
+    $mail->addAddress($mails[$mailTo], 'Calidra');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo($mails[$mailTo], 'Más información');
 

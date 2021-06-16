@@ -31,6 +31,8 @@ const Calidra = (() => {
     let carousels;
     let lastKnownScrollPosition = 0;
     let ticking = false;
+    const localCalidra_url = "http://localhost/calidra/";
+    const prodCalidra_url = "http://calidra.catorcedias.com/";
 
     return{
         init: () => {
@@ -229,7 +231,6 @@ const Calidra = (() => {
             img.setAttribute('src', `${newSrc+tipo}.png`);
             let colaboraTabsTexto = document.querySelectorAll('.colabora-tabs-contenido-texto');
             colaboraTabsTexto.forEach( item => {
-                console.log(item.dataset.colaboratexto, tipo);
                 if(item.dataset.colaboratexto === tipo) {
                     item.classList.remove('oculto');
                 }else{
@@ -288,6 +289,16 @@ const Calidra = (() => {
             const contactoGracias = document.querySelector('.envio-modal-cont-mensaje-gracias');
             const contactoMsg = document.querySelector('.envio-modal-cont-mensaje-msg');
             const contactoImg = document.querySelector('.envio-modal-cont-img');
+            const showModal = (gracias) => {
+                contactoModal.style.display = "flex";
+                contactoModal.classList.add('show');
+                contactoGracias.innerHTML = gracias;
+                contactoMsg.innerHTML = getData.msg;
+                setTimeout(() => {
+                    contactoModal.style.display = "none";
+                    formulario.reset();
+                }, 4500)
+            }
             const postData = async (url, data) => {
                 const response = await fetch(url, {
                     method: 'POST',
@@ -299,35 +310,14 @@ const Calidra = (() => {
                 return response.json();
             }
             try{
-                getData = await postData('http://localhost/calidra/wp-content/themes/calidra/sendMail.php', data);
-                console.log(getData);
+                getData = await postData(`${localCalidra_url}wp-content/themes/calidra/sendMail.php`, data);
             } catch (e){
                 getData = {status: 500, msg: 'El servidor no responde, favor de intentar más tarde'}
-                console.log(e);
             }
             if(getData.status === 200){
-                //TODO: POner esto en una función aparte
-                contactoModal.style.display = "flex";
-                contactoModal.classList.add('show');
-                contactoGracias.innerHTML = "¡Muchas gracias!";
-                contactoMsg.innerHTML = getData.msg;
-                setTimeout(() => {
-                    contactoModal.style.display = "none";
-                    formulario.reset();
-                }, 4500)
-                console.log(getData.msg);
+                showModal("¡Muchas gracias!");
             }else{
-                //TODO: POner esto en una función aparte
-                contactoModal.style.display = "flex";
-                contactoImg.style.display = "none";
-                contactoModal.classList.add('show');
-                contactoGracias.innerHTML = "¡Lo sentimos!";
-                contactoMsg.innerHTML = getData.msg;
-                setTimeout(() => {
-                    contactoModal.style.display = "none";
-                    formulario.reset();
-                }, 4500)
-                console.log(getData.msg);
+                showModal("¡Lo sentimos!");
             }
         },
         scrollToPos: (top = 0) => {
