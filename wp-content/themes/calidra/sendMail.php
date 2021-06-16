@@ -49,7 +49,7 @@ try {
     $mail->setFrom('calidra.contacto.form@gmail.com', 'Calidra contacto');
     $mail->addAddress($mails[$mailTo], 'Calidra');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
-    //$mail->addReplyTo($mails[$mailTo], 'Más información');
+    $mail->addReplyTo($correo, 'Respuesta de contacto';
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
