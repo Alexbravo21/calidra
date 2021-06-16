@@ -17,6 +17,7 @@ const Calidra = (() => {
     const viejaConfiableUp = document.querySelectorAll('.reliable-old-lady-up');
     const viejaConfiableDown = document.querySelectorAll('.reliable-old-lady-down');
     const colaboraPesta = document.querySelectorAll('.colabora-tabs .column');
+    const contactoBoton = document.querySelector('.contacto_enviar');
     
     let windowWidth = window.innerWidth;
     let sliderContador = 0;
@@ -63,6 +64,7 @@ const Calidra = (() => {
                     tab.onclick = e => {e.stopPropagation(); Calidra.colaboraTabs(e, tab)};
                 });  
             }
+            if(contactoBoton) contactoBoton.onclick = (e) => {e.stopPropagation(); Calidra.contactoVerificar();}
         },
         burgerClick: () => {
             elBurger.onclick = () => {
@@ -234,7 +236,107 @@ const Calidra = (() => {
                     if(!item.classList.contains('oculto')) item.classList.add('oculto');
                 }
             });
+        },
+        contactoVerificar: () => {
+            let data = {}
+            let sendData = [];
+            const formulario = document.forms[0];
+
+            const validateEmail = (email) => {
+                const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            const checkValue = element => {
+                if(element.value === ""){
+                    element.nextElementSibling.style.display = 'block';
+                    Calidra.scrollToPos(700);
+                    sendData.push(false);
+                }else if(element.id === 'correo' && !validateEmail(element.value)){
+                    element.nextElementSibling.style.display = 'block';
+                    Calidra.scrollToPos(700);
+                    sendData.push(false);
+                }else if( !element.checked && element.type === 'checkbox'){
+                    let sib = element.nextElementSibling;
+                    sib.nextElementSibling.style.display = 'block';
+                    Calidra.scrollToPos(700);
+                    sendData.push(false);
+                }else{
+                    if(element.type === 'checkbox'){
+                        let sib = element.nextElementSibling;
+                        sib.nextElementSibling.style.display = 'none';
+                    }else{
+                        element.nextElementSibling.style.display = 'none';
+                    }
+                    if(element.type !== 'checkbox') data[element.id] = element.value;
+                    sendData.push(true);
+                }
+            }
+            for (let i=0; i < formulario.length; i++){
+                if(formulario[i].dataset.required === 'true'){
+                    checkValue(formulario[i]);
+                }
+            }
+            if(!sendData.includes(false)){
+                Calidra.contactoSend(data);
+            }
+        },
+        contactoSend: async (data) => {
+            let getData;
+            const formulario = document.forms[0];
+            const contactoModal = document.querySelector('.envio-modal');
+            const contactoGracias = document.querySelector('.envio-modal-cont-mensaje-gracias');
+            const contactoMsg = document.querySelector('.envio-modal-cont-mensaje-msg');
+            const contactoImg = document.querySelector('.envio-modal-cont-img');
+            const postData = async (url, data) => {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    mode: "same-origin",
+                    credentials: "same-origin",
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                return response.json();
+            }
+            try{
+                getData = await postData('http://localhost/calidra/wp-content/themes/calidra/sendMail.php', data);
+                console.log(getData);
+            } catch (e){
+                getData = {status: 500, msg: 'El servidor no responde, favor de intentar más tarde'}
+                console.log(e);
+            }
+            if(getData.status === 200){
+                //TODO: POner esto en una función aparte
+                contactoModal.style.display = "flex";
+                contactoModal.classList.add('show');
+                contactoGracias.innerHTML = "¡Muchas gracias!";
+                contactoMsg.innerHTML = getData.msg;
+                setTimeout(() => {
+                    contactoModal.style.display = "none";
+                    formulario.reset();
+                }, 4500)
+                console.log(getData.msg);
+            }else{
+                //TODO: POner esto en una función aparte
+                contactoModal.style.display = "flex";
+                contactoImg.style.display = "none";
+                contactoModal.classList.add('show');
+                contactoGracias.innerHTML = "¡Lo sentimos!";
+                contactoMsg.innerHTML = getData.msg;
+                setTimeout(() => {
+                    contactoModal.style.display = "none";
+                    formulario.reset();
+                }, 4500)
+                console.log(getData.msg);
+            }
+        },
+        scrollToPos: (top = 0) => {
+            window.scrollTo({
+                top: top,
+                behavior: 'smooth'
+            });
         }
     }  
 })();
 Calidra.init();
+

@@ -1540,6 +1540,53 @@ footer{
         }
     }
 }
+.envio-modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background-color: rgba($color: $ultra-dark-grey, $alpha: 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    &.show{
+        opacity: 1;
+    }
+    &-cont{
+        width: 400px;
+        height: 400px;
+        max-width: 90%;
+        background-color: #ffffff;
+        color: $grey;
+        font-family: $century;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-mensaje{
+            text-align: center;
+            max-width: 80%;
+            img{
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            &-gracias{
+                @include fontLine(3rem, 3rem);
+                font-style: italic;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            &-msg{
+                @include fontLine(1.8rem, 2.2rem);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
 .contacto{
     &-parrafo{
         @include especificContainer(800px);
@@ -1550,6 +1597,12 @@ footer{
     }
     &-form{
         @include especificContainer(800px);
+        .error{
+            @include fontLine(1.1rem, 1.4rem);
+            color: $calidra-red;
+            font-weight: bold;
+            display: none;
+        }
         &-item{
             padding: 15px 0;
             &.comentarios{
@@ -1881,6 +1934,21 @@ footer{
                 background-color: $ultra-light-grey;
             }
         }
+    }
+}
+.aviso{
+    @include especificContainer(1200px);
+    color: $grey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h2{
+       @include fontLine(4.5rem, 4.5rem);
+       margin-bottom: 40px;
+       text-align: center;
+       font-weight: bold;
+    }
+    p{
+        margin-bottom: 10px;
     }
 }
 .reliable-old-lady, .reliable-old-lady-right, .reliable-old-lady-up, .reliable-old-lady-down{

@@ -2441,6 +2441,75 @@ footer .footer-bottom-border {
       flex-basis: 100%;
 }
 
+.envio-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000000;
+  background-color: rgba(32, 32, 32, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.envio-modal.show {
+  opacity: 1;
+}
+
+.envio-modal-cont {
+  width: 400px;
+  height: 400px;
+  max-width: 90%;
+  background-color: #ffffff;
+  color: #3e3e3e;
+  font-family: "Century Gothic", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.envio-modal-cont-mensaje {
+  text-align: center;
+  max-width: 80%;
+}
+
+.envio-modal-cont-mensaje img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.envio-modal-cont-mensaje-gracias {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.envio-modal-cont-mensaje-msg {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+}
+
 .contacto-parrafo {
   width: 800px;
   max-width: 100%;
@@ -2455,6 +2524,14 @@ footer .footer-bottom-border {
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.contacto-form .error {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: #ed1d24;
+  font-weight: bold;
+  display: none;
 }
 
 .contacto-form-item {
@@ -2955,6 +3032,27 @@ footer .footer-bottom-border {
   width: 2px;
   border-radius: 5px;
   background-color: #808080;
+}
+
+.aviso {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #3e3e3e;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.aviso h2 {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.aviso p {
+  margin-bottom: 10px;
 }
 
 .reliable-old-lady, .reliable-old-lady-right, .reliable-old-lady-up, .reliable-old-lady-down {

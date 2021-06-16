@@ -45,7 +45,7 @@
                             <p class="footer-aviso-border">2021 Calidra. Todos los derechos reservados</p>
                         </div>
                         <div class="column">
-                            <p>AVISO DE PRIVACIDAD</p>
+                            <p><a href="<?=$calidra_base_url ?>aviso-de-privacidad">AVISO DE PRIVACIDAD</a></p>
                         </div>
                     </div>
                 </div>
