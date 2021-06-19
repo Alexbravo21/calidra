@@ -57,6 +57,7 @@
 <script src="<?=get_template_directory_uri()?>/assets/js/bulma-carousel.js"></script>
 <script src="<?=get_template_directory_uri()?>/assets/js/bulma-carousel-2.js"></script>
 <script src="<?=get_template_directory_uri()?>/assets/js/calidra.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK8rOTolosFz9PTVCQcQttvD8t6zOojac&callback=initMap" async defer></script>
     
 </body>
 </html>

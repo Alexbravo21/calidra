@@ -18,6 +18,8 @@ const Calidra = (() => {
     const viejaConfiableDown = document.querySelectorAll('.reliable-old-lady-down');
     const colaboraPesta = document.querySelectorAll('.colabora-tabs .column');
     const contactoBoton = document.querySelector('.contacto_enviar');
+    const mapa = document.querySelector('.localizador-mapa-gmaps');
+    const localizadorEnviar = document.querySelector('.localizador_enviar');
     
     let windowWidth = window.innerWidth;
     let sliderContador = 0;
@@ -31,6 +33,40 @@ const Calidra = (() => {
     let carousels;
     let lastKnownScrollPosition = 0;
     let ticking = false;
+    let map;
+    let markers = [];
+    let zoom_map = 4.8;
+    const pos_ini = {lat: 23.380954871434753, lng: -102.18304682485348};
+    const mapOptions = {
+        zoomControl: true,
+        streetViewControl:false,
+        mapTypeControl:false,
+        gestureHandling: 'greedy',
+        center: pos_ini,
+        zoom: zoom_map,
+        mapTypeId: 'roadmap',
+        styles: [
+            {
+                "featureType": "poi.business",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            }
+        ]
+    };
+
+
     const localCalidra_url = "http://localhost/calidra/";
     const prodCalidra_url = "http://calidra.catorcedias.com/";
 
@@ -67,6 +103,7 @@ const Calidra = (() => {
                 });  
             }
             if(contactoBoton) contactoBoton.onclick = (e) => {e.stopPropagation(); Calidra.contactoVerificar();}
+            if(localizadorEnviar) localizadorEnviar.onclick = (e) => {e.stopPropagation(); Calidra.geo_search();}
         },
         burgerClick: () => {
             elBurger.onclick = () => {
@@ -325,8 +362,73 @@ const Calidra = (() => {
                 top: top,
                 behavior: 'smooth'
             });
+        },
+        //Localizador mapa funcionlidad
+        initMap: () => {
+            //inicia el mapa
+            map = new google.maps.Map(mapa, mapOptions);
+            return map;
+        },
+        focusMap: (map, latlng, zoom_map) => {
+            const bounds = new google.maps.LatLngBounds();
+            bounds.extend(latlng);
+            map.fitBounds(bounds);
+            map.setZoom(zoom_map);
+        },
+        clearMarkers: () => {
+            markers.forEach( marker => {
+            marker.setMap(null);
+            });
+            markers = [];
+        },
+        setMarkers :  places => {
+            // --- get map locations
+            places.forEach((place) => {
+                const addres = `${place.nombre}, ${place.estado}, ${place.ciudad}, ${place.calle}, ${place.cp}`;
+                let marker = new google.maps.Marker({
+                  map: map,
+                  // icon: image,
+                  title: addres,
+                  position: {lat:parseFloat(place.lat), lng:parseFloat(place.lng)},
+                }); 
+                let infowindow = new google.maps.InfoWindow({
+                  content: addres
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                  infowindow.open(map,marker);
+                });
+          
+                markers.push(marker);
+            } );
+            
+            //focusMap(map, {lat:parseFloat(places[0].lat), lng:parseFloat(places[0].lng)}, zoom_map+1);
+        },
+        calidraDistribuidores: txt_search => {
+          fetch(`${localCalidra_url}wp-content/themes/calidra/get_distribuidores.php?txt_search=${txt_search}`, {//TODO: set proper URL
+              method: 'GET',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+              }
+          })
+          .then(function(response) {
+              return response.json();
+          })
+          .then(function(data) {
+              Calidra.setMarkers(data.distribuidores);
+          })
+          .catch(function(err) {
+              console.error(err);
+          });
+        },
+        geo_search: () => {   
+            let txt_search = document.querySelector('.localizador_input').value;
+            Calidra.clearMarkers();
+            Calidra.calidraDistribuidores(txt_search);
         }
     }  
 })();
 Calidra.init();
+function initMap(){
+    return Calidra.initMap();
+}
 

@@ -15,11 +15,12 @@
         <h2 class="reliable-old-lady">Localizador</h2>
         <p class="reliable-old-lady-right">Encuentra tu distribuidor más cercano a lo largo de toda la República Mexicana, Calidra siempre ahí.</p>
         <div class="localizador-buscador-input reliable-old-lady-down">
-            <input type="text" placeholder="INGRESA ESTADO, LOCALIDAD Y/O CÓDIGO POSTAL">
-            <button type="button">BUSCAR</button>
+            <input type="text" placeholder="INGRESA ESTADO, LOCALIDAD Y/O CÓDIGO POSTAL" class="localizador_input">
+            <button class="localizador_enviar" type="button">BUSCAR</button>
         </div>
     </div>
     <div class="localizador-mapa">
+        <div class="localizador-mapa-gmaps"></div>
         <div class="localizador-mapa-info">
             <div class="cerrar"><span>X</span></div>
             <div class="container localizador-mapa-info-display">
