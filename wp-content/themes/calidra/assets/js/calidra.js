@@ -366,6 +366,7 @@ const Calidra = (() => {
         //Localizador mapa funcionlidad
         initMap: () => {
             //inicia el mapa
+            if(!mapa) return false
             map = new google.maps.Map(mapa, mapOptions);
             return map;
         },
