@@ -35,8 +35,8 @@ const Calidra = (() => {
     let ticking = false;
     let map;
     let markers = [];
-    let zoom_map = 4.8;
-    const pos_ini = {lat: 23.380954871434753, lng: -102.18304682485348};
+    let zoom_map = 5.36;
+    const pos_ini = {lat: 24.3889553, lng: -101.6195797};
     const mapOptions = {
         zoomControl: true,
         streetViewControl:false,
@@ -347,7 +347,7 @@ const Calidra = (() => {
                 return response.json();
             }
             try{
-                getData = await postData(`${localCalidra_url}wp-content/themes/calidra/sendMail.php`, data);
+                getData = await postData(`${prodCalidra_url}wp-content/themes/calidra/sendMail.php`, data);
             } catch (e){
                 getData = {status: 500, msg: 'El servidor no responde, favor de intentar más tarde'}
             }
@@ -383,28 +383,32 @@ const Calidra = (() => {
         },
         setMarkers :  places => {
             // --- get map locations
-            places.forEach((place) => {
-                const addres = `${place.nombre}, ${place.estado}, ${place.ciudad}, ${place.calle}, ${place.cp}`;
+            places.forEach(({nombre, estado, ciudad, calle, cp, lat, lng}) => {
+                const addres = `${nombre}, ${estado}, ${ciudad}, ${calle}, ${cp}`;
                 let marker = new google.maps.Marker({
-                  map: map,
-                  // icon: image,
-                  title: addres,
-                  position: {lat:parseFloat(place.lat), lng:parseFloat(place.lng)},
+                    map: map,
+                    // icon: image,
+                    title: addres,
+                    markerInfo: {
+                        nombre: nombre,
+                        calle: calle,
+                        ciudad: ciudad,
+                        estado: estado,
+                        cp: cp
+                    },
+                    position: {lat:parseFloat(lat), lng:parseFloat(lng)},
                 }); 
-                let infowindow = new google.maps.InfoWindow({
-                  content: addres
-                });
                 google.maps.event.addListener(marker, 'click', function() {
-                  infowindow.open(map,marker);
+                    Calidra.renderAddress(marker.markerInfo);
                 });
           
                 markers.push(marker);
             } );
-            
-            //focusMap(map, {lat:parseFloat(places[0].lat), lng:parseFloat(places[0].lng)}, zoom_map+1);
+            Calidra.renderAddress(places[0]);
+            Calidra.focusMap(map, {lat:parseFloat(places[0].lat), lng:parseFloat(places[0].lng)}, zoom_map+2);
         },
         calidraDistribuidores: txt_search => {
-          fetch(`${localCalidra_url}wp-content/themes/calidra/get_distribuidores.php?txt_search=${txt_search}`, {//TODO: set proper URL
+          fetch(`${prodCalidra_url}wp-content/themes/calidra/get_distribuidores.php?txt_search=${txt_search}`, {//TODO: set proper URL
               method: 'GET',
               headers: {
                   'Content-Type': 'application/x-www-form-urlencoded'
@@ -421,9 +425,21 @@ const Calidra = (() => {
           });
         },
         geo_search: () => {   
+            Calidra.scrollToPos(765);
             let txt_search = document.querySelector('.localizador_input').value;
             Calidra.clearMarkers();
             Calidra.calidraDistribuidores(txt_search);
+        },
+        renderAddress: ({calle, ciudad, estado, cp, nombre}) => {
+            const elNombre = document.querySelector('.info-nombre');
+            const elDir1 = document.querySelector('.info-direccion-1');
+            const elDir2 = document.querySelector('.info-direccion-2');
+            ciudad = ciudad !== "" ? `${ciudad}, ` : '';
+            estado = estado !== "" ? cp !== "" ? `${estado}, `: `${estado}` : '';
+            elNombre.innerHTML = nombre;
+            elDir1.innerHTML = calle;
+            elDir2.innerHTML = ciudad + estado + cp;
+            localizadorInfo.style.display = 'block';
         }
     }  
 })();

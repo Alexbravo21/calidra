@@ -26,10 +26,9 @@
             <div class="container localizador-mapa-info-display">
                 <div class="columns">
                     <div class="column localizador-mapa-info-texto is-6 reliable-old-lady">
-                        <h4>REGIÓN ORIENTE</h4>
-                        <h3>CALIDRA DE ORIENTE S.A. DE C.V.</h3>
-                        <p>Corporativo Angelópolis, Oficina 201, Calle Opera #2</p>
-                        <p>Lomas de Angelópolis, Puebla, Puebla, C.P. 72830</p>
+                        <h3 class="info-nombre">CALIDRA DE ORIENTE S.A. DE C.V.</h3>
+                        <p class="info-direccion-1">Corporativo Angelópolis, Oficina 201, Calle Opera #2</p>
+                        <p class="info-direccion-2">Lomas de Angelópolis, Puebla, Puebla, C.P. 72830</p>
                     </div>
                     <div class="column localizador-mapa-info-tel reliable-old-lady-right">
                         <img src="<?=$templateUriSection ?>tel.png" alt="">
