@@ -439,6 +439,7 @@ const Calidra = (() => {
             elNombre.innerHTML = nombre;
             elDir1.innerHTML = calle;
             elDir2.innerHTML = ciudad + estado + cp;
+            if(localizadorInfo.classList.contains('cerrado')) localizadorInfo.classList.remove('cerrado');
             localizadorInfo.style.display = 'block';
         }
     }  
