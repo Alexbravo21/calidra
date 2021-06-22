@@ -17,6 +17,7 @@
         <div class="localizador-buscador-input reliable-old-lady-down">
             <input type="text" placeholder="INGRESA ESTADO, LOCALIDAD Y/O CÓDIGO POSTAL" class="localizador_input">
             <button class="localizador_enviar" type="button">BUSCAR</button>
+            <p class="error error_localizador">Debe ingresar su nombre</p>
         </div>
     </div>
     <div class="localizador-mapa">

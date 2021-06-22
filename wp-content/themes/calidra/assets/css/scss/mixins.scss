@@ -8,7 +8,7 @@
         @content;
     }
 }
-@mixin standardButton($bg-color, $font-color) {
+@mixin standardButton($bg-color, $font-color, $hover-scale) {
     color: $font-color;
     border: none;
     background-color: $bg-color;
@@ -26,7 +26,7 @@
     }
     &:hover{
         color: $bg-color;
-        transform: scale(1.1);
+        transform: scale($hover-scale);
         background-color: $font-color;
     }
 }

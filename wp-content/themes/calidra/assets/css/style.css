@@ -1984,6 +1984,12 @@ footer .footer-bottom-border {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .localizador-buscador-input input[type='text'] {
@@ -2055,9 +2061,19 @@ footer .footer-bottom-border {
 
 .localizador-buscador-input button:hover {
   color: #ed1d24;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   background-color: #ffffff;
+}
+
+.localizador-buscador-input .error {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: #ed1d24;
+  font-weight: bold;
+  display: none;
+  width: 100%;
+  margin: 0;
 }
 
 .localizador-mapa {
@@ -2110,7 +2126,6 @@ footer .footer-bottom-border {
   position: relative;
   -webkit-transition: opacity 400ms ease-in-out;
   transition: opacity 400ms ease-in-out;
-  display: none;
 }
 
 @media screen and (min-width: 1024px) {

@@ -20,6 +20,8 @@ const Calidra = (() => {
     const contactoBoton = document.querySelector('.contacto_enviar');
     const mapa = document.querySelector('.localizador-mapa-gmaps');
     const localizadorEnviar = document.querySelector('.localizador_enviar');
+    const localizadorSearch = document.querySelector('.localizador_input');
+    const localizadorError = document.querySelector('.error_localizador');
     
     let windowWidth = window.innerWidth;
     let sliderContador = 0;
@@ -47,23 +49,164 @@ const Calidra = (() => {
         mapTypeId: 'roadmap',
         styles: [
             {
-                "featureType": "poi.business",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#f5f5f5"
+                }
+              ]
             },
             {
-                "featureType": "poi.park",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
+              "elementType": "labels.icon",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#616161"
+                }
+              ]
+            },
+            {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+                {
+                  "color": "#f5f5f5"
+                }
+              ]
+            },
+            {
+              "featureType": "administrative.land_parcel",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#bdbdbd"
+                }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#eeeeee"
+                }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#757575"
+                }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#e5e5e5"
+                }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#9e9e9e"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#ffffff"
+                }
+              ]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#757575"
+                }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#dadada"
+                }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#616161"
+                }
+              ]
+            },
+            {
+              "featureType": "road.local",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#9e9e9e"
+                }
+              ]
+            },
+            {
+              "featureType": "transit.line",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#e5e5e5"
+                }
+              ]
+            },
+            {
+              "featureType": "transit.station",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#eeeeee"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#c9c9c9"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#9e9e9e"
+                }
+              ]
             }
-        ]
+          ]
     };
 
 
@@ -79,6 +222,7 @@ const Calidra = (() => {
             Calidra.scrollFunction();
             Calidra.scrollAction();
             window.addEventListener('resize', Calidra.restartAllSliders);
+            document.addEventListener('keydown', Calidra.pressEnterToLocalize);
         },
         clickEvents: () => {
             if (iniciativasDer) iniciativasDer.onclick = (e) => {e.stopPropagation(); Calidra.iniciativasCarousel('d')};
@@ -384,7 +528,7 @@ const Calidra = (() => {
         },
         setMarkers :  places => {
             // --- get map locations
-            places.forEach(({nombre, estado, ciudad, calle, cp, lat, lng}) => {
+            places.forEach(({nombre = "", estado = "", ciudad = "", calle = "", cp = "", lat = "", lng = ""}) => {
                 const addres = `${nombre}, ${estado}, ${ciudad}, ${calle}, ${cp}`;
                 let marker = new google.maps.Marker({
                     map: map,
@@ -409,25 +553,32 @@ const Calidra = (() => {
             Calidra.focusMap(map, {lat:parseFloat(places[0].lat), lng:parseFloat(places[0].lng)}, zoom_map+2);
         },
         calidraDistribuidores: txt_search => {
-          fetch(`${prodCalidra_url}wp-content/themes/calidra/get_distribuidores.php?txt_search=${txt_search}`, {//TODO: set proper URL
-              method: 'GET',
-              headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded'
-              }
-          })
-          .then(function(response) {
-              return response.json();
-          })
-          .then(function(data) {
-              Calidra.setMarkers(data.distribuidores);
-          })
-          .catch(function(err) {
-              console.error(err);
-          });
+            fetch(`${prodCalidra_url}wp-content/themes/calidra/get_distribuidores.php?txt_search=${txt_search}`, {//TODO: set proper URL
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                if(data.success) {
+                    localizadorError.style.display = "none";
+                    Calidra.setMarkers(data.distribuidores);
+                }else{
+                    throw "No se encontró la unicación ingresada";
+                }
+            })
+            .catch(function(err) {
+                localizadorError.innerHTML = err;
+                localizadorError.style.display = "block";
+                console.error(err);
+            });
         },
         geo_search: () => {   
             Calidra.scrollToPos(765);
-            let txt_search = document.querySelector('.localizador_input').value;
+            let txt_search = localizadorSearch.value;
             Calidra.clearMarkers();
             Calidra.calidraDistribuidores(txt_search);
         },
@@ -442,11 +593,16 @@ const Calidra = (() => {
             elDir2.innerHTML = ciudad + estado + cp;
             if(localizadorInfo.classList.contains('cerrado')) localizadorInfo.classList.remove('cerrado');
             localizadorInfo.style.display = 'block';
+        },
+        pressEnterToLocalize: (e) => {
+            if(localizadorSearch && localizadorSearch.value !== '' && document.activeElement === localizadorSearch && e.keyCode === 13){
+                Calidra.geo_search();
+            }
         }
     }  
 })();
 Calidra.init();
 function initMap(){
-    return Calidra.initMap();
+    Calidra.initMap();
 }
 
