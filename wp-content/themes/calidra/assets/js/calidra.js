@@ -11,6 +11,8 @@ const Calidra = (() => {
     const videoUsosHome = document.querySelector('.usos-cotidianos-home');
     const cerrarDireccion = document.querySelector('.cerrar');
     const localizadorInfo = document.querySelector('.localizador-mapa-info');
+    const localizadorTels = document.querySelector('.localizador-mapa-info-display-tels');
+    const localizadorMarker = document.querySelector('.localizador-mapa-info-display-marker');
     const usosPlayButton = document.querySelectorAll('.play-button');
     const viejaConfiable = document.querySelectorAll('.reliable-old-lady');
     const viejaConfiableRight = document.querySelectorAll('.reliable-old-lady-right');
@@ -37,8 +39,8 @@ const Calidra = (() => {
     let ticking = false;
     let map;
     let markers = [];
-    let zoom_map = 5.36;
-    const pos_ini = {lat: 24.3889553, lng: -101.6195797};
+    let zoom_map = 5.5;
+    const pos_ini = {lat: 20, lng: -100.7022783};
     const mapOptions = {
         zoomControl: true,
         streetViewControl:false,
@@ -591,8 +593,12 @@ const Calidra = (() => {
             elNombre.innerHTML = nombre;
             elDir1.innerHTML = calle;
             elDir2.innerHTML = ciudad + estado + cp;
-            if(localizadorInfo.classList.contains('cerrado')) localizadorInfo.classList.remove('cerrado');
-            localizadorInfo.style.display = 'block';
+            if(localizadorInfo.classList.contains('cerrado')) {
+                localizadorInfo.style.display = ""
+                localizadorInfo.classList.remove('cerrado');
+            }
+            localizadorMarker.style.display = 'block';
+            localizadorTels.style.display = 'none';
         },
         pressEnterToLocalize: (e) => {
             if(localizadorSearch && localizadorSearch.value !== '' && document.activeElement === localizadorSearch && e.keyCode === 13){

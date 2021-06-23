@@ -2093,7 +2093,7 @@ footer .footer-bottom-border {
 
 @media screen and (min-width: 1024px) {
   .localizador-mapa {
-    height: 600px;
+    height: 750px;
   }
 }
 
@@ -2130,7 +2130,7 @@ footer .footer-bottom-border {
 
 @media screen and (min-width: 1024px) {
   .localizador-mapa-info {
-    padding: 30px 0 75px;
+    padding: 40px 0 100px;
   }
 }
 
@@ -2167,11 +2167,40 @@ footer .footer-bottom-border {
   }
 }
 
-.localizador-mapa-info-texto {
+.localizador-mapa-info-display-tels .region p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #ed1d24;
+}
+
+.localizador-mapa-info-display-tels .telefonos img {
+  margin-bottom: 30px;
+}
+
+.localizador-mapa-info-display-tels .telefonos p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.localizador-mapa-info-display-tels .mails img {
+  margin-bottom: 30px;
+}
+
+.localizador-mapa-info-display-tels .mails p {
+  font-size: 1.2em;
+  line-height: 2.5rem;
+  color: #ed1d24;
+}
+
+.localizador-mapa-info-display-marker {
+  display: none;
+}
+
+.localizador-mapa-info-display-marker-texto {
   text-align: left;
 }
 
-.localizador-mapa-info-texto h4 {
+.localizador-mapa-info-display-marker-texto h4 {
   color: #ed1d24;
   font-size: 1.7rem;
   line-height: 1.7rem;
@@ -2179,13 +2208,13 @@ footer .footer-bottom-border {
 }
 
 @media screen and (min-width: 1024px) {
-  .localizador-mapa-info-texto h4 {
+  .localizador-mapa-info-display-marker-texto h4 {
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 
-.localizador-mapa-info-texto h3 {
+.localizador-mapa-info-display-marker-texto h3 {
   font-family: "Century Gothic", sans-serif;
   font-size: 2rem;
   line-height: 2rem;
@@ -2195,7 +2224,7 @@ footer .footer-bottom-border {
 }
 
 @media screen and (min-width: 1024px) {
-  .localizador-mapa-info-texto h3 {
+  .localizador-mapa-info-display-marker-texto h3 {
     font-size: 3rem;
     line-height: 3rem;
   }

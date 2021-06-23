@@ -1301,7 +1301,7 @@ footer{
         margin-top: 50px;
         position: relative;
         @include minWidth($lg){
-            height: 600px;
+            height: 750px;
         }
         @include maxWidth($lg - 1){
             margin-left: -1.5rem;
@@ -1328,7 +1328,7 @@ footer{
             position: relative;
             transition: opacity 400ms ease-in-out;
             @include minWidth($lg){
-                padding: 30px 0 75px;
+                padding: 40px 0 100px;
             }
             .cerrar{
                 font-family: $century;
@@ -1351,24 +1351,54 @@ footer{
                     @include fontLine(1.4rem, 2rem);
                 }
             }
-            &-texto{
-                text-align: left;
-                h4{
-                    color: $calidra-red;
-                    @include fontLine(1.7rem, 1.7rem);
-                    margin-bottom: 10px;
-                    @include minWidth($lg){
-                        @include fontLine(2rem, 2rem);
+            &-display{
+                &-tels{
+                    .region{
+                        p{
+                            @include fontLine(2rem, 2.5rem);
+                            color: $calidra-red;
+                        }
+                    }
+                    .telefonos{
+                        img{
+                            margin-bottom: 30px;
+                        }
+                        p{
+                            @include fontLine(1.7rem, 2.5rem);
+                        }
+                    }
+                    .mails{
+                        img{
+                            margin-bottom: 30px;
+                        }
+                        p{
+                            @include fontLine(1.2em, 2.5rem);
+                            color: $calidra-red;
+                        }
                     }
                 }
-                h3{
-                    font-family: $century;
-                    @include fontLine(2rem, 2rem);
-                    margin-bottom: 25px;
-                    font-style: italic;
-                    font-weight: bold;
-                    @include minWidth($lg){
-                        @include fontLine(3rem, 3rem);
+                &-marker{
+                    display: none;
+                    &-texto{
+                        text-align: left;
+                        h4{
+                            color: $calidra-red;
+                            @include fontLine(1.7rem, 1.7rem);
+                            margin-bottom: 10px;
+                            @include minWidth($lg){
+                                @include fontLine(2rem, 2rem);
+                            }
+                        }
+                        h3{
+                            font-family: $century;
+                            @include fontLine(2rem, 2rem);
+                            margin-bottom: 25px;
+                            font-style: italic;
+                            font-weight: bold;
+                            @include minWidth($lg){
+                                @include fontLine(3rem, 3rem);
+                            }
+                        }
                     }
                 }
             }
