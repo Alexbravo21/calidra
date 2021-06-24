@@ -1280,6 +1280,10 @@ footer{
                 width: 20%;
                 height: 50px;
                 padding: 0;
+                &:hover{
+                    color: #ffffff;
+                    background-color: $calidra-red-dark;
+                }
             }
             .error{
                 @include fontLine(1.1rem, 1.4rem);
