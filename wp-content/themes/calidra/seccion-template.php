@@ -22,15 +22,13 @@
     $videos = json_decode(json_encode([
         "alimenticia" => ['D12MlWtzUE0'],
         "quimica" => ['U3yUJkGUbgE'],
-        "mineria" => ['nMBzT1alKxg', 'XnTJfH3q2VQ'],
+        "mineria" => ['XnTJfH3q2VQ'],
+        "siderurgica" => ['nMBzT1alKxg'],
         "estabilizacion" => ['QflDe0W470s', 'hNS--mhuuXI', 'biynAo7RBzY'],
         "construccion" => ['gm3RDq1hTQU', 'SOFdvebKSX8', 'gFqjVxlCgMg', 'gx1IPAvIbGA', 'bxc3dFvYxn0', 'PaDnweI1OJw', 'AJj7T5rQoLg']
     ]));
 ?>
 <div class="seccion-template section">
-    <div class="seccion-template-desc reliable-old-lady">
-        <?php the_field('descripcion_de_seccion'); ?>
-    </div>
     <div class="seccion-template-productos">
         <h3 class="reliable-old-lady">NUESTROS PRODUCTOS</h3>
         <div class="columns is-justify-content-space-evenly">
@@ -54,20 +52,6 @@
                 <?php $contador = $contador + 1; endif; ?>
                 <?php endwhile; ?>
             <?php endif; wp_reset_query(); ?>
-        </div>
-    </div>
-    <div class="template-localizador">
-        <div class="columns is-vcentered">
-            <div class="column">
-                <div class="template-localizador-cta reliable-old-lady">
-                    <h3><strong>Encuentra</strong> tu distribuidor</h3>
-                    <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
-                    <a href="<?=$calidra_base_url ?>localizador"><button>LOCALIZAR</button></a>
-                </div>
-            </div>
-            <div class="column">
-                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="" class="reliable-old-lady-right">
-            </div>
         </div>
     </div>
     <div class="template-videos container">
@@ -103,6 +87,23 @@
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    <div class="seccion-template-desc reliable-old-lady">
+        <?php the_field('descripcion_de_seccion'); ?>
+    </div>
+    <div class="template-localizador">
+        <div class="columns is-vcentered">
+            <div class="column">
+                <div class="template-localizador-cta reliable-old-lady">
+                    <h3><strong>Encuentra</strong> tu Asesor</h3>
+                    <p>Contáctanos y localiza a tu asesor más cercano:</p>
+                    <a href="<?=$calidra_base_url ?>localizador"><button>LOCALIZAR</button></a>
+                </div>
+            </div>
+            <div class="column">
+                <img src="<?=get_template_directory_uri(); ?>/assets/img/seccion_template/localizador_icon.png" alt="" class="reliable-old-lady-right">
             </div>
         </div>
     </div>

@@ -1153,7 +1153,6 @@ footer{
         @include especificContainer(800px);
         color: $grey;
         @include fontLine(1.5rem, 2rem);
-        margin-top: 60px;
         margin-bottom: 60px;
         font-family: $century;
         ul{
@@ -1166,7 +1165,7 @@ footer{
     }
     &-productos{
         @include especificContainer(1200px);
-        padding: 0 0 50px;
+        padding: 50px 0 50px;
         h3{
             text-align: center;
             @include fontLine(4rem, 4rem);

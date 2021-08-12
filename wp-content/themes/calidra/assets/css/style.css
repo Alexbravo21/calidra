@@ -1833,7 +1833,6 @@ footer .footer-bottom-border {
   color: #3e3e3e;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-top: 60px;
   margin-bottom: 60px;
   font-family: "Century Gothic", sans-serif;
 }
@@ -1851,7 +1850,7 @@ footer .footer-bottom-border {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 0 50px;
+  padding: 50px 0 50px;
 }
 
 .seccion-template-productos h3 {

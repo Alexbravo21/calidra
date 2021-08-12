@@ -1,12 +1,13 @@
 <?php 
     global $calidra_base_url;
-    $calidra_base_url = 'http://localhost/calidra/';
+    $calidra_base_url = 'http://calidra.catorcedias.com/';
     $menu_items = Array(
         ["corporativo", "corporativo"],
         ["usos cotidianos", "usos-cotidianos"],
         ["Alimenticia y agrícola", "alimenticia-y-agricola"],
         ["química", "quimica"],
-        ["minería y siderúrgica", "mineria-y-siderurgica"],
+        ["minería", "mineria"],
+        ["siderúrgica", "siderurgica"],
         ["estabilización de suelos", "estabilizacion-de-suelos"],
         ["construcción", "construccion"],
         ["localizador", "localizador"]

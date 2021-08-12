@@ -6,8 +6,9 @@ $categoryArray = Array(
     'alimenticia' => 35,
     'quimica' => 47,
     'mineria' => 52,
+    'siderurgica' => 247,
     'estabilizacion' => 57,
-    'construccion' => 61,
+    'construccion' => 61
 );
 $category = get_field('tipo_producto')['value'];
 $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
@@ -29,6 +30,7 @@ $videos = json_decode(json_encode([
     "alimenticia" => ['D12MlWtzUE0'],
     "quimica" => ['U3yUJkGUbgE'],
     "mineria" => ['nMBzT1alKxg', 'XnTJfH3q2VQ'],
+    "siderurgica" => ['nMBzT1alKxg'],
     "estabilizacion" => ['QflDe0W470s', 'hNS--mhuuXI', 'biynAo7RBzY'],
     "construccion" => ['gm3RDq1hTQU', 'SOFdvebKSX8', 'gFqjVxlCgMg', 'gx1IPAvIbGA', 'bxc3dFvYxn0', 'PaDnweI1OJw', 'AJj7T5rQoLg']
 ]));
