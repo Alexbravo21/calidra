@@ -1164,8 +1164,8 @@ footer{
         }
     }
     &-productos{
-        @include especificContainer(1200px);
         padding: 50px 0 50px;
+        position: relative;
         h3{
             text-align: center;
             @include fontLine(4rem, 4rem);
@@ -1176,6 +1176,65 @@ footer{
             font-family: $century;
             color: $grey;
             margin-bottom: 80px;
+        }
+        .slider-prods-previous-calidra, .slider-prods-next-calidra{
+            background-color: $calidra-red;
+            z-index: 1000;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            cursor: pointer;
+            .flecha{
+                border-left: 4px solid #ffffff;
+                border-bottom: 4px solid #ffffff;
+                transform: rotate(45deg);
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+            }
+            @include minWidth($lg){
+                width: 150px;
+                height: 150px;
+                .flecha{
+                    border-left: 4px solid #ffffff;
+                    border-bottom: 4px solid #ffffff;
+                    transform: rotate(45deg);
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 25px;
+                }
+            }
+        }
+        .slider-prods-next-calidra{
+            left: auto;
+            right: 0;
+            transform: translate(50%, -50%);
+            justify-content: flex-start;
+            .flecha{
+                transform: rotate(-135deg);
+                margin-left: 15px;
+            }
+            @include minWidth($lg){
+                .flecha{
+                    margin-right: 25px;
+                }
+            }
+        }
+        &-prods-carousel{
+            @include especificContainer(1200px);
+            overflow: hidden;
+            .car-item{
+                padding: 0 15px;
+                display: flex;
+                height: 100%;
+            }
         }
         &-cont{
             border: 1px solid $grey;

@@ -294,6 +294,16 @@ const Calidra = (() => {
             // Initialize all elements with carousel class.
             carousels = bulmaCarousel2.attach(clase, options);
         },
+        bulmaCarousel3: (clase, slides) => {
+            const options = {
+                slidesToShow: slides,
+                pagination: false,
+                infinite: true,
+                breakpoints: [{ changePoint: 900, slidesToShow: 1, slidesToScroll: 1 } ]
+            }
+            // Initialize all elements with carousel class.
+            carousels = bulmaCarousel3.attach(clase, options);
+        },
         iniciativasCarousel: lado => {
             sumrest = lado === 'd' ? 1 : -1;
             sliderContador = sliderContador + sumrest;
@@ -382,13 +392,15 @@ const Calidra = (() => {
             );
         },
         startAllSliders: () => {
-            Calidra.bulmaCarousel2('.carousel', 2);       
+            Calidra.bulmaCarousel3('.carousel-prods', 4);          
+            Calidra.bulmaCarousel2('.carousel', 2);          
             Calidra.bulmaCarousel2('.home-carousel', 2);
             Calidra.bulmaCarousel('.usos-carousel', 1);
         },
         restartAllSliders: (e) => {
             if(window.innerWidth === windowWidth) return false;
             Calidra.restartSlider('.carousel');       
+            Calidra.restartSlider('.carousel-prods');       
             Calidra.restartSlider('.home-carousel');
             Calidra.restartSlider('.usos-carousel');
         },

@@ -1847,10 +1847,8 @@ footer .footer-bottom-border {
 }
 
 .seccion-template-productos {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
   padding: 50px 0 50px;
+  position: relative;
 }
 
 .seccion-template-productos h3 {
@@ -1868,6 +1866,92 @@ footer .footer-bottom-border {
     font-size: 5rem;
     line-height: 5rem;
   }
+}
+
+.seccion-template-productos .slider-prods-previous-calidra, .seccion-template-productos .slider-prods-next-calidra {
+  background-color: #ed1d24;
+  z-index: 1000;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+.seccion-template-productos .slider-prods-previous-calidra .flecha, .seccion-template-productos .slider-prods-next-calidra .flecha {
+  border-left: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .seccion-template-productos .slider-prods-previous-calidra, .seccion-template-productos .slider-prods-next-calidra {
+    width: 150px;
+    height: 150px;
+  }
+  .seccion-template-productos .slider-prods-previous-calidra .flecha, .seccion-template-productos .slider-prods-next-calidra .flecha {
+    border-left: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 28px;
+    height: 28px;
+    margin-right: 25px;
+  }
+}
+
+.seccion-template-productos .slider-prods-next-calidra {
+  left: auto;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.seccion-template-productos .slider-prods-next-calidra .flecha {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .seccion-template-productos .slider-prods-next-calidra .flecha {
+    margin-right: 25px;
+  }
+}
+
+.seccion-template-productos-prods-carousel {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.seccion-template-productos-prods-carousel .car-item {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
 }
 
 .seccion-template-productos-cont {
