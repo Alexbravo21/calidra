@@ -19,6 +19,7 @@
         'meta_value'	=> $seccion
     );
     $productos_query = new WP_Query( $args );
+    $post_count = $productos_query->post_count;
     $videos = json_decode(json_encode([
         "alimenticia" => ['D12MlWtzUE0'],
         "quimica" => ['U3yUJkGUbgE'],
@@ -35,31 +36,56 @@
 <div class="seccion-template section">
     <div class="seccion-template-productos">
         <h3 class="reliable-old-lady">NUESTROS PRODUCTOS</h3>
-        <div class="slider-prods-previous-calidra"><div class="flecha"></div></div>
-        <div class="slider-prods-next-calidra"><div class="flecha"></div></div>
-        <div class="seccion-template-productos-prods-carousel">
-            <div id="carousel-demo" class="carousel-prods">
-                <?php $contador = 0; if($productos_query->have_posts()) : ?>
-                    <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
-                        <div class="item-<?=$contador ?> car-item">
-                            <div class="seccion-template-productos-cont reliable-old-lady-up">
-                                <div class="seccion-template-productos-cont-image">
-                                    <img src="<?=the_post_thumbnail_url(); ?>" alt="">
-                                </div>
-                                <div class="seccion-template-productos-cont-text">
-                                    <a href="<?=get_post_permalink(); ?>"><div class="seccion-template-productos-cont-text-mas">
-                                        <span></span><span></span>
-                                    </div></a>
-                                    <h4><?=get_the_title(); ?></h4>
-                                    <p><?=get_field('intro_producto'); ?></p>
+        <?php if($post_count > 4):?>
+            <div class="slider-prods-previous-calidra"><div class="flecha"></div></div>
+            <div class="slider-prods-next-calidra"><div class="flecha"></div></div>
+            <div class="seccion-template-productos-prods-carousel reliable-old-lady-up">
+                <div id="carousel-demo" class="carousel-prods">
+                    <?php $contador = 0; if($productos_query->have_posts()) : ?>
+                        <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
+                            <div class="item-<?=$contador ?> car-item">
+                                <div class="seccion-template-productos-cont">
+                                    <div class="seccion-template-productos-cont-image">
+                                        <img src="<?=the_post_thumbnail_url(); ?>" alt="">
+                                    </div>
+                                    <div class="seccion-template-productos-cont-text">
+                                        <a href="<?=get_post_permalink(); ?>"><div class="seccion-template-productos-cont-text-mas">
+                                            <span></span><span></span>
+                                        </div></a>
+                                        <h4><?=get_the_title(); ?></h4>
+                                        <p><?=get_field('intro_producto'); ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php $contador = $contador + 1;?>
-                    <?php endwhile; ?>
-                <?php endif; wp_reset_query(); ?>
+                        <?php $contador = $contador + 1;?>
+                        <?php endwhile; ?>
+                    <?php endif; wp_reset_query(); ?>
+                </div>
             </div>
-        </div>
+        <?php else: ?>
+            <div class="seccion-template-productos-prods">
+                <div class="columns is-justify-content-space-evenly">
+                    <?php if($productos_query->have_posts()) : ?>
+                        <?php while($productos_query->have_posts()) : $productos_query->the_post(); ?>
+                            <div class="column is-one-quarter is-flex">
+                                <div class="seccion-template-productos-cont reliable-old-lady-up">
+                                    <div class="seccion-template-productos-cont-image">
+                                        <img src="<?=the_post_thumbnail_url(); ?>" alt="">
+                                    </div>
+                                    <div class="seccion-template-productos-cont-text">
+                                        <a href="<?=get_post_permalink(); ?>"><div class="seccion-template-productos-cont-text-mas">
+                                            <span></span><span></span>
+                                        </div></a>
+                                        <h4><?=get_the_title(); ?></h4>
+                                        <p><?=get_field('intro_producto'); ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; wp_reset_query(); ?>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
     <div class="template-videos container">
         <h3>Videos</h3>

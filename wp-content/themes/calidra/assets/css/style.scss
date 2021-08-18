@@ -1227,13 +1227,16 @@ footer{
                 }
             }
         }
-        &-prods-carousel{
+        &-prods{
             @include especificContainer(1200px);
-            overflow: hidden;
-            .car-item{
-                padding: 0 15px;
-                display: flex;
-                height: 100%;
+            &-carousel{
+                @include especificContainer(1200px);
+                overflow: hidden;
+                .car-item{
+                    padding: 0 15px;
+                    display: flex;
+                    height: 100%;
+                }
             }
         }
         &-cont{

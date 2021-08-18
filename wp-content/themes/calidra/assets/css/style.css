@@ -1939,6 +1939,12 @@ footer .footer-bottom-border {
   }
 }
 
+.seccion-template-productos-prods {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .seccion-template-productos-prods-carousel {
   width: 1200px;
   max-width: 100%;
