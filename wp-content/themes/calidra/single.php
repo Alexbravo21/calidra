@@ -10,7 +10,7 @@
     <div class="container">
         <div class="columns">
             <div class="column is-one-third">
-                <h2>Adios <?=get_the_title() ?></h2>
+                <h2><?=get_the_title() ?></h2>
                 <p class="blog-interior-meta">
                     <span><?php print_r(get_the_category()[0]->name); ?></span>
                     <?=get_post_time('d-m-Y'); ?>

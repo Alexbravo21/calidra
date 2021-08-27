@@ -10,9 +10,9 @@ $categoryArray = Array(
     'estabilizacion' => 57,
     'construccion' => 61
 );
-$category = get_field('tipo_producto')['value'];
+$seccion = get_field('tipo_producto')['value'];
 $templateUriSection = get_template_directory_uri() . '/assets/img/localizador/';
-$imageSectionHero = get_field('hero_image', $categoryArray[$category]);
+$imageSectionHero = get_field('hero_image', $categoryArray[$seccion]);
 $copySide = 'derecho';
 $color = 'blanco';
 include 'section-header-2.php';
@@ -25,7 +25,6 @@ $args = array(
 );
 $productos_query = new WP_Query( $args );
 $ficha_tecnica = get_field("ficha_tecnica") !== NULL ? get_field("ficha_tecnica") : '#';
-$seccion = get_field('tipo_producto')['value'];
 $videos = json_decode(json_encode([
     "alimenticia" => ['D12MlWtzUE0'],
     "quimica" => ['U3yUJkGUbgE'],
@@ -34,6 +33,7 @@ $videos = json_decode(json_encode([
     "estabilizacion" => ['QflDe0W470s', 'hNS--mhuuXI', 'biynAo7RBzY'],
     "construccion" => ['gm3RDq1hTQU', 'SOFdvebKSX8', 'gFqjVxlCgMg', 'gx1IPAvIbGA', 'bxc3dFvYxn0', 'PaDnweI1OJw', 'AJj7T5rQoLg']
 ]));
+$asesor_distribuidor = $seccion == 'construccion' ? 'distribuidor' : 'asesor';
 ?>
 <div class="producto-interior section">
     <div class="producto-interior-cont">
@@ -58,8 +58,8 @@ $videos = json_decode(json_encode([
         <div class="columns is-vcentered">
             <div class="column">
                 <div class="template-localizador-cta reliable-old-lady">
-                    <h3><strong>Encuentra</strong> tu distribuidor</h3>
-                    <p>Comparte tu ubicación y localiza a tu distribuidor más cercano</p>
+                    <h3><strong>Encuentra</strong> tu asesor</h3>
+                    <p>Comparte tu ubicación y localiza a tu <?=$asesor_distribuidor ?> más cercano</p>
                     <a href="<?=$calidra_base_url ?>localizador"><button>LOCALIZAR</button></a>
                 </div>
             </div>

@@ -6,8 +6,8 @@
     $productos_slider = [
         'alimenticia-y-agricola' => ['Alimenticia y Agrícola', 'La cal dentro del ramo agrícola se usa para la neutralización de suelos ácidos, además de aportar Calcio y magnesio a los cultivos.'],
         'quimica' => ['Química', 'Se usa como materia prima en muchos procesos químicos y como coadyuvante en los procesos del cuidado del medio ambiente.'],
-        'mineria-y-siderurgica' => ['Minería y Siderúrgica', 'En la minería, la cal estabiliza el pH de los minerales, en sus diversos procesos.
-        En la siderurgia facilita la purificación del acero y asegura la protección de recubrimiento refractario de los hornos fundidores del acero.'],
+        'mineria' => ['Minería', 'Dentro de la industria Minera, la cal juega un papel importante en la estabilización de pH en procesos de lixiviación dinámica y estática.'],
+        'siderurgica' => ['Siderúrgica', 'Dentro de la industria siderúrgica facilita la purificación del acero y asegura la protección de recubrimiento refractario de los hornos fundidores del acero.'],
         'estabilizacion-de-suelos' => ['Estabilización de suelos', 'La estabilización con cal es un proceso químico entre los minerales de arcilla presentes en el suelo y el calcio, que propicia la disminución de plasticidad gracias a las reacciones puzolánicas.'],
         'construccion' => ['Construcción', 'Es utilizado para la elaboración de mezclas de albañilería, morteros a base de cal, repellos, acabados finos, acabados gruesos, pegado de block, pegado de ladrillo, pegado de adobe.']
     ];

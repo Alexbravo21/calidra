@@ -32,6 +32,7 @@
     $video_cont_num = count($videos->$seccion);
     $video_cont_div = floor($video_cont_num / $video_cont_max);
     $video_cont_residue = $video_cont_num % $video_cont_max;
+    $asesor_distribuidor = $seccion == 'construccion' ? 'distribuidor' : 'asesor';
 ?>
 <div class="seccion-template section">
     <div class="seccion-template-productos">
@@ -139,7 +140,7 @@
         <div class="columns is-vcentered">
             <div class="column">
                 <div class="template-localizador-cta reliable-old-lady">
-                    <h3><strong>Encuentra</strong> tu Asesor</h3>
+                    <h3><strong>Encuentra</strong> tu <?=$asesor_distribuidor ?></h3>
                     <p>Contáctanos y localiza a tu asesor más cercano:</p>
                     <a href="<?=$calidra_base_url ?>localizador"><button>LOCALIZAR</button></a>
                 </div>
