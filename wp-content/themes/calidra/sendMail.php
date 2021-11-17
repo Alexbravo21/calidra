@@ -14,18 +14,15 @@ $correo = isset($decoded) ? $decoded['correo'] : NULL;
 $telefono = isset($decoded) ? $decoded['telefono'] : NULL;
 $ciudad = isset($decoded) ? $decoded['ciudad'] : NULL;
 $comentarios = isset($decoded) && isset($decoded['comentarios']) ? $decoded['comentarios'] : 'Sin comentarios';
+
+$body = 'El usuario'.$nombre.' '.$apellido.' se contacto por medio del formulario de contacto del sitio web.<br>
+                    Sus datos de contacto son: <br>'.
+                    'Correo: '.$correo.'<br>'.
+                    'Teléfono: '.$telefono.'.<br>'.
+                    'Con residencia en la ciudad de '.$ciudad.'<br>'.
+                    'Comentarios: '.$comentarios;
+
 $mailTo = isset($decoded) ? $decoded['interesado'] : 0;
-//print_r($_POST);
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-
-require 'phpMailer/Exception.php';
-require 'phpMailer/PHPMailer.php';
-require 'phpMailer/SMTP.php';
-
-$mail = new PHPMailer(true);
 $mails = Array(
     'erangel@calidra.com.mx',
     'atencionaclientescentro@calidra.com.mx',
@@ -34,42 +31,14 @@ $mails = Array(
     'abastecimiento@calidra.com.mx',
 );
 
-try {
-    //Server settings
-    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'calidra.contacto.form@gmail.com';                     //SMTP username
-    $mail->Password   = 'c4lidr4$cont4cto';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+$sending = mail($mails[$mailTo], 'Formulario de contacto', $body);
 
-    //Recipients
-    $mail->setFrom('calidra.contacto.form@gmail.com', 'Calidra contacto');
-    $mail->addAddress($mails[$mailTo], 'Calidra');     //Add a recipient
-    //$mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo($correo, 'Respuesta de contacto';
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Formulario de contacto';
-    $mail->Body    = 'El usuario'.$nombre.' '.$apellido.' se contacto por medio del formulario de contacto del sitio web.<br>
-                    Sus datos de contacto son: <br>'.
-                    'Correo: '.$correo.'<br>'.
-                    'Teléfono: '.$telefono.'.<br>'.
-                    'Con residencia en la ciudad de '.$ciudad.'<br>'.
-                    'Comentarios: '.$comentarios;
-
-                    
-    $mail->AltBody = 'El usuario'.$nombre.' '.$apellido.' se contacto por medio del formulario de contacto del sitio web. Datos de contacto: Correo: '.$correo.' Teléfono: '.$telefono.' Con residencia en la ciudad de '.$ciudad.' Comentarios: '.$comentarios;
-
-    $mail->send();
+if ($sending) {
     $response = Array(
         'status' => 200,
         'msg' => "Tu mensaje se ha enviado correctamente"
     );
-} catch (Exception $e) {
+}else{
     $response = Array(
         'status' => 500,
         'msg' => "El mensaje no pudo ser enviado. Error: {$mail->ErrorInfo}"
